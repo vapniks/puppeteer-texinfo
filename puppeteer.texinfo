@@ -1571,8 +1571,8 @@ page.removeListener('request', logRequest);
 * event ‘workerdestroyed'::
 * page$selector::
 * page$$selector::
-* page$$evalselector pageFunction[ @dots{}args]::
-* page$evalselector pageFunction[ @dots{}args]::
+* page$$evalselector pageFunction[@dots{}args]::
+* page$evalselector pageFunction[@dots{}args]::
 * page$xexpression::
 * pageaccessibility::
 * pageaddScriptTagoptions::
@@ -1589,9 +1589,9 @@ page.removeListener('request', logRequest);
 * pagedeleteCookie@dots{}cookies::
 * pageemulateoptions::
 * pageemulateMediamediaType::
-* pageevaluatepageFunction[ @dots{}args]::
-* pageevaluateHandlepageFunction[ @dots{}args]::
-* pageevaluateOnNewDocumentpageFunction[ @dots{}args]::
+* pageevaluatepageFunction[@dots{}args]::
+* pageevaluateHandlepageFunction[@dots{}args]::
+* pageevaluateOnNewDocumentpageFunction[@dots{}args]::
 * pageexposeFunctionname puppeteerFunction::
 * pagefocusselector::
 * pageframes::
@@ -1608,7 +1608,7 @@ page.removeListener('request', logRequest);
 * pagequeryObjectsprototypeHandle::
 * pagereload[options]::
 * pagescreenshot[options]::
-* pageselectselector @dots{}values::
+* pageselectselector@dots{}values::
 * pagesetBypassCSPenabled::
 * pagesetCacheEnabled[enabled]::
 * pagesetContenthtml[ options]::
@@ -1630,8 +1630,8 @@ page.removeListener('request', logRequest);
 * pagetypeselector text[ options]::
 * pageurl::
 * pageviewport::
-* pagewaitForselectorOrFunctionOrTimeout[ options[ @dots{}args]]::
-* pagewaitForFunctionpageFunction[ options[ @dots{}args]]::
+* pagewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
+* pagewaitForFunctionpageFunction[ options[@dots{}args]]::
 * pagewaitForNavigation[options]::
 * pagewaitForRequesturlOrPredicate[ options]::
 * pagewaitForResponseurlOrPredicate[ options]::
@@ -1931,8 +1931,8 @@ elements match the selector, the return value resolves to @code{[]}.
 
 Shortcut for @ref{#frameselector-1,page.mainFrame().$$(selector)}.
 
-@node page$$evalselector pageFunction[ @dots{}args]
-@subsection page.$$eval(selector, pageFunction[, @dots{}args])
+@node page$$evalselector pageFunction[@dots{}args]
+@subsection page.$$eval(selector, pageFunction[,@dots{}args])
 @findex page.$$eval
 @anchor{#pageevalselector-pagefunction-args}
 @itemize
@@ -1971,8 +1971,8 @@ Examples:
 const divsCounts = await page.$$eval('div', divs => divs.length);
 @end verbatim
 
-@node page$evalselector pageFunction[ @dots{}args]
-@subsection page.$eval(selector, pageFunction[, @dots{}args])
+@node page$evalselector pageFunction[@dots{}args]
+@subsection page.$eval(selector, pageFunction[,@dots{}args])
 @findex page.$eval
 @anchor{#pageevalselector-pagefunction-args-1}
 @itemize
@@ -2474,8 +2474,8 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node pageevaluatepageFunction[ @dots{}args]
-@subsection page.evaluate(pageFunction[, @dots{}args])
+@node pageevaluatepageFunction[@dots{}args]
+@subsection page.evaluate(pageFunction[,@dots{}args])
 @findex page.evaluate
 @anchor{#pageevaluatepagefunction-args}
 @itemize
@@ -2535,8 +2535,8 @@ Shortcut for
 @ref{#frameevaluatepagefunction-args,page.mainFrame().evaluate(pageFunction,
 @dots{}args)}.
 
-@node pageevaluateHandlepageFunction[ @dots{}args]
-@subsection page.evaluateHandle(pageFunction[, @dots{}args])
+@node pageevaluateHandlepageFunction[@dots{}args]
+@subsection page.evaluateHandle(pageFunction[,@dots{}args])
 @findex page.evaluateHandle
 @anchor{#pageevaluatehandlepagefunction-args}
 @itemize
@@ -2584,8 +2584,8 @@ Shortcut for
 @ref{#executioncontextevaluatehandlepagefunction-args,page.mainFrame().executionContext().evaluateHandle(pageFunction,
 @dots{}args)}.
 
-@node pageevaluateOnNewDocumentpageFunction[ @dots{}args]
-@subsection page.evaluateOnNewDocument(pageFunction[, @dots{}args])
+@node pageevaluateOnNewDocumentpageFunction[@dots{}args]
+@subsection page.evaluateOnNewDocument(pageFunction[,@dots{}args])
 @findex page.evaluateOnNewDocument
 @anchor{#pageevaluateonnewdocumentpagefunction-args}
 @itemize
@@ -3398,8 +3398,8 @@ value of @code{encoding}) with captured screenshot.
 https://crbug.com/741689 for discussion.
 @end quotation
 
-@node pageselectselector @dots{}values
-@subsection page.select(selector, @dots{}values)
+@node pageselectselector@dots{}values
+@subsection page.select(selector,@dots{}values)
 @findex page.select
 @anchor{#pageselectselector-values}
 @itemize
@@ -3617,9 +3617,9 @@ methods and related shortcuts: -
 @ref{#pagereloadoptions,page.reload([options])} -
 @ref{#pagesetcontenthtml-options,page.setContent(html[, options])} -
 @ref{#pagewaitforselectororfunctionortimeout-options-args,page.waitFor(selectorOrFunctionOrTimeout[,
-options[, @dots{}args]])} -
+options[,@dots{}args]])} -
 @ref{#pagewaitforfunctionpagefunction-options-args,page.waitForFunction(pageFunction[,
-options[, @dots{}args]])} -
+options[,@dots{}args]])} -
 @ref{#pagewaitfornavigationoptions,page.waitForNavigation([options])} -
 @ref{#pagewaitforrequesturlorpredicate-options,page.waitForRequest(urlOrPredicate[,
 options])} -
@@ -4001,10 +4001,9 @@ Specifies if viewport is in landscape mode. Defaults to @code{false}.
 
 @end itemize
 
-@node pagewaitForselectorOrFunctionOrTimeout[ options[ @dots{}args]]
-@subsection page.waitFor(selectorOrFunctionOrTimeout[, options[,
+@node pagewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
+@subsection page.waitFor(selectorOrFunctionOrTimeout[, options[,@dots{}args]])
 @findex page.waitFor
-@dots{}args]])
 @anchor{#pagewaitforselectororfunctionortimeout-options-args}
 @itemize
 @item
@@ -4064,12 +4063,11 @@ await page.waitFor(selector => !!document.querySelector(selector), {}, selector)
 
 Shortcut for
 @ref{#framewaitforselectororfunctionortimeout-options-args,page.mainFrame().waitFor(selectorOrFunctionOrTimeout[,
-options[, @dots{}args]])}.
+options[,@dots{}args]])}.
 
-@node pagewaitForFunctionpageFunction[ options[ @dots{}args]]
-@subsection page.waitForFunction(pageFunction[, options[,
+@node pagewaitForFunctionpageFunction[ options[@dots{}args]]
+@subsection page.waitForFunction(pageFunction[, options[,@dots{}args]])
 @findex page.waitForFunction
-@dots{}args]])
 @anchor{#pagewaitforfunctionpagefunction-options-args}
 @itemize
 @item
@@ -4142,7 +4140,7 @@ await page.waitForFunction(selector => !!document.querySelector(selector), {}, s
 
 Shortcut for
 @ref{#framewaitforfunctionpagefunction-options-args,page.mainFrame().waitForFunction(pageFunction[,
-options[, @dots{}args]])}.
+options[,@dots{}args]])}.
 
 @node pagewaitForNavigation[options]
 @subsection page.waitForNavigation([options])
@@ -4461,14 +4459,14 @@ for (const worker of page.workers())
 @end verbatim
 
 @menu
-* workerevaluatepageFunction[ @dots{}args]::
-* workerevaluateHandlepageFunction[ @dots{}args]::
+* workerevaluatepageFunction[@dots{}args]::
+* workerevaluateHandlepageFunction[@dots{}args]::
 * workerexecutionContext::
 * workerurl::
 @end menu
 
-@node workerevaluatepageFunction[ @dots{}args]
-@subsection worker.evaluate(pageFunction[, @dots{}args])
+@node workerevaluatepageFunction[@dots{}args]
+@subsection worker.evaluate(pageFunction[,@dots{}args])
 @findex worker.evaluate
 @anchor{#workerevaluatepagefunction-args}
 @itemize
@@ -4499,10 +4497,10 @@ are not serializable by @code{JSON}: @code{-0}, @code{NaN},
 @code{Infinity}, @code{-Infinity}, and bigint literals.
 
 Shortcut for @ref{#executioncontextevaluatepagefunction-args,(await
-worker.executionContext()).evaluate(pageFunction, @dots{}args)}.
+worker.executionContext()).evaluate(pageFunction,@dots{}args)}.
 
-@node workerevaluateHandlepageFunction[ @dots{}args]
-@subsection worker.evaluateHandle(pageFunction[, @dots{}args])
+@node workerevaluateHandlepageFunction[@dots{}args]
+@subsection worker.evaluateHandle(pageFunction[,@dots{}args])
 @findex worker.evaluateHandle
 @anchor{#workerevaluatehandlepagefunction-args}
 @itemize
@@ -4532,7 +4530,7 @@ and return its value.
 
 Shortcut for
 @ref{#executioncontextevaluatehandlepagefunction-args,(await
-worker.executionContext()).evaluateHandle(pageFunction, @dots{}args)}.
+worker.executionContext()).evaluateHandle(pageFunction,@dots{}args)}.
 
 @node workerexecutionContext
 @subsection worker.executionContext()
@@ -5417,16 +5415,16 @@ An example of getting text from an iframe element:
 @menu
 * frame$selector::
 * frame$$selector::
-* frame$$evalselector pageFunction[ @dots{}args]::
-* frame$evalselector pageFunction[ @dots{}args]::
+* frame$$evalselector pageFunction[@dots{}args]::
+* frame$evalselector pageFunction[@dots{}args]::
 * frame$xexpression::
 * frameaddScriptTagoptions::
 * frameaddStyleTagoptions::
 * framechildFrames::
 * frameclickselector[ options]::
 * framecontent::
-* frameevaluatepageFunction[ @dots{}args]::
-* frameevaluateHandlepageFunction[ @dots{}args]::
+* frameevaluatepageFunction[@dots{}args]::
+* frameevaluateHandlepageFunction[@dots{}args]::
 * frameexecutionContext::
 * framefocusselector::
 * framegotourl[ options]::
@@ -5434,14 +5432,14 @@ An example of getting text from an iframe element:
 * frameisDetached::
 * framename::
 * frameparentFrame::
-* frameselectselector @dots{}values::
+* frameselectselector@dots{}values::
 * framesetContenthtml[ options]::
 * frametapselector::
 * frametitle::
 * frametypeselector text[ options]::
 * frameurl::
-* framewaitForselectorOrFunctionOrTimeout[ options[ @dots{}args]]::
-* framewaitForFunctionpageFunction[ options[ @dots{}args]]::
+* framewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
+* framewaitForFunctionpageFunction[ options[@dots{}args]]::
 * framewaitForNavigation[options]::
 * framewaitForSelectorselector[ options]::
 * framewaitForXPathxpath[ options]::
@@ -5487,8 +5485,8 @@ Promise which resolves to ElementHandles pointing to the frame elements.
 The method runs @code{document.querySelectorAll} within the frame. If no
 elements match the selector, the return value resolves to @code{[]}.
 
-@node frame$$evalselector pageFunction[ @dots{}args]
-@subsection frame.$$eval(selector, pageFunction[, @dots{}args])
+@node frame$$evalselector pageFunction[@dots{}args]
+@subsection frame.$$eval(selector, pageFunction[,@dots{}args])
 @findex frame.$$eval
 @anchor{#frameevalselector-pagefunction-args}
 @itemize
@@ -5527,8 +5525,8 @@ Examples:
 const divsCounts = await frame.$$eval('div', divs => divs.length);
 @end verbatim
 
-@node frame$evalselector pageFunction[ @dots{}args]
-@subsection frame.$eval(selector, pageFunction[, @dots{}args])
+@node frame$evalselector pageFunction[@dots{}args]
+@subsection frame.$eval(selector, pageFunction[,@dots{}args])
 @findex frame.$eval
 @anchor{#frameevalselector-pagefunction-args-1}
 @itemize
@@ -5742,8 +5740,8 @@ returns:
 
 Gets the full HTML contents of the frame, including the doctype.
 
-@node frameevaluatepageFunction[ @dots{}args]
-@subsection frame.evaluate(pageFunction[, @dots{}args])
+@node frameevaluatepageFunction[@dots{}args]
+@subsection frame.evaluate(pageFunction[,@dots{}args])
 @findex frame.evaluate
 @anchor{#frameevaluatepagefunction-args}
 @itemize
@@ -5795,8 +5793,8 @@ const html = await frame.evaluate(body => body.innerHTML, bodyHandle);
 await bodyHandle.dispose();
 @end verbatim
 
-@node frameevaluateHandlepageFunction[ @dots{}args]
-@subsection frame.evaluateHandle(pageFunction[, @dots{}args])
+@node frameevaluateHandlepageFunction[@dots{}args]
+@subsection frame.evaluateHandle(pageFunction[,@dots{}args])
 @findex frame.evaluateHandle
 @anchor{#frameevaluatehandlepagefunction-args}
 @itemize
@@ -6026,8 +6024,8 @@ returns: <?@ref{#class-frame,Frame}> Parent frame, if any. Detached
 frames and main frames return @code{null}.
 @end itemize
 
-@node frameselectselector @dots{}values
-@subsection frame.select(selector, @dots{}values)
+@node frameselectselector@dots{}values
+@subsection frame.select(selector,@dots{}values)
 @findex frame.select
 @anchor{#frameselectselector-values}
 @itemize
@@ -6196,10 +6194,9 @@ returns:
 
 Returns frame's url.
 
-@node framewaitForselectorOrFunctionOrTimeout[ options[ @dots{}args]]
-@subsection frame.waitFor(selectorOrFunctionOrTimeout[, options[,
+@node framewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
+@subsection frame.waitFor(selectorOrFunctionOrTimeout[, options[,@dots{}args]])
 @findex frame.waitFor
-@dots{}args]])
 @anchor{#framewaitforselectororfunctionortimeout-options-args}
 @itemize
 @item
@@ -6257,10 +6254,9 @@ const selector = '.foo';
 await page.waitFor(selector => !!document.querySelector(selector), {}, selector);
 @end verbatim
 
-@node framewaitForFunctionpageFunction[ options[ @dots{}args]]
-@subsection frame.waitForFunction(pageFunction[, options[,
+@node framewaitForFunctionpageFunction[ options[@dots{}args]]
+@subsection frame.waitForFunction(pageFunction[, options[,@dots{}args]])
 @findex frame.waitForFunction
-@dots{}args]])
 @anchor{#framewaitforfunctionpagefunction-options-args}
 @itemize
 @item
@@ -6548,14 +6544,14 @@ Besides pages, execution contexts can be found in
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API,workers}.
 
 @menu
-* executionContextevaluatepageFunction[ @dots{}args]::
-* executionContextevaluateHandlepageFunction[ @dots{}args]::
+* executionContextevaluatepageFunction[@dots{}args]::
+* executionContextevaluateHandlepageFunction[@dots{}args]::
 * executionContextframe::
 * executionContextqueryObjectsprototypeHandle::
 @end menu
 
-@node executionContextevaluatepageFunction[ @dots{}args]
-@subsection executionContext.evaluate(pageFunction[, @dots{}args])
+@node executionContextevaluatepageFunction[@dots{}args]
+@subsection executionContext.evaluate(pageFunction[,@dots{}args])
 @findex executionContext.evaluate
 @anchor{#executioncontextevaluatepagefunction-args}
 @itemize
@@ -6609,10 +6605,9 @@ await twoHandle.dispose();
 console.log(result); // prints '3'.
 @end verbatim
 
-@node executionContextevaluateHandlepageFunction[ @dots{}args]
-@subsection executionContext.evaluateHandle(pageFunction[,
+@node executionContextevaluateHandlepageFunction[@dots{}args]
+@subsection executionContext.evaluateHandle(pageFunction[,@dots{}args])
 @findex executionContext.evaluateHandle
-@dots{}args])
 @anchor{#executioncontextevaluatehandlepagefunction-args}
 @itemize
 @item
@@ -6870,8 +6865,8 @@ ElementHandle instances can be used as arguments in
 @menu
 * elementHandle$selector::
 * elementHandle$$selector::
-* elementHandle$$evalselector pageFunction[ @dots{}args]::
-* elementHandle$evalselector pageFunction[ @dots{}args]::
+* elementHandle$$evalselector pageFunction[@dots{}args]::
+* elementHandle$evalselector pageFunction[@dots{}args]::
 * elementHandle$xexpression::
 * elementHandleasElement::
 * elementHandleboundingBox::
@@ -6932,10 +6927,9 @@ returns:
 The method runs @code{element.querySelectorAll} within the page. If no
 elements match the selector, the return value resolves to @code{[]}.
 
-@node elementHandle$$evalselector pageFunction[ @dots{}args]
-@subsection elementHandle.$$eval(selector, pageFunction[,
+@node elementHandle$$evalselector pageFunction[@dots{}args]
+@subsection elementHandle.$$eval(selector, pageFunction[,@dots{}args])
 @findex elementHandle.$$eval
-@dots{}args])
 @anchor{#elementhandleevalselector-pagefunction-args}
 @itemize
 @item
@@ -6981,10 +6975,9 @@ const feedHandle = await page.$('.feed');
 expect(await feedHandle.$$eval('.tweet', nodes => nodes.map(n => n.innerText))).toEqual(['Hello!', 'Hi!']);
 @end verbatim
 
-@node elementHandle$evalselector pageFunction[ @dots{}args]
-@subsection elementHandle.$eval(selector, pageFunction[,
+@node elementHandle$evalselector pageFunction[@dots{}args]
+@subsection elementHandle.$eval(selector, pageFunction[,@dots{}args])
 @findex elementHandle.$eval
-@dots{}args])
 @anchor{#elementhandleevalselector-pagefunction-args-1}
 @itemize
 @item

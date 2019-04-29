@@ -730,9 +730,9 @@ Function Index
                                                                 (line 6)
 * elementHandle.$$:                      elementHandle$$selector.
                                                                 (line 6)
-* elementHandle.$$eval:                  elementHandle$$evalselector pageFunction[ ...args].
+* elementHandle.$$eval:                  elementHandle$$evalselector pageFunction[...args].
                                                                 (line 6)
-* elementHandle.$eval:                   elementHandle$evalselector pageFunction[ ...args].
+* elementHandle.$eval:                   elementHandle$evalselector pageFunction[...args].
                                                                 (line 6)
 * elementHandle.$x:                      elementHandle$xexpression.
                                                                 (line 6)
@@ -768,18 +768,18 @@ Function Index
                                                                 (line 6)
 * elementHandle.uploadFile:              elementHandleuploadFile...filePaths.
                                                                 (line 6)
-* executionContext.evaluate:             executionContextevaluatepageFunction[ ...args].
+* executionContext.evaluate:             executionContextevaluatepageFunction[...args].
                                                                 (line 6)
-* executionContext.evaluateHandle:       executionContextevaluateHandlepageFunction[ ...args].
+* executionContext.evaluateHandle:       executionContextevaluateHandlepageFunction[...args].
                                                                 (line 6)
 * executionContext.frame:                executionContextframe. (line 6)
 * executionContext.queryObjects:         executionContextqueryObjectsprototypeHandle.
                                                                 (line 6)
 * frame.$:                               frame$selector.        (line 6)
 * frame.$$:                              frame$$selector.       (line 6)
-* frame.$$eval:                          frame$$evalselector pageFunction[ ...args].
+* frame.$$eval:                          frame$$evalselector pageFunction[...args].
                                                                 (line 6)
-* frame.$eval:                           frame$evalselector pageFunction[ ...args].
+* frame.$eval:                           frame$evalselector pageFunction[...args].
                                                                 (line 6)
 * frame.$x:                              frame$xexpression.     (line 6)
 * frame.addScriptTag:                    frameaddScriptTagoptions.
@@ -790,9 +790,9 @@ Function Index
 * frame.click:                           frameclickselector[ options].
                                                                 (line 6)
 * frame.content:                         framecontent.          (line 6)
-* frame.evaluate:                        frameevaluatepageFunction[ ...args].
+* frame.evaluate:                        frameevaluatepageFunction[...args].
                                                                 (line 6)
-* frame.evaluateHandle:                  frameevaluateHandlepageFunction[ ...args].
+* frame.evaluateHandle:                  frameevaluateHandlepageFunction[...args].
                                                                 (line 6)
 * frame.executionContext:                frameexecutionContext. (line 6)
 * frame.focus:                           framefocusselector.    (line 6)
@@ -802,7 +802,7 @@ Function Index
 * frame.isDetached:                      frameisDetached.       (line 6)
 * frame.name:                            framename.             (line 6)
 * frame.parentFrame:                     frameparentFrame.      (line 6)
-* frame.select:                          frameselectselector ...values.
+* frame.select:                          frameselectselector...values.
                                                                 (line 6)
 * frame.setContent:                      framesetContenthtml[ options].
                                                                 (line 6)
@@ -811,9 +811,9 @@ Function Index
 * frame.type:                            frametypeselector text[ options].
                                                                 (line 6)
 * frame.url:                             frameurl.              (line 6)
-* frame.waitFor:                         framewaitForselectorOrFunctionOrTimeout[ options[ ...args]].
+* frame.waitFor:                         framewaitForselectorOrFunctionOrTimeout[ options[...args]].
                                                                 (line 6)
-* frame.waitForFunction:                 framewaitForFunctionpageFunction[ options[ ...args]].
+* frame.waitForFunction:                 framewaitForFunctionpageFunction[ options[...args]].
                                                                 (line 6)
 * frame.waitForNavigation:               framewaitForNavigation[options].
                                                                 (line 6)
@@ -846,9 +846,9 @@ Function Index
 * mouse.up:                              mouseup[options].      (line 6)
 * page.$:                                page$selector.         (line 6)
 * page.$$:                               page$$selector.        (line 6)
-* page.$$eval:                           page$$evalselector pageFunction[ ...args].
+* page.$$eval:                           page$$evalselector pageFunction[...args].
                                                                 (line 6)
-* page.$eval:                            page$evalselector pageFunction[ ...args].
+* page.$eval:                            page$evalselector pageFunction[...args].
                                                                 (line 6)
 * page.$x:                               page$xexpression.      (line 6)
 * page.accessibility:                    pageaccessibility.     (line 6)
@@ -872,11 +872,11 @@ Function Index
 * page.emulate:                          pageemulateoptions.    (line 6)
 * page.emulateMedia:                     pageemulateMediamediaType.
                                                                 (line 6)
-* page.evaluate:                         pageevaluatepageFunction[ ...args].
+* page.evaluate:                         pageevaluatepageFunction[...args].
                                                                 (line 6)
-* page.evaluateHandle:                   pageevaluateHandlepageFunction[ ...args].
+* page.evaluateHandle:                   pageevaluateHandlepageFunction[...args].
                                                                 (line 6)
-* page.evaluateOnNewDocument:            pageevaluateOnNewDocumentpageFunction[ ...args].
+* page.evaluateOnNewDocument:            pageevaluateOnNewDocumentpageFunction[...args].
                                                                 (line 6)
 * page.exposeFunction:                   pageexposeFunctionname puppeteerFunction.
                                                                 (line 6)
@@ -898,7 +898,7 @@ Function Index
 * page.reload:                           pagereload[options].   (line 6)
 * page.screenshot:                       pagescreenshot[options].
                                                                 (line 6)
-* page.select:                           pageselectselector ...values.
+* page.select:                           pageselectselector...values.
                                                                 (line 6)
 * page.setBypassCSP:                     pagesetBypassCSPenabled.
                                                                 (line 6)
@@ -935,9 +935,9 @@ Function Index
                                                                 (line 6)
 * page.url:                              pageurl.               (line 6)
 * page.viewport:                         pageviewport.          (line 6)
-* page.waitFor:                          pagewaitForselectorOrFunctionOrTimeout[ options[ ...args]].
+* page.waitFor:                          pagewaitForselectorOrFunctionOrTimeout[ options[...args]].
                                                                 (line 6)
-* page.waitForFunction:                  pagewaitForFunctionpageFunction[ options[ ...args]].
+* page.waitForFunction:                  pagewaitForFunctionpageFunction[ options[...args]].
                                                                 (line 6)
 * page.waitForNavigation:                pagewaitForNavigation[options].
                                                                 (line 6)
@@ -1015,9 +1015,9 @@ Function Index
 * touchscreen.tap:                       touchscreentapx y.     (line 6)
 * tracing.start:                         tracingstartoptions.   (line 6)
 * tracing.stop:                          tracingstop.           (line 6)
-* worker.evaluate:                       workerevaluatepageFunction[ ...args].
+* worker.evaluate:                       workerevaluatepageFunction[...args].
                                                                 (line 6)
-* worker.evaluateHandle:                 workerevaluateHandlepageFunction[ ...args].
+* worker.evaluateHandle:                 workerevaluateHandlepageFunction[...args].
                                                                 (line 6)
 * worker.executionContext:               workerexecutionContext.
                                                                 (line 6)
