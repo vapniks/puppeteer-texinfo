@@ -253,16 +253,16 @@ puppeteer.launch().then(async browser => {
 
 * Menu:
 
-* puppeteerconnectoptions::
-* puppeteercreateBrowserFetcher[options]::
-* puppeteerdefaultArgs[options]::
-* puppeteerdevices::
-* puppeteererrors::
-* puppeteerexecutablePath::
-* puppeteerlaunch[options]::
+* puppeteer.connect::
+* puppeteer.createBrowserFetcher[options]::
+* puppeteer.defaultArgs[options]::
+* puppeteer.devices::
+* puppeteer.errors::
+* puppeteer.executablePath::
+* puppeteer.launch[options]::
 
 
-File: puppeteer.info,  Node: puppeteerconnectoptions,  Next: puppeteercreateBrowserFetcher[options],  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.connect,  Next: puppeteer.createBrowserFetcher[options],  Up: class Puppeteer
 
 1.5.1 puppeteer.connect(options)
 --------------------------------
@@ -326,7 +326,7 @@ File: puppeteer.info,  Node: puppeteerconnectoptions,  Next: puppeteercreateBrow
 This methods attaches Puppeteer to an existing Chromium instance.
 
 
-File: puppeteer.info,  Node: puppeteercreateBrowserFetcher[options],  Next: puppeteerdefaultArgs[options],  Prev: puppeteerconnectoptions,  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.createBrowserFetcher[options],  Next: puppeteer.defaultArgs[options],  Prev: puppeteer.connect,  Up: class Puppeteer
 
 1.5.2 puppeteer.createBrowserFetcher([options])
 -----------------------------------------------
@@ -350,7 +350,7 @@ File: puppeteer.info,  Node: puppeteercreateBrowserFetcher[options],  Next: pupp
    • returns: <*note BrowserFetcher: #class-browserfetcher.>
 
 
-File: puppeteer.info,  Node: puppeteerdefaultArgs[options],  Next: puppeteerdevices,  Prev: puppeteercreateBrowserFetcher[options],  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.defaultArgs[options],  Next: puppeteer.devices,  Prev: puppeteer.createBrowserFetcher[options],  Up: class Puppeteer
 
 1.5.3 puppeteer.defaultArgs([options])
 --------------------------------------
@@ -386,7 +386,7 @@ File: puppeteer.info,  Node: puppeteerdefaultArgs[options],  Next: puppeteerdevi
 The default flags that Chromium will be launched with.
 
 
-File: puppeteer.info,  Node: puppeteerdevices,  Next: puppeteererrors,  Prev: puppeteerdefaultArgs[options],  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.devices,  Next: puppeteer.errors,  Prev: puppeteer.defaultArgs[options],  Up: class Puppeteer
 
 1.5.4 puppeteer.devices
 -----------------------
@@ -414,7 +414,7 @@ puppeteer.launch().then(async browser => {
      obtained with ‘require('puppeteer/DeviceDescriptors')’.
 
 
-File: puppeteer.info,  Node: puppeteererrors,  Next: puppeteerexecutablePath,  Prev: puppeteerdevices,  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.errors,  Next: puppeteer.executablePath,  Prev: puppeteer.devices,  Up: class Puppeteer
 
 1.5.5 puppeteer.errors
 ----------------------
@@ -448,7 +448,7 @@ try {
      obtained with ‘require('puppeteer/Errors')’.
 
 
-File: puppeteer.info,  Node: puppeteerexecutablePath,  Next: puppeteerlaunch[options],  Prev: puppeteererrors,  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.executablePath,  Next: puppeteer.launch[options],  Prev: puppeteer.errors,  Up: class Puppeteer
 
 1.5.6 puppeteer.executablePath()
 --------------------------------
@@ -465,7 +465,7 @@ File: puppeteer.info,  Node: puppeteerexecutablePath,  Next: puppeteerlaunch[opt
      #environment-variables. for details.
 
 
-File: puppeteer.info,  Node: puppeteerlaunch[options],  Prev: puppeteerexecutablePath,  Up: class Puppeteer
+File: puppeteer.info,  Node: puppeteer.launch[options],  Prev: puppeteer.executablePath,  Up: class Puppeteer
 
 1.5.7 puppeteer.launch([options])
 ---------------------------------
@@ -629,15 +629,15 @@ const browser = await puppeteer.launch({executablePath: revisionInfo.executableP
 
 * Menu:
 
-* browserFetchercanDownloadrevision::
-* browserFetcherdownloadrevision[ progressCallback]::
-* browserFetcherlocalRevisions::
-* browserFetcherplatform::
-* browserFetcherremoverevision::
-* browserFetcherrevisionInforevision::
+* browserFetcher.canDownloadrevision::
+* browserFetcher.downloadrevision[ progressCallback]::
+* browserFetcher.localRevisions::
+* browserFetcher.platform::
+* browserFetcher.removerevision::
+* browserFetcher.revisionInforevision::
 
 
-File: puppeteer.info,  Node: browserFetchercanDownloadrevision,  Next: browserFetcherdownloadrevision[ progressCallback],  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.canDownloadrevision,  Next: browserFetcher.downloadrevision[ progressCallback],  Up: class BrowserFetcher
 
 1.6.1 browserFetcher.canDownload(revision)
 ------------------------------------------
@@ -654,7 +654,7 @@ The method initiates a HEAD request to check if the revision is
 available.
 
 
-File: puppeteer.info,  Node: browserFetcherdownloadrevision[ progressCallback],  Next: browserFetcherlocalRevisions,  Prev: browserFetchercanDownloadrevision,  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.downloadrevision[ progressCallback],  Next: browserFetcher.localRevisions,  Prev: browserFetcher.canDownloadrevision,  Up: class BrowserFetcher
 
 1.6.2 browserFetcher.download(revision[, progressCallback])
 -----------------------------------------------------------
@@ -696,7 +696,7 @@ The method initiates a GET request to download the revision from the
 host.
 
 
-File: puppeteer.info,  Node: browserFetcherlocalRevisions,  Next: browserFetcherplatform,  Prev: browserFetcherdownloadrevision[ progressCallback],  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.localRevisions,  Next: browserFetcher.platform,  Prev: browserFetcher.downloadrevision[ progressCallback],  Up: class BrowserFetcher
 
 1.6.3 browserFetcher.localRevisions()
 -------------------------------------
@@ -708,7 +708,7 @@ File: puppeteer.info,  Node: browserFetcherlocalRevisions,  Next: browserFetcher
      A list of all revisions available locally on disk.
 
 
-File: puppeteer.info,  Node: browserFetcherplatform,  Next: browserFetcherremoverevision,  Prev: browserFetcherlocalRevisions,  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.platform,  Next: browserFetcher.removerevision,  Prev: browserFetcher.localRevisions,  Up: class BrowserFetcher
 
 1.6.4 browserFetcher.platform()
 -------------------------------
@@ -718,7 +718,7 @@ File: puppeteer.info,  Node: browserFetcherplatform,  Next: browserFetcherremove
      One of ‘mac’, ‘linux’, ‘win32’ or ‘win64’.
 
 
-File: puppeteer.info,  Node: browserFetcherremoverevision,  Next: browserFetcherrevisionInforevision,  Prev: browserFetcherplatform,  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.removerevision,  Next: browserFetcher.revisionInforevision,  Prev: browserFetcher.platform,  Up: class BrowserFetcher
 
 1.6.5 browserFetcher.remove(revision)
 -------------------------------------
@@ -732,7 +732,7 @@ File: puppeteer.info,  Node: browserFetcherremoverevision,  Next: browserFetcher
      Resolves when the revision has been removed.
 
 
-File: puppeteer.info,  Node: browserFetcherrevisionInforevision,  Prev: browserFetcherremoverevision,  Up: class BrowserFetcher
+File: puppeteer.info,  Node: browserFetcher.revisionInforevision,  Prev: browserFetcher.removerevision,  Up: class BrowserFetcher
 
 1.6.6 browserFetcher.revisionInfo(revision)
 -------------------------------------------
@@ -805,20 +805,20 @@ puppeteer.launch().then(async browser => {
 * event ‘targetchanged'::
 * event ‘targetcreated'::
 * event ‘targetdestroyed'::
-* browserbrowserContexts::
-* browserclose::
-* browsercreateIncognitoBrowserContext::
-* browserdefaultBrowserContext::
-* browserdisconnect::
-* browsernewPage::
-* browserpages::
-* browserprocess::
-* browsertarget::
-* browsertargets::
-* browseruserAgent::
-* browserversion::
-* browserwaitForTargetpredicate[ options]::
-* browserwsEndpoint::
+* browser.browserContexts::
+* browser.close::
+* browser.createIncognitoBrowserContext::
+* browser.defaultBrowserContext::
+* browser.disconnect::
+* browser.newPage::
+* browser.pages::
+* browser.process::
+* browser.target::
+* browser.targets::
+* browser.userAgent::
+* browser.version::
+* browser.waitForTargetpredicate[ options]::
+* browser.wsEndpoint::
 
 
 File: puppeteer.info,  Node: event ‘disconnected',  Next: event ‘targetchanged',  Up: class Browser
@@ -860,7 +860,7 @@ by ‘window.open’
      contexts.
 
 
-File: puppeteer.info,  Node: event ‘targetdestroyed',  Next: browserbrowserContexts,  Prev: event ‘targetcreated',  Up: class Browser
+File: puppeteer.info,  Node: event ‘targetdestroyed',  Next: browser.browserContexts,  Prev: event ‘targetcreated',  Up: class Browser
 
 1.7.4 event: ‘targetdestroyed’
 ------------------------------
@@ -873,7 +873,7 @@ Emitted when a target is destroyed, for example when a page is closed.
      contexts.
 
 
-File: puppeteer.info,  Node: browserbrowserContexts,  Next: browserclose,  Prev: event ‘targetdestroyed',  Up: class Browser
+File: puppeteer.info,  Node: browser.browserContexts,  Next: browser.close,  Prev: event ‘targetdestroyed',  Up: class Browser
 
 1.7.5 browser.browserContexts()
 -------------------------------
@@ -887,7 +887,7 @@ browser, this will return a single instance of *note BrowserContext:
 #class-browsercontext.
 
 
-File: puppeteer.info,  Node: browserclose,  Next: browsercreateIncognitoBrowserContext,  Prev: browserbrowserContexts,  Up: class Browser
+File: puppeteer.info,  Node: browser.close,  Next: browser.createIncognitoBrowserContext,  Prev: browser.browserContexts,  Up: class Browser
 
 1.7.6 browser.close()
 ---------------------
@@ -900,7 +900,7 @@ Browser: #class-browser. object itself is considered to be disposed and
 cannot be used anymore.
 
 
-File: puppeteer.info,  Node: browsercreateIncognitoBrowserContext,  Next: browserdefaultBrowserContext,  Prev: browserclose,  Up: class Browser
+File: puppeteer.info,  Node: browser.createIncognitoBrowserContext,  Next: browser.defaultBrowserContext,  Prev: browser.close,  Up: class Browser
 
 1.7.7 browser.createIncognitoBrowserContext()
 ---------------------------------------------
@@ -921,7 +921,7 @@ const page = await context.newPage();
 await page.goto('https://example.com');
 
 
-File: puppeteer.info,  Node: browserdefaultBrowserContext,  Next: browserdisconnect,  Prev: browsercreateIncognitoBrowserContext,  Up: class Browser
+File: puppeteer.info,  Node: browser.defaultBrowserContext,  Next: browser.disconnect,  Prev: browser.createIncognitoBrowserContext,  Up: class Browser
 
 1.7.8 browser.defaultBrowserContext()
 -------------------------------------
@@ -932,7 +932,7 @@ Returns the default browser context.  The default browser context can
 not be closed.
 
 
-File: puppeteer.info,  Node: browserdisconnect,  Next: browsernewPage,  Prev: browserdefaultBrowserContext,  Up: class Browser
+File: puppeteer.info,  Node: browser.disconnect,  Next: browser.newPage,  Prev: browser.defaultBrowserContext,  Up: class Browser
 
 1.7.9 browser.disconnect()
 --------------------------
@@ -942,7 +942,7 @@ running.  After calling ‘disconnect’, the *note Browser: #class-browser.
 object is considered disposed and cannot be used anymore.
 
 
-File: puppeteer.info,  Node: browsernewPage,  Next: browserpages,  Prev: browserdisconnect,  Up: class Browser
+File: puppeteer.info,  Node: browser.newPage,  Next: browser.pages,  Prev: browser.disconnect,  Up: class Browser
 
 1.7.10 browser.newPage()
 ------------------------
@@ -955,7 +955,7 @@ Promise which resolves to a new *note Page: #class-page. object.  The
 *note Page: #class-page. is created in a default browser context.
 
 
-File: puppeteer.info,  Node: browserpages,  Next: browserprocess,  Prev: browsernewPage,  Up: class Browser
+File: puppeteer.info,  Node: browser.pages,  Next: browser.process,  Prev: browser.newPage,  Up: class Browser
 
 1.7.11 browser.pages()
 ----------------------
@@ -973,7 +973,7 @@ contexts, the method will return an array with all the pages in all
 browser contexts.
 
 
-File: puppeteer.info,  Node: browserprocess,  Next: browsertarget,  Prev: browserpages,  Up: class Browser
+File: puppeteer.info,  Node: browser.process,  Next: browser.target,  Prev: browser.pages,  Up: class Browser
 
 1.7.12 browser.process()
 ------------------------
@@ -984,7 +984,7 @@ File: puppeteer.info,  Node: browserprocess,  Next: browsertarget,  Prev: browse
      *note ‘puppeteer.connect’: #puppeteerconnectoptions. method.
 
 
-File: puppeteer.info,  Node: browsertarget,  Next: browsertargets,  Prev: browserprocess,  Up: class Browser
+File: puppeteer.info,  Node: browser.target,  Next: browser.targets,  Prev: browser.process,  Up: class Browser
 
 1.7.13 browser.target()
 -----------------------
@@ -994,7 +994,7 @@ File: puppeteer.info,  Node: browsertarget,  Next: browsertargets,  Prev: browse
 A target associated with the browser.
 
 
-File: puppeteer.info,  Node: browsertargets,  Next: browseruserAgent,  Prev: browsertarget,  Up: class Browser
+File: puppeteer.info,  Node: browser.targets,  Next: browser.userAgent,  Prev: browser.target,  Up: class Browser
 
 1.7.14 browser.targets()
 ------------------------
@@ -1008,7 +1008,7 @@ browser contexts, the method will return an array with all the targets
 in all browser contexts.
 
 
-File: puppeteer.info,  Node: browseruserAgent,  Next: browserversion,  Prev: browsertargets,  Up: class Browser
+File: puppeteer.info,  Node: browser.userAgent,  Next: browser.version,  Prev: browser.targets,  Up: class Browser
 
 1.7.15 browser.userAgent()
 --------------------------
@@ -1022,7 +1022,7 @@ File: puppeteer.info,  Node: browseruserAgent,  Next: browserversion,  Prev: bro
      page.setUserAgent: #pagesetuseragentuseragent.
 
 
-File: puppeteer.info,  Node: browserversion,  Next: browserwaitForTargetpredicate[ options],  Prev: browseruserAgent,  Up: class Browser
+File: puppeteer.info,  Node: browser.version,  Next: browser.waitForTargetpredicate[ options],  Prev: browser.userAgent,  Up: class Browser
 
 1.7.16 browser.version()
 ------------------------
@@ -1038,7 +1038,7 @@ File: puppeteer.info,  Node: browserversion,  Next: browserwaitForTargetpredicat
      releases of Chromium.
 
 
-File: puppeteer.info,  Node: browserwaitForTargetpredicate[ options],  Next: browserwsEndpoint,  Prev: browserversion,  Up: class Browser
+File: puppeteer.info,  Node: browser.waitForTargetpredicate[ options],  Next: browser.wsEndpoint,  Prev: browser.version,  Up: class Browser
 
 1.7.17 browser.waitForTarget(predicate[, options])
 --------------------------------------------------
@@ -1068,7 +1068,7 @@ await page.evaluate(() => window.open('https://www.example.com/'));
 const newWindowTarget = await browser.waitForTarget(target => target.url() === 'https://www.example.com/');
 
 
-File: puppeteer.info,  Node: browserwsEndpoint,  Prev: browserwaitForTargetpredicate[ options],  Up: class Browser
+File: puppeteer.info,  Node: browser.wsEndpoint,  Prev: browser.waitForTargetpredicate[ options],  Up: class Browser
 
 1.7.18 browser.wsEndpoint()
 ---------------------------
@@ -1122,15 +1122,15 @@ await context.close();
 * event ‘targetchanged' 1::
 * event ‘targetcreated' 1::
 * event ‘targetdestroyed' 1::
-* browserContextbrowser::
-* browserContextclearPermissionOverrides::
-* browserContextclose::
-* browserContextisIncognito::
-* browserContextnewPage::
-* browserContextoverridePermissionsorigin permissions::
-* browserContextpages::
-* browserContexttargets::
-* browserContextwaitForTargetpredicate[ options]::
+* browserContext.browser::
+* browserContext.clearPermissionOverrides::
+* browserContext.close::
+* browserContext.isIncognito::
+* browserContext.newPage::
+* browserContext.overridePermissionsorigin permissions::
+* browserContext.pages::
+* browserContext.targets::
+* browserContext.waitForTargetpredicate[ options]::
 
 
 File: puppeteer.info,  Node: event ‘targetchanged' 1,  Next: event ‘targetcreated' 1,  Up: class BrowserContext
@@ -1156,7 +1156,7 @@ example when a new page is opened by ‘window.open’
 ‘browserContext.newPage’: #browsercontextnewpage.
 
 
-File: puppeteer.info,  Node: event ‘targetdestroyed' 1,  Next: browserContextbrowser,  Prev: event ‘targetcreated' 1,  Up: class BrowserContext
+File: puppeteer.info,  Node: event ‘targetdestroyed' 1,  Next: browserContext.browser,  Prev: event ‘targetcreated' 1,  Up: class BrowserContext
 
 1.8.3 event: ‘targetdestroyed’ 1
 --------------------------------
@@ -1167,7 +1167,7 @@ Emitted when a target inside the browser context is destroyed, for
 example when a page is closed.
 
 
-File: puppeteer.info,  Node: browserContextbrowser,  Next: browserContextclearPermissionOverrides,  Prev: event ‘targetdestroyed' 1,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.browser,  Next: browserContext.clearPermissionOverrides,  Prev: event ‘targetdestroyed' 1,  Up: class BrowserContext
 
 1.8.4 browserContext.browser()
 ------------------------------
@@ -1177,7 +1177,7 @@ File: puppeteer.info,  Node: browserContextbrowser,  Next: browserContextclearPe
 The browser this browser context belongs to.
 
 
-File: puppeteer.info,  Node: browserContextclearPermissionOverrides,  Next: browserContextclose,  Prev: browserContextbrowser,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.clearPermissionOverrides,  Next: browserContext.close,  Prev: browserContext.browser,  Up: class BrowserContext
 
 1.8.5 browserContext.clearPermissionOverrides()
 -----------------------------------------------
@@ -1193,7 +1193,7 @@ context.overridePermissions('https://example.com', ['clipboard-read']);
 context.clearPermissionOverrides();
 
 
-File: puppeteer.info,  Node: browserContextclose,  Next: browserContextisIncognito,  Prev: browserContextclearPermissionOverrides,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.close,  Next: browserContext.isIncognito,  Prev: browserContext.clearPermissionOverrides,  Up: class BrowserContext
 
 1.8.6 browserContext.close()
 ----------------------------
@@ -1207,7 +1207,7 @@ context will be closed.
      *NOTE* only incognito browser contexts can be closed.
 
 
-File: puppeteer.info,  Node: browserContextisIncognito,  Next: browserContextnewPage,  Prev: browserContextclose,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.isIncognito,  Next: browserContext.newPage,  Prev: browserContext.close,  Up: class BrowserContext
 
 1.8.7 browserContext.isIncognito()
 ----------------------------------
@@ -1221,7 +1221,7 @@ context is the only non-incognito browser context.
      *NOTE* the default browser context cannot be closed.
 
 
-File: puppeteer.info,  Node: browserContextnewPage,  Next: browserContextoverridePermissionsorigin permissions,  Prev: browserContextisIncognito,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.newPage,  Next: browserContext.overridePermissionsorigin permissions,  Prev: browserContext.isIncognito,  Up: class BrowserContext
 
 1.8.8 browserContext.newPage()
 ------------------------------
@@ -1233,7 +1233,7 @@ File: puppeteer.info,  Node: browserContextnewPage,  Next: browserContextoverrid
 Creates a new page in the browser context.
 
 
-File: puppeteer.info,  Node: browserContextoverridePermissionsorigin permissions,  Next: browserContextpages,  Prev: browserContextnewPage,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.overridePermissionsorigin permissions,  Next: browserContext.pages,  Prev: browserContext.newPage,  Up: class BrowserContext
 
 1.8.9 browserContext.overridePermissions(origin, permissions)
 -------------------------------------------------------------
@@ -1273,7 +1273,7 @@ const context = browser.defaultBrowserContext();
 await context.overridePermissions('https://html5demos.com', ['geolocation']);
 
 
-File: puppeteer.info,  Node: browserContextpages,  Next: browserContexttargets,  Prev: browserContextoverridePermissionsorigin permissions,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.pages,  Next: browserContext.targets,  Prev: browserContext.overridePermissionsorigin permissions,  Up: class BrowserContext
 
 1.8.10 browserContext.pages()
 -----------------------------
@@ -1289,7 +1289,7 @@ File: puppeteer.info,  Node: browserContextpages,  Next: browserContexttargets, 
 An array of all pages inside the browser context.
 
 
-File: puppeteer.info,  Node: browserContexttargets,  Next: browserContextwaitForTargetpredicate[ options],  Prev: browserContextpages,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.targets,  Next: browserContext.waitForTargetpredicate[ options],  Prev: browserContext.pages,  Up: class BrowserContext
 
 1.8.11 browserContext.targets()
 -------------------------------
@@ -1301,7 +1301,7 @@ File: puppeteer.info,  Node: browserContexttargets,  Next: browserContextwaitFor
 An array of all active targets inside the browser context.
 
 
-File: puppeteer.info,  Node: browserContextwaitForTargetpredicate[ options],  Prev: browserContexttargets,  Up: class BrowserContext
+File: puppeteer.info,  Node: browserContext.waitForTargetpredicate[ options],  Prev: browserContext.targets,  Up: class BrowserContext
 
 1.8.12 browserContext.waitForTarget(predicate[, options])
 ---------------------------------------------------------
@@ -1395,75 +1395,75 @@ page.removeListener('request', logRequest);
 * event ‘response'::
 * event ‘workercreated'::
 * event ‘workerdestroyed'::
-* page$selector::
-* page$$selector::
-* page$$evalselector pageFunction[...args]::
-* page$evalselector pageFunction[...args]::
-* page$xexpression::
-* pageaccessibility::
-* pageaddScriptTagoptions::
-* pageaddStyleTagoptions::
-* pageauthenticatecredentials::
-* pagebringToFront::
-* pagebrowser::
-* pagebrowserContext::
-* pageclickselector[ options]::
-* pageclose[options]::
-* pagecontent::
-* pagecookies[...urls]::
-* pagecoverage::
-* pagedeleteCookie...cookies::
-* pageemulateoptions::
-* pageemulateMediamediaType::
-* pageevaluatepageFunction[...args]::
-* pageevaluateHandlepageFunction[...args]::
-* pageevaluateOnNewDocumentpageFunction[...args]::
-* pageexposeFunctionname puppeteerFunction::
-* pagefocusselector::
-* pageframes::
-* pagegoBack[options]::
-* pagegoForward[options]::
-* pagegotourl[ options]::
-* pagehoverselector::
-* pageisClosed::
-* pagekeyboard::
-* pagemainFrame::
-* pagemetrics::
-* pagemouse::
-* pagepdf[options]::
-* pagequeryObjectsprototypeHandle::
-* pagereload[options]::
-* pagescreenshot[options]::
-* pageselectselector...values::
-* pagesetBypassCSPenabled::
-* pagesetCacheEnabled[enabled]::
-* pagesetContenthtml[ options]::
-* pagesetCookie...cookies::
-* pagesetDefaultNavigationTimeouttimeout::
-* pagesetDefaultTimeouttimeout::
-* pagesetExtraHTTPHeadersheaders::
-* pagesetGeolocationoptions::
-* pagesetJavaScriptEnabledenabled::
-* pagesetOfflineModeenabled::
-* pagesetRequestInterceptionvalue::
-* pagesetUserAgentuserAgent::
-* pagesetViewportviewport::
-* pagetapselector::
-* pagetarget::
-* pagetitle::
-* pagetouchscreen::
-* pagetracing::
-* pagetypeselector text[ options]::
-* pageurl::
-* pageviewport::
-* pagewaitForselectorOrFunctionOrTimeout[ options[...args]]::
-* pagewaitForFunctionpageFunction[ options[...args]]::
-* pagewaitForNavigation[options]::
-* pagewaitForRequesturlOrPredicate[ options]::
-* pagewaitForResponseurlOrPredicate[ options]::
-* pagewaitForSelectorselector[ options]::
-* pagewaitForXPathxpath[ options]::
-* pageworkers::
+* page.$selector::
+* page.$$selector::
+* page.$$evalselector pageFunction[...args]::
+* page.$evalselector pageFunction[...args]::
+* page.$xexpression::
+* page.accessibility::
+* page.addScriptTag::
+* page.addStyleTag::
+* page.authenticatecredentials::
+* page.bringToFront::
+* page.browser::
+* page.browserContext::
+* page.clickselector[ options]::
+* page.close[options]::
+* page.content::
+* page.cookies[...urls]::
+* page.coverage::
+* page.deleteCookie...cookies::
+* page.emulate::
+* page.emulateMediamediaType::
+* page.evaluatepageFunction[...args]::
+* page.evaluateHandlepageFunction[...args]::
+* page.evaluateOnNewDocumentpageFunction[...args]::
+* page.exposeFunctionname puppeteerFunction::
+* page.focusselector::
+* page.frames::
+* page.goBack[options]::
+* page.goForward[options]::
+* page.gotourl[ options]::
+* page.hoverselector::
+* page.isClosed::
+* page.keyboard::
+* page.mainFrame::
+* page.metrics::
+* page.mouse::
+* page.pdf[options]::
+* page.queryObjectsprototypeHandle::
+* page.reload[options]::
+* page.screenshot[options]::
+* page.selectselector...values::
+* page.setBypassCSPenabled::
+* page.setCacheEnabled[enabled]::
+* page.setContenthtml[ options]::
+* page.setCookie...cookies::
+* page.setDefaultNavigationTimeouttimeout::
+* page.setDefaultTimeouttimeout::
+* page.setExtraHTTPHeadersheaders::
+* page.setGeolocation::
+* page.setJavaScriptEnabledenabled::
+* page.setOfflineModeenabled::
+* page.setRequestInterceptionvalue::
+* page.setUserAgentuserAgent::
+* page.setViewportviewport::
+* page.tapselector::
+* page.target::
+* page.title::
+* page.touchscreen::
+* page.tracing::
+* page.typeselector text[ options]::
+* page.url::
+* page.viewport::
+* page.waitForselectorOrFunctionOrTimeout[ options[...args]]::
+* page.waitForFunctionpageFunction[ options[...args]]::
+* page.waitForNavigation[options]::
+* page.waitForRequesturlOrPredicate[ options]::
+* page.waitForResponseurlOrPredicate[ options]::
+* page.waitForSelectorselector[ options]::
+* page.waitForXPathxpath[ options]::
+* page.workers::
 
 
 File: puppeteer.info,  Node: event ‘close',  Next: event ‘console',  Up: class Page
@@ -1680,7 +1680,7 @@ Emitted when a dedicated WebWorker
 spawned by the page.
 
 
-File: puppeteer.info,  Node: event ‘workerdestroyed',  Next: page$selector,  Prev: event ‘workercreated',  Up: class Page
+File: puppeteer.info,  Node: event ‘workerdestroyed',  Next: page.$selector,  Prev: event ‘workercreated',  Up: class Page
 
 1.9.18 event: ‘workerdestroyed’
 -------------------------------
@@ -1692,7 +1692,7 @@ Emitted when a dedicated WebWorker
 terminated.
 
 
-File: puppeteer.info,  Node: page$selector,  Next: page$$selector,  Prev: event ‘workerdestroyed',  Up: class Page
+File: puppeteer.info,  Node: page.$selector,  Next: page.$$selector,  Prev: event ‘workerdestroyed',  Up: class Page
 
 1.9.19 page.$(selector)
 -----------------------
@@ -1712,7 +1712,7 @@ matches the selector, the return value resolves to ‘null’.
 Shortcut for *note page.mainFrame().$(selector): #frameselector.
 
 
-File: puppeteer.info,  Node: page$$selector,  Next: page$$evalselector pageFunction[...args],  Prev: page$selector,  Up: class Page
+File: puppeteer.info,  Node: page.$$selector,  Next: page.$$evalselector pageFunction[...args],  Prev: page.$selector,  Up: class Page
 
 1.9.20 page.$$(selector)
 ------------------------
@@ -1733,7 +1733,7 @@ elements match the selector, the return value resolves to ‘[]’.
 Shortcut for *note page.mainFrame().$$(selector): #frameselector-1.
 
 
-File: puppeteer.info,  Node: page$$evalselector pageFunction[...args],  Next: page$evalselector pageFunction[...args],  Prev: page$$selector,  Up: class Page
+File: puppeteer.info,  Node: page.$$evalselector pageFunction[...args],  Next: page.$evalselector pageFunction[...args],  Prev: page.$$selector,  Up: class Page
 
 1.9.21 page.$$eval(selector, pageFunction[,...args])
 ----------------------------------------------------
@@ -1769,7 +1769,7 @@ Examples:
 const divsCounts = await page.$$eval('div', divs => divs.length);
 
 
-File: puppeteer.info,  Node: page$evalselector pageFunction[...args],  Next: page$xexpression,  Prev: page$$evalselector pageFunction[...args],  Up: class Page
+File: puppeteer.info,  Node: page.$evalselector pageFunction[...args],  Next: page.$xexpression,  Prev: page.$$evalselector pageFunction[...args],  Up: class Page
 
 1.9.22 page.$eval(selector, pageFunction[,...args])
 ---------------------------------------------------
@@ -1810,7 +1810,7 @@ Shortcut for *note page.mainFrame().$eval(selector:
 #frameevalselector-pagefunction-args.
 
 
-File: puppeteer.info,  Node: page$xexpression,  Next: pageaccessibility,  Prev: page$evalselector pageFunction[...args],  Up: class Page
+File: puppeteer.info,  Node: page.$xexpression,  Next: page.accessibility,  Prev: page.$evalselector pageFunction[...args],  Up: class Page
 
 1.9.23 page.$x(expression)
 --------------------------
@@ -1829,7 +1829,7 @@ The method evaluates the XPath expression.
 Shortcut for *note page.mainFrame().$x(expression): #framexexpression.
 
 
-File: puppeteer.info,  Node: pageaccessibility,  Next: pageaddScriptTagoptions,  Prev: page$xexpression,  Up: class Page
+File: puppeteer.info,  Node: page.accessibility,  Next: page.addScriptTag,  Prev: page.$xexpression,  Up: class Page
 
 1.9.24 page.accessibility
 -------------------------
@@ -1837,7 +1837,7 @@ File: puppeteer.info,  Node: pageaccessibility,  Next: pageaddScriptTagoptions, 
    • returns: <*note Accessibility: #class-accessibility.>
 
 
-File: puppeteer.info,  Node: pageaddScriptTagoptions,  Next: pageaddStyleTagoptions,  Prev: pageaccessibility,  Up: class Page
+File: puppeteer.info,  Node: page.addScriptTag,  Next: page.addStyleTag,  Prev: page.accessibility,  Up: class Page
 
 1.9.25 page.addScriptTag(options)
 ---------------------------------
@@ -1875,7 +1875,7 @@ Shortcut for *note page.mainFrame().addScriptTag(options):
 #frameaddscripttagoptions.
 
 
-File: puppeteer.info,  Node: pageaddStyleTagoptions,  Next: pageauthenticatecredentials,  Prev: pageaddScriptTagoptions,  Up: class Page
+File: puppeteer.info,  Node: page.addStyleTag,  Next: page.authenticatecredentials,  Prev: page.addScriptTag,  Up: class Page
 
 1.9.26 page.addStyleTag(options)
 --------------------------------
@@ -1908,7 +1908,7 @@ Shortcut for *note page.mainFrame().addStyleTag(options):
 #frameaddstyletagoptions.
 
 
-File: puppeteer.info,  Node: pageauthenticatecredentials,  Next: pagebringToFront,  Prev: pageaddStyleTagoptions,  Up: class Page
+File: puppeteer.info,  Node: page.authenticatecredentials,  Next: page.bringToFront,  Prev: page.addStyleTag,  Up: class Page
 
 1.9.27 page.authenticate(credentials)
 -------------------------------------
@@ -1929,7 +1929,7 @@ Provide credentials for HTTP authentication
 To disable authentication, pass ‘null’.
 
 
-File: puppeteer.info,  Node: pagebringToFront,  Next: pagebrowser,  Prev: pageauthenticatecredentials,  Up: class Page
+File: puppeteer.info,  Node: page.bringToFront,  Next: page.browser,  Prev: page.authenticatecredentials,  Up: class Page
 
 1.9.28 page.bringToFront()
 --------------------------
@@ -1940,7 +1940,7 @@ File: puppeteer.info,  Node: pagebringToFront,  Next: pagebrowser,  Prev: pageau
 Brings page to front (activates tab).
 
 
-File: puppeteer.info,  Node: pagebrowser,  Next: pagebrowserContext,  Prev: pagebringToFront,  Up: class Page
+File: puppeteer.info,  Node: page.browser,  Next: page.browserContext,  Prev: page.bringToFront,  Up: class Page
 
 1.9.29 page.browser()
 ---------------------
@@ -1950,7 +1950,7 @@ File: puppeteer.info,  Node: pagebrowser,  Next: pagebrowserContext,  Prev: page
 Get the browser the page belongs to.
 
 
-File: puppeteer.info,  Node: pagebrowserContext,  Next: pageclickselector[ options],  Prev: pagebrowser,  Up: class Page
+File: puppeteer.info,  Node: page.browserContext,  Next: page.clickselector[ options],  Prev: page.browser,  Up: class Page
 
 1.9.30 page.browserContext()
 ----------------------------
@@ -1960,7 +1960,7 @@ File: puppeteer.info,  Node: pagebrowserContext,  Next: pageclickselector[ optio
 Get the browser context that the page belongs to.
 
 
-File: puppeteer.info,  Node: pageclickselector[ options],  Next: pageclose[options],  Prev: pagebrowserContext,  Up: class Page
+File: puppeteer.info,  Node: page.clickselector[ options],  Next: page.close[options],  Prev: page.browserContext,  Up: class Page
 
 1.9.31 page.click(selector[, options])
 --------------------------------------
@@ -2008,7 +2008,7 @@ Shortcut for *note page.mainFrame().click(selector[:
 #frameclickselector-options.
 
 
-File: puppeteer.info,  Node: pageclose[options],  Next: pagecontent,  Prev: pageclickselector[ options],  Up: class Page
+File: puppeteer.info,  Node: page.close[options],  Next: page.content,  Prev: page.clickselector[ options],  Up: class Page
 
 1.9.32 page.close([options])
 ----------------------------
@@ -2031,7 +2031,7 @@ By default, ‘page.close()’ *does not* run beforeunload handlers.
      *note ‘dialog’: #event-dialog. event.
 
 
-File: puppeteer.info,  Node: pagecontent,  Next: pagecookies[...urls],  Prev: pageclose[options],  Up: class Page
+File: puppeteer.info,  Node: page.content,  Next: page.cookies[...urls],  Prev: page.close[options],  Up: class Page
 
 1.9.33 page.content()
 ---------------------
@@ -2043,7 +2043,7 @@ File: puppeteer.info,  Node: pagecontent,  Next: pagecookies[...urls],  Prev: pa
 Gets the full HTML contents of the page, including the doctype.
 
 
-File: puppeteer.info,  Node: pagecookies[...urls],  Next: pagecoverage,  Prev: pagecontent,  Up: class Page
+File: puppeteer.info,  Node: page.cookies[...urls],  Next: page.coverage,  Prev: page.content,  Up: class Page
 
 1.9.34 page.cookies([...urls])
 ------------------------------
@@ -2080,7 +2080,7 @@ page URL. If URLs are specified, only cookies for those URLs are
 returned.
 
 
-File: puppeteer.info,  Node: pagecoverage,  Next: pagedeleteCookie...cookies,  Prev: pagecookies[...urls],  Up: class Page
+File: puppeteer.info,  Node: page.coverage,  Next: page.deleteCookie...cookies,  Prev: page.cookies[...urls],  Up: class Page
 
 1.9.35 page.coverage
 --------------------
@@ -2088,7 +2088,7 @@ File: puppeteer.info,  Node: pagecoverage,  Next: pagedeleteCookie...cookies,  P
    • returns: <*note Coverage: #class-coverage.>
 
 
-File: puppeteer.info,  Node: pagedeleteCookie...cookies,  Next: pageemulateoptions,  Prev: pagecoverage,  Up: class Page
+File: puppeteer.info,  Node: page.deleteCookie...cookies,  Next: page.emulate,  Prev: page.coverage,  Up: class Page
 
 1.9.36 page.deleteCookie(...cookies)
 ------------------------------------
@@ -2109,7 +2109,7 @@ File: puppeteer.info,  Node: pagedeleteCookie...cookies,  Next: pageemulateoptio
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)>
 
 
-File: puppeteer.info,  Node: pageemulateoptions,  Next: pageemulateMediamediaType,  Prev: pagedeleteCookie...cookies,  Up: class Page
+File: puppeteer.info,  Node: page.emulate,  Next: page.emulateMediamediaType,  Prev: page.deleteCookie...cookies,  Up: class Page
 
 1.9.37 page.emulate(options)
 ----------------------------
@@ -2172,7 +2172,7 @@ DeviceDescriptors.js
 (https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
 
 
-File: puppeteer.info,  Node: pageemulateMediamediaType,  Next: pageevaluatepageFunction[...args],  Prev: pageemulateoptions,  Up: class Page
+File: puppeteer.info,  Node: page.emulateMediamediaType,  Next: page.evaluatepageFunction[...args],  Prev: page.emulate,  Up: class Page
 
 1.9.38 page.emulateMedia(mediaType)
 -----------------------------------
@@ -2186,7 +2186,7 @@ File: puppeteer.info,  Node: pageemulateMediamediaType,  Next: pageevaluatepageF
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)>
 
 
-File: puppeteer.info,  Node: pageevaluatepageFunction[...args],  Next: pageevaluateHandlepageFunction[...args],  Prev: pageemulateMediamediaType,  Up: class Page
+File: puppeteer.info,  Node: page.evaluatepageFunction[...args],  Next: page.evaluateHandlepageFunction[...args],  Prev: page.emulateMediamediaType,  Up: class Page
 
 1.9.39 page.evaluate(pageFunction[,...args])
 --------------------------------------------
@@ -2239,7 +2239,7 @@ Shortcut for *note page.mainFrame().evaluate(pageFunction:
 #frameevaluatepagefunction-args.
 
 
-File: puppeteer.info,  Node: pageevaluateHandlepageFunction[...args],  Next: pageevaluateOnNewDocumentpageFunction[...args],  Prev: pageevaluatepageFunction[...args],  Up: class Page
+File: puppeteer.info,  Node: page.evaluateHandlepageFunction[...args],  Next: page.evaluateOnNewDocumentpageFunction[...args],  Prev: page.evaluatepageFunction[...args],  Up: class Page
 
 1.9.40 page.evaluateHandle(pageFunction[,...args])
 --------------------------------------------------
@@ -2281,7 +2281,7 @@ page.mainFrame().executionContext().evaluateHandle(pageFunction:
 #executioncontextevaluatehandlepagefunction-args.
 
 
-File: puppeteer.info,  Node: pageevaluateOnNewDocumentpageFunction[...args],  Next: pageexposeFunctionname puppeteerFunction,  Prev: pageevaluateHandlepageFunction[...args],  Up: class Page
+File: puppeteer.info,  Node: page.evaluateOnNewDocumentpageFunction[...args],  Next: page.exposeFunctionname puppeteerFunction,  Prev: page.evaluateHandlepageFunction[...args],  Up: class Page
 
 1.9.41 page.evaluateOnNewDocument(pageFunction[,...args])
 ---------------------------------------------------------
@@ -2322,7 +2322,7 @@ const preloadFile = fs.readFileSync('./preload.js', 'utf8');
 await page.evaluateOnNewDocument(preloadFile);
 
 
-File: puppeteer.info,  Node: pageexposeFunctionname puppeteerFunction,  Next: pagefocusselector,  Prev: pageevaluateOnNewDocumentpageFunction[...args],  Up: class Page
+File: puppeteer.info,  Node: page.exposeFunctionname puppeteerFunction,  Next: page.focusselector,  Prev: page.evaluateOnNewDocumentpageFunction[...args],  Up: class Page
 
 1.9.42 page.exposeFunction(name, puppeteerFunction)
 ---------------------------------------------------
@@ -2395,7 +2395,7 @@ puppeteer.launch().then(async browser => {
 });
 
 
-File: puppeteer.info,  Node: pagefocusselector,  Next: pageframes,  Prev: pageexposeFunctionname puppeteerFunction,  Up: class Page
+File: puppeteer.info,  Node: page.focusselector,  Next: page.frames,  Prev: page.exposeFunctionname puppeteerFunction,  Up: class Page
 
 1.9.43 page.focus(selector)
 ---------------------------
@@ -2419,7 +2419,7 @@ Shortcut for *note page.mainFrame().focus(selector):
 #framefocusselector.
 
 
-File: puppeteer.info,  Node: pageframes,  Next: pagegoBack[options],  Prev: pagefocusselector,  Up: class Page
+File: puppeteer.info,  Node: page.frames,  Next: page.goBack[options],  Prev: page.focusselector,  Up: class Page
 
 1.9.44 page.frames()
 --------------------
@@ -2429,7 +2429,7 @@ File: puppeteer.info,  Node: pageframes,  Next: pagegoBack[options],  Prev: page
      Frame: #class-frame.>> An array of all frames attached to the page.
 
 
-File: puppeteer.info,  Node: pagegoBack[options],  Next: pagegoForward[options],  Prev: pageframes,  Up: class Page
+File: puppeteer.info,  Node: page.goBack[options],  Next: page.goForward[options],  Prev: page.frames,  Up: class Page
 
 1.9.45 page.goBack([options])
 -----------------------------
@@ -2475,7 +2475,7 @@ File: puppeteer.info,  Node: pagegoBack[options],  Next: pagegoForward[options],
 Navigate to the previous page in history.
 
 
-File: puppeteer.info,  Node: pagegoForward[options],  Next: pagegotourl[ options],  Prev: pagegoBack[options],  Up: class Page
+File: puppeteer.info,  Node: page.goForward[options],  Next: page.gotourl[ options],  Prev: page.goBack[options],  Up: class Page
 
 1.9.46 page.goForward([options])
 --------------------------------
@@ -2521,7 +2521,7 @@ File: puppeteer.info,  Node: pagegoForward[options],  Next: pagegotourl[ options
 Navigate to the next page in history.
 
 
-File: puppeteer.info,  Node: pagegotourl[ options],  Next: pagehoverselector,  Prev: pagegoForward[options],  Up: class Page
+File: puppeteer.info,  Node: page.gotourl[ options],  Next: page.hoverselector,  Prev: page.goForward[options],  Up: class Page
 
 1.9.47 page.goto(url[, options])
 --------------------------------
@@ -2588,7 +2588,7 @@ load.
 Shortcut for *note page.mainFrame().goto(url: #framegotourl-options.
 
 
-File: puppeteer.info,  Node: pagehoverselector,  Next: pageisClosed,  Prev: pagegotourl[ options],  Up: class Page
+File: puppeteer.info,  Node: page.hoverselector,  Next: page.isClosed,  Prev: page.gotourl[ options],  Up: class Page
 
 1.9.48 page.hover(selector)
 ---------------------------
@@ -2614,7 +2614,7 @@ Shortcut for *note page.mainFrame().hover(selector):
 #framehoverselector.
 
 
-File: puppeteer.info,  Node: pageisClosed,  Next: pagekeyboard,  Prev: pagehoverselector,  Up: class Page
+File: puppeteer.info,  Node: page.isClosed,  Next: page.keyboard,  Prev: page.hoverselector,  Up: class Page
 
 1.9.49 page.isClosed()
 ----------------------
@@ -2625,7 +2625,7 @@ File: puppeteer.info,  Node: pageisClosed,  Next: pagekeyboard,  Prev: pagehover
 Indicates that the page has been closed.
 
 
-File: puppeteer.info,  Node: pagekeyboard,  Next: pagemainFrame,  Prev: pageisClosed,  Up: class Page
+File: puppeteer.info,  Node: page.keyboard,  Next: page.mainFrame,  Prev: page.isClosed,  Up: class Page
 
 1.9.50 page.keyboard
 --------------------
@@ -2633,7 +2633,7 @@ File: puppeteer.info,  Node: pagekeyboard,  Next: pagemainFrame,  Prev: pageisCl
    • returns: <*note Keyboard: #class-keyboard.>
 
 
-File: puppeteer.info,  Node: pagemainFrame,  Next: pagemetrics,  Prev: pagekeyboard,  Up: class Page
+File: puppeteer.info,  Node: page.mainFrame,  Next: page.metrics,  Prev: page.keyboard,  Up: class Page
 
 1.9.51 page.mainFrame()
 -----------------------
@@ -2644,7 +2644,7 @@ Page is guaranteed to have a main frame which persists during
 navigations.
 
 
-File: puppeteer.info,  Node: pagemetrics,  Next: pagemouse,  Prev: pagemainFrame,  Up: class Page
+File: puppeteer.info,  Node: page.metrics,  Next: page.mouse,  Prev: page.mainFrame,  Up: class Page
 
 1.9.52 page.metrics()
 ---------------------
@@ -2697,7 +2697,7 @@ File: puppeteer.info,  Node: pagemetrics,  Next: pagemouse,  Prev: pagemainFrame
      increasing time in seconds since an arbitrary point in the past.
 
 
-File: puppeteer.info,  Node: pagemouse,  Next: pagepdf[options],  Prev: pagemetrics,  Up: class Page
+File: puppeteer.info,  Node: page.mouse,  Next: page.pdf[options],  Prev: page.metrics,  Up: class Page
 
 1.9.53 page.mouse
 -----------------
@@ -2705,7 +2705,7 @@ File: puppeteer.info,  Node: pagemouse,  Next: pagepdf[options],  Prev: pagemetr
    • returns: <*note Mouse: #class-mouse.>
 
 
-File: puppeteer.info,  Node: pagepdf[options],  Next: pagequeryObjectsprototypeHandle,  Prev: pagemouse,  Up: class Page
+File: puppeteer.info,  Node: page.pdf[options],  Next: page.queryObjectsprototypeHandle,  Prev: page.mouse,  Up: class Page
 
 1.9.54 page.pdf([options])
 --------------------------
@@ -2834,7 +2834,7 @@ The ‘format’ options are: - ‘Letter’: 8.5in x 11in - ‘Legal’: 8.5in 
      evaluated.  2.  Page styles are not visible inside templates.
 
 
-File: puppeteer.info,  Node: pagequeryObjectsprototypeHandle,  Next: pagereload[options],  Prev: pagepdf[options],  Up: class Page
+File: puppeteer.info,  Node: page.queryObjectsprototypeHandle,  Next: page.reload[options],  Prev: page.pdf[options],  Up: class Page
 
 1.9.55 page.queryObjects(prototypeHandle)
 -----------------------------------------
@@ -2865,7 +2865,7 @@ page.mainFrame().executionContext().queryObjects(prototypeHandle):
 #executioncontextqueryobjectsprototypehandle.
 
 
-File: puppeteer.info,  Node: pagereload[options],  Next: pagescreenshot[options],  Prev: pagequeryObjectsprototypeHandle,  Up: class Page
+File: puppeteer.info,  Node: page.reload[options],  Next: page.screenshot[options],  Prev: page.queryObjectsprototypeHandle,  Up: class Page
 
 1.9.56 page.reload([options])
 -----------------------------
@@ -2908,7 +2908,7 @@ File: puppeteer.info,  Node: pagereload[options],  Next: pagescreenshot[options]
      will resolve with the response of the last redirect.
 
 
-File: puppeteer.info,  Node: pagescreenshot[options],  Next: pageselectselector...values,  Prev: pagereload[options],  Up: class Page
+File: puppeteer.info,  Node: page.screenshot[options],  Next: page.selectselector...values,  Prev: page.reload[options],  Up: class Page
 
 1.9.57 page.screenshot([options])
 ---------------------------------
@@ -2973,7 +2973,7 @@ File: puppeteer.info,  Node: pagescreenshot[options],  Next: pageselectselector.
      https://crbug.com/741689 for discussion.
 
 
-File: puppeteer.info,  Node: pageselectselector...values,  Next: pagesetBypassCSPenabled,  Prev: pagescreenshot[options],  Up: class Page
+File: puppeteer.info,  Node: page.selectselector...values,  Next: page.setBypassCSPenabled,  Prev: page.screenshot[options],  Up: class Page
 
 1.9.58 page.select(selector,...values)
 --------------------------------------
@@ -3005,7 +3005,7 @@ Shortcut for *note page.mainFrame().select():
 #frameselectselector-values.
 
 
-File: puppeteer.info,  Node: pagesetBypassCSPenabled,  Next: pagesetCacheEnabled[enabled],  Prev: pageselectselector...values,  Up: class Page
+File: puppeteer.info,  Node: page.setBypassCSPenabled,  Next: page.setCacheEnabled[enabled],  Prev: page.selectselector...values,  Up: class Page
 
 1.9.59 page.setBypassCSP(enabled)
 ---------------------------------
@@ -3024,7 +3024,7 @@ Toggles bypassing page’s Content-Security-Policy.
      domain.
 
 
-File: puppeteer.info,  Node: pagesetCacheEnabled[enabled],  Next: pagesetContenthtml[ options],  Prev: pagesetBypassCSPenabled,  Up: class Page
+File: puppeteer.info,  Node: page.setCacheEnabled[enabled],  Next: page.setContenthtml[ options],  Prev: page.setBypassCSPenabled,  Up: class Page
 
 1.9.60 page.setCacheEnabled([enabled])
 --------------------------------------
@@ -3039,7 +3039,7 @@ Toggles ignoring cache for each request based on the enabled state.  By
 default, caching is enabled.
 
 
-File: puppeteer.info,  Node: pagesetContenthtml[ options],  Next: pagesetCookie...cookies,  Prev: pagesetCacheEnabled[enabled],  Up: class Page
+File: puppeteer.info,  Node: page.setContenthtml[ options],  Next: page.setCookie...cookies,  Prev: page.setCacheEnabled[enabled],  Up: class Page
 
 1.9.61 page.setContent(html[, options])
 ---------------------------------------
@@ -3082,7 +3082,7 @@ File: puppeteer.info,  Node: pagesetContenthtml[ options],  Next: pagesetCookie.
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)>
 
 
-File: puppeteer.info,  Node: pagesetCookie...cookies,  Next: pagesetDefaultNavigationTimeouttimeout,  Prev: pagesetContenthtml[ options],  Up: class Page
+File: puppeteer.info,  Node: page.setCookie...cookies,  Next: page.setDefaultNavigationTimeouttimeout,  Prev: page.setContenthtml[ options],  Up: class Page
 
 1.9.62 page.setCookie(...cookies)
 ---------------------------------
@@ -3116,7 +3116,7 @@ File: puppeteer.info,  Node: pagesetCookie...cookies,  Next: pagesetDefaultNavig
 await page.setCookie(cookieObject1, cookieObject2);
 
 
-File: puppeteer.info,  Node: pagesetDefaultNavigationTimeouttimeout,  Next: pagesetDefaultTimeouttimeout,  Prev: pagesetCookie...cookies,  Up: class Page
+File: puppeteer.info,  Node: page.setDefaultNavigationTimeouttimeout,  Next: page.setDefaultTimeouttimeout,  Prev: page.setCookie...cookies,  Up: class Page
 
 1.9.63 page.setDefaultNavigationTimeout(timeout)
 ------------------------------------------------
@@ -3138,7 +3138,7 @@ page.waitForNavigation([options]): #pagewaitfornavigationoptions.
      ‘page.setDefaultTimeout’: #pagesetdefaulttimeouttimeout.
 
 
-File: puppeteer.info,  Node: pagesetDefaultTimeouttimeout,  Next: pagesetExtraHTTPHeadersheaders,  Prev: pagesetDefaultNavigationTimeouttimeout,  Up: class Page
+File: puppeteer.info,  Node: page.setDefaultTimeouttimeout,  Next: page.setExtraHTTPHeadersheaders,  Prev: page.setDefaultNavigationTimeouttimeout,  Up: class Page
 
 1.9.64 page.setDefaultTimeout(timeout)
 --------------------------------------
@@ -3170,7 +3170,7 @@ page.waitForSelector(selector[: #pagewaitforselectorselector-options. -
      ‘page.setDefaultTimeout’: #pagesetdefaulttimeouttimeout.
 
 
-File: puppeteer.info,  Node: pagesetExtraHTTPHeadersheaders,  Next: pagesetGeolocationoptions,  Prev: pagesetDefaultTimeouttimeout,  Up: class Page
+File: puppeteer.info,  Node: page.setExtraHTTPHeadersheaders,  Next: page.setGeolocation,  Prev: page.setDefaultTimeouttimeout,  Up: class Page
 
 1.9.65 page.setExtraHTTPHeaders(headers)
 ----------------------------------------
@@ -3189,7 +3189,7 @@ initiates.
      headers in the outgoing requests.
 
 
-File: puppeteer.info,  Node: pagesetGeolocationoptions,  Next: pagesetJavaScriptEnabledenabled,  Prev: pagesetExtraHTTPHeadersheaders,  Up: class Page
+File: puppeteer.info,  Node: page.setGeolocation,  Next: page.setJavaScriptEnabledenabled,  Prev: page.setExtraHTTPHeadersheaders,  Up: class Page
 
 1.9.66 page.setGeolocation(options)
 -----------------------------------
@@ -3218,7 +3218,7 @@ await page.setGeolocation({latitude: 59.95, longitude: 30.31667});
      permissions for the page to read its geolocation.
 
 
-File: puppeteer.info,  Node: pagesetJavaScriptEnabledenabled,  Next: pagesetOfflineModeenabled,  Prev: pagesetGeolocationoptions,  Up: class Page
+File: puppeteer.info,  Node: page.setJavaScriptEnabledenabled,  Next: page.setOfflineModeenabled,  Prev: page.setGeolocation,  Up: class Page
 
 1.9.67 page.setJavaScriptEnabled(enabled)
 -----------------------------------------
@@ -3234,7 +3234,7 @@ File: puppeteer.info,  Node: pagesetJavaScriptEnabledenabled,  Next: pagesetOffl
      #pagegotourl-options.
 
 
-File: puppeteer.info,  Node: pagesetOfflineModeenabled,  Next: pagesetRequestInterceptionvalue,  Prev: pagesetJavaScriptEnabledenabled,  Up: class Page
+File: puppeteer.info,  Node: page.setOfflineModeenabled,  Next: page.setRequestInterceptionvalue,  Prev: page.setJavaScriptEnabledenabled,  Up: class Page
 
 1.9.68 page.setOfflineMode(enabled)
 -----------------------------------
@@ -3246,7 +3246,7 @@ File: puppeteer.info,  Node: pagesetOfflineModeenabled,  Next: pagesetRequestInt
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)>
 
 
-File: puppeteer.info,  Node: pagesetRequestInterceptionvalue,  Next: pagesetUserAgentuserAgent,  Prev: pagesetOfflineModeenabled,  Up: class Page
+File: puppeteer.info,  Node: page.setRequestInterceptionvalue,  Next: page.setUserAgentuserAgent,  Prev: page.setOfflineModeenabled,  Up: class Page
 
 1.9.69 page.setRequestInterception(value)
 -----------------------------------------
@@ -3283,7 +3283,7 @@ puppeteer.launch().then(async browser => {
      *NOTE* Enabling request interception disables page caching.
 
 
-File: puppeteer.info,  Node: pagesetUserAgentuserAgent,  Next: pagesetViewportviewport,  Prev: pagesetRequestInterceptionvalue,  Up: class Page
+File: puppeteer.info,  Node: page.setUserAgentuserAgent,  Next: page.setViewportviewport,  Prev: page.setRequestInterceptionvalue,  Up: class Page
 
 1.9.70 page.setUserAgent(userAgent)
 -----------------------------------
@@ -3296,7 +3296,7 @@ File: puppeteer.info,  Node: pagesetUserAgentuserAgent,  Next: pagesetViewportvi
      Promise which resolves when the user agent is set.
 
 
-File: puppeteer.info,  Node: pagesetViewportviewport,  Next: pagetapselector,  Prev: pagesetUserAgentuserAgent,  Up: class Page
+File: puppeteer.info,  Node: page.setViewportviewport,  Next: page.tapselector,  Prev: page.setUserAgentuserAgent,  Up: class Page
 
 1.9.71 page.setViewport(viewport)
 ---------------------------------
@@ -3335,7 +3335,7 @@ In the case of multiple pages in a single browser, each page can have
 its own viewport size.
 
 
-File: puppeteer.info,  Node: pagetapselector,  Next: pagetarget,  Prev: pagesetViewportviewport,  Up: class Page
+File: puppeteer.info,  Node: page.tapselector,  Next: page.target,  Prev: page.setViewportviewport,  Up: class Page
 
 1.9.72 page.tap(selector)
 -------------------------
@@ -3357,7 +3357,7 @@ in the center of the element.  If there’s no element matching
 Shortcut for *note page.mainFrame().tap(selector): #frametapselector.
 
 
-File: puppeteer.info,  Node: pagetarget,  Next: pagetitle,  Prev: pagetapselector,  Up: class Page
+File: puppeteer.info,  Node: page.target,  Next: page.title,  Prev: page.tapselector,  Up: class Page
 
 1.9.73 page.target()
 --------------------
@@ -3366,7 +3366,7 @@ File: puppeteer.info,  Node: pagetarget,  Next: pagetitle,  Prev: pagetapselecto
      created from.
 
 
-File: puppeteer.info,  Node: pagetitle,  Next: pagetouchscreen,  Prev: pagetarget,  Up: class Page
+File: puppeteer.info,  Node: page.title,  Next: page.touchscreen,  Prev: page.target,  Up: class Page
 
 1.9.74 page.title()
 -------------------
@@ -3379,7 +3379,7 @@ File: puppeteer.info,  Node: pagetitle,  Next: pagetouchscreen,  Prev: pagetarge
 Shortcut for *note page.mainFrame().title(): #frametitle.
 
 
-File: puppeteer.info,  Node: pagetouchscreen,  Next: pagetracing,  Prev: pagetitle,  Up: class Page
+File: puppeteer.info,  Node: page.touchscreen,  Next: page.tracing,  Prev: page.title,  Up: class Page
 
 1.9.75 page.touchscreen
 -----------------------
@@ -3387,7 +3387,7 @@ File: puppeteer.info,  Node: pagetouchscreen,  Next: pagetracing,  Prev: pagetit
    • returns: <*note Touchscreen: #class-touchscreen.>
 
 
-File: puppeteer.info,  Node: pagetracing,  Next: pagetypeselector text[ options],  Prev: pagetouchscreen,  Up: class Page
+File: puppeteer.info,  Node: page.tracing,  Next: page.typeselector text[ options],  Prev: page.touchscreen,  Up: class Page
 
 1.9.76 page.tracing
 -------------------
@@ -3395,7 +3395,7 @@ File: puppeteer.info,  Node: pagetracing,  Next: pagetypeselector text[ options]
    • returns: <*note Tracing: #class-tracing.>
 
 
-File: puppeteer.info,  Node: pagetypeselector text[ options],  Next: pageurl,  Prev: pagetracing,  Up: class Page
+File: puppeteer.info,  Node: page.typeselector text[ options],  Next: page.url,  Prev: page.tracing,  Up: class Page
 
 1.9.77 page.type(selector, text[, options])
 -------------------------------------------
@@ -3432,7 +3432,7 @@ Shortcut for *note page.mainFrame().type(selector:
 (options]))#frametypeselector-text-options.
 
 
-File: puppeteer.info,  Node: pageurl,  Next: pageviewport,  Prev: pagetypeselector text[ options],  Up: class Page
+File: puppeteer.info,  Node: page.url,  Next: page.viewport,  Prev: page.typeselector text[ options],  Up: class Page
 
 1.9.78 page.url()
 -----------------
@@ -3443,7 +3443,7 @@ File: puppeteer.info,  Node: pageurl,  Next: pageviewport,  Prev: pagetypeselect
 This is a shortcut for *note page.mainFrame().url(): #frameurl.
 
 
-File: puppeteer.info,  Node: pageviewport,  Next: pagewaitForselectorOrFunctionOrTimeout[ options[...args]],  Prev: pageurl,  Up: class Page
+File: puppeteer.info,  Node: page.viewport,  Next: page.waitForselectorOrFunctionOrTimeout[ options[...args]],  Prev: page.url,  Up: class Page
 
 1.9.79 page.viewport()
 ----------------------
@@ -3474,7 +3474,7 @@ File: puppeteer.info,  Node: pageviewport,  Next: pagewaitForselectorOrFunctionO
           ‘false’.
 
 
-File: puppeteer.info,  Node: pagewaitForselectorOrFunctionOrTimeout[ options[...args]],  Next: pagewaitForFunctionpageFunction[ options[...args]],  Prev: pageviewport,  Up: class Page
+File: puppeteer.info,  Node: page.waitForselectorOrFunctionOrTimeout[ options[...args]],  Next: page.waitForFunctionpageFunction[ options[...args]],  Prev: page.viewport,  Up: class Page
 
 1.9.80 page.waitFor(selectorOrFunctionOrTimeout[, options[,...args]])
 ---------------------------------------------------------------------
@@ -3531,7 +3531,7 @@ page.mainFrame().waitFor(selectorOrFunctionOrTimeout[:
 (...args]]))#framewaitforselectororfunctionortimeout-options-args.
 
 
-File: puppeteer.info,  Node: pagewaitForFunctionpageFunction[ options[...args]],  Next: pagewaitForNavigation[options],  Prev: pagewaitForselectorOrFunctionOrTimeout[ options[...args]],  Up: class Page
+File: puppeteer.info,  Node: page.waitForFunctionpageFunction[ options[...args]],  Next: page.waitForNavigation[options],  Prev: page.waitForselectorOrFunctionOrTimeout[ options[...args]],  Up: class Page
 
 1.9.81 page.waitForFunction(pageFunction[, options[,...args]])
 --------------------------------------------------------------
@@ -3597,7 +3597,7 @@ Shortcut for *note page.mainFrame().waitForFunction(pageFunction[:
 (...args]]))#framewaitforfunctionpagefunction-options-args.
 
 
-File: puppeteer.info,  Node: pagewaitForNavigation[options],  Next: pagewaitForRequesturlOrPredicate[ options],  Prev: pagewaitForFunctionpageFunction[ options[...args]],  Up: class Page
+File: puppeteer.info,  Node: page.waitForNavigation[options],  Next: page.waitForRequesturlOrPredicate[ options],  Prev: page.waitForFunctionpageFunction[ options[...args]],  Up: class Page
 
 1.9.82 page.waitForNavigation([options])
 ----------------------------------------
@@ -3658,7 +3658,7 @@ Shortcut for *note page.mainFrame().waitForNavigation(options):
 #framewaitfornavigationoptions.
 
 
-File: puppeteer.info,  Node: pagewaitForRequesturlOrPredicate[ options],  Next: pagewaitForResponseurlOrPredicate[ options],  Prev: pagewaitForNavigation[options],  Up: class Page
+File: puppeteer.info,  Node: page.waitForRequesturlOrPredicate[ options],  Next: page.waitForResponseurlOrPredicate[ options],  Prev: page.waitForNavigation[options],  Up: class Page
 
 1.9.83 page.waitForRequest(urlOrPredicate[, options])
 -----------------------------------------------------
@@ -3687,7 +3687,7 @@ const finalRequest = await page.waitForRequest(request => request.url() === 'htt
 return firstRequest.url();
 
 
-File: puppeteer.info,  Node: pagewaitForResponseurlOrPredicate[ options],  Next: pagewaitForSelectorselector[ options],  Prev: pagewaitForRequesturlOrPredicate[ options],  Up: class Page
+File: puppeteer.info,  Node: page.waitForResponseurlOrPredicate[ options],  Next: page.waitForSelectorselector[ options],  Prev: page.waitForRequesturlOrPredicate[ options],  Up: class Page
 
 1.9.84 page.waitForResponse(urlOrPredicate[, options])
 ------------------------------------------------------
@@ -3716,7 +3716,7 @@ const finalResponse = await page.waitForResponse(response => response.url() === 
 return finalResponse.ok();
 
 
-File: puppeteer.info,  Node: pagewaitForSelectorselector[ options],  Next: pagewaitForXPathxpath[ options],  Prev: pagewaitForResponseurlOrPredicate[ options],  Up: class Page
+File: puppeteer.info,  Node: page.waitForSelectorselector[ options],  Next: page.waitForXPathxpath[ options],  Prev: page.waitForResponseurlOrPredicate[ options],  Up: class Page
 
 1.9.85 page.waitForSelector(selector[, options])
 ------------------------------------------------
@@ -3778,7 +3778,7 @@ Shortcut for *note page.mainFrame().waitForSelector(selector[:
 #framewaitforselectorselector-options.
 
 
-File: puppeteer.info,  Node: pagewaitForXPathxpath[ options],  Next: pageworkers,  Prev: pagewaitForSelectorselector[ options],  Up: class Page
+File: puppeteer.info,  Node: page.waitForXPathxpath[ options],  Next: page.workers,  Prev: page.waitForSelectorselector[ options],  Up: class Page
 
 1.9.86 page.waitForXPath(xpath[, options])
 ------------------------------------------
@@ -3838,7 +3838,7 @@ Shortcut for *note page.mainFrame().waitForXPath(xpath[:
 #framewaitforxpathxpath-options.
 
 
-File: puppeteer.info,  Node: pageworkers,  Prev: pagewaitForXPathxpath[ options],  Up: class Page
+File: puppeteer.info,  Node: page.workers,  Prev: page.waitForXPathxpath[ options],  Up: class Page
 
 1.9.87 page.workers()
 ---------------------
@@ -3872,13 +3872,13 @@ for (const worker of page.workers())
 
 * Menu:
 
-* workerevaluatepageFunction[...args]::
-* workerevaluateHandlepageFunction[...args]::
-* workerexecutionContext::
-* workerurl::
+* worker.evaluatepageFunction[...args]::
+* worker.evaluateHandlepageFunction[...args]::
+* worker.executionContext::
+* worker.url::
 
 
-File: puppeteer.info,  Node: workerevaluatepageFunction[...args],  Next: workerevaluateHandlepageFunction[...args],  Up: class Worker
+File: puppeteer.info,  Node: worker.evaluatepageFunction[...args],  Next: worker.evaluateHandlepageFunction[...args],  Up: class Worker
 
 1.10.1 worker.evaluate(pageFunction[,...args])
 ----------------------------------------------
@@ -3913,7 +3913,7 @@ worker.executionContext()).evaluate(pageFunction:
 #executioncontextevaluatepagefunction-args.
 
 
-File: puppeteer.info,  Node: workerevaluateHandlepageFunction[...args],  Next: workerexecutionContext,  Prev: workerevaluatepageFunction[...args],  Up: class Worker
+File: puppeteer.info,  Node: worker.evaluateHandlepageFunction[...args],  Next: worker.executionContext,  Prev: worker.evaluatepageFunction[...args],  Up: class Worker
 
 1.10.2 worker.evaluateHandle(pageFunction[,...args])
 ----------------------------------------------------
@@ -3944,7 +3944,7 @@ worker.executionContext()).evaluateHandle(pageFunction:
 #executioncontextevaluatehandlepagefunction-args.
 
 
-File: puppeteer.info,  Node: workerexecutionContext,  Next: workerurl,  Prev: workerevaluateHandlepageFunction[...args],  Up: class Worker
+File: puppeteer.info,  Node: worker.executionContext,  Next: worker.url,  Prev: worker.evaluateHandlepageFunction[...args],  Up: class Worker
 
 1.10.3 worker.executionContext()
 --------------------------------
@@ -3954,7 +3954,7 @@ File: puppeteer.info,  Node: workerexecutionContext,  Next: workerurl,  Prev: wo
      ExecutionContext: #class-executioncontext.>>
 
 
-File: puppeteer.info,  Node: workerurl,  Prev: workerexecutionContext,  Up: class Worker
+File: puppeteer.info,  Node: worker.url,  Prev: worker.executionContext,  Up: class Worker
 
 1.10.4 worker.url()
 -------------------
@@ -3989,10 +3989,10 @@ exposing only the “interesting” nodes of the tree.
 
 * Menu:
 
-* accessibilitysnapshot[options]::
+* accessibility.snapshot[options]::
 
 
-File: puppeteer.info,  Node: accessibilitysnapshot[options],  Up: class Accessibility
+File: puppeteer.info,  Node: accessibility.snapshot[options],  Up: class Accessibility
 
 1.11.1 accessibility.snapshot([options])
 ----------------------------------------
@@ -4161,14 +4161,14 @@ await page.keyboard.up('Shift');
 
 * Menu:
 
-* keyboarddownkey[ options]::
-* keyboardpresskey[ options]::
-* keyboardsendCharacterchar::
-* keyboardtypetext[ options]::
-* keyboardupkey::
+* keyboard.downkey[ options]::
+* keyboard.presskey[ options]::
+* keyboard.sendCharacterchar::
+* keyboard.typetext[ options]::
+* keyboard.upkey::
 
 
-File: puppeteer.info,  Node: keyboarddownkey[ options],  Next: keyboardpresskey[ options],  Up: class Keyboard
+File: puppeteer.info,  Node: keyboard.downkey[ options],  Next: keyboard.presskey[ options],  Up: class Keyboard
 
 1.12.1 keyboard.down(key[, options])
 ------------------------------------
@@ -4206,7 +4206,7 @@ set to true.  To release the key, use *note ‘keyboard.up’:
      ‘Shift’ will type the text in upper case.
 
 
-File: puppeteer.info,  Node: keyboardpresskey[ options],  Next: keyboardsendCharacterchar,  Prev: keyboarddownkey[ options],  Up: class Keyboard
+File: puppeteer.info,  Node: keyboard.presskey[ options],  Next: keyboard.sendCharacterchar,  Prev: keyboard.downkey[ options],  Up: class Keyboard
 
 1.12.2 keyboard.press(key[, options])
 -------------------------------------
@@ -4238,7 +4238,7 @@ Shortcut for *note ‘keyboard.down’: #keyboarddownkey-options. and *note
 ‘keyboard.up’: #keyboardupkey.
 
 
-File: puppeteer.info,  Node: keyboardsendCharacterchar,  Next: keyboardtypetext[ options],  Prev: keyboardpresskey[ options],  Up: class Keyboard
+File: puppeteer.info,  Node: keyboard.sendCharacterchar,  Next: keyboard.typetext[ options],  Prev: keyboard.presskey[ options],  Up: class Keyboard
 
 1.12.3 keyboard.sendCharacter(char)
 -----------------------------------
@@ -4258,7 +4258,7 @@ page.keyboard.sendCharacter('嗨');
      Holding down ‘Shift’ will not type the text in upper case.
 
 
-File: puppeteer.info,  Node: keyboardtypetext[ options],  Next: keyboardupkey,  Prev: keyboardsendCharacterchar,  Up: class Keyboard
+File: puppeteer.info,  Node: keyboard.typetext[ options],  Next: keyboard.upkey,  Prev: keyboard.sendCharacterchar,  Up: class Keyboard
 
 1.12.4 keyboard.type(text[, options])
 -------------------------------------
@@ -4289,7 +4289,7 @@ page.keyboard.type('World', {delay: 100}); // Types slower, like a user
      ‘Shift’ will not type the text in upper case.
 
 
-File: puppeteer.info,  Node: keyboardupkey,  Prev: keyboardtypetext[ options],  Up: class Keyboard
+File: puppeteer.info,  Node: keyboard.upkey,  Prev: keyboard.typetext[ options],  Up: class Keyboard
 
 1.12.5 keyboard.up(key)
 -----------------------
@@ -4326,13 +4326,13 @@ await page.mouse.up();
 
 * Menu:
 
-* mouseclickx y[ options]::
-* mousedown[options]::
-* mousemovex y[ options]::
-* mouseup[options]::
+* mouse.clickx y[ options]::
+* mouse.down[options]::
+* mouse.movex y[ options]::
+* mouse.up[options]::
 
 
-File: puppeteer.info,  Node: mouseclickx y[ options],  Next: mousedown[options],  Up: class Mouse
+File: puppeteer.info,  Node: mouse.clickx y[ options],  Next: mouse.down[options],  Up: class Mouse
 
 1.13.1 mouse.click(x, y[, options])
 -----------------------------------
@@ -4360,7 +4360,7 @@ Shortcut for *note ‘mouse.move’: #mousemovex-y-options, *note
 ‘mouse.down’: #mousedownoptions. and *note ‘mouse.up’: #mouseupoptions.
 
 
-File: puppeteer.info,  Node: mousedown[options],  Next: mousemovex y[ options],  Prev: mouseclickx y[ options],  Up: class Mouse
+File: puppeteer.info,  Node: mouse.down[options],  Next: mouse.movex y[ options],  Prev: mouse.clickx y[ options],  Up: class Mouse
 
 1.13.2 mouse.down([options])
 ----------------------------
@@ -4379,7 +4379,7 @@ File: puppeteer.info,  Node: mousedown[options],  Next: mousemovex y[ options], 
 Dispatches a ‘mousedown’ event.
 
 
-File: puppeteer.info,  Node: mousemovex y[ options],  Next: mouseup[options],  Prev: mousedown[options],  Up: class Mouse
+File: puppeteer.info,  Node: mouse.movex y[ options],  Next: mouse.up[options],  Prev: mouse.down[options],  Up: class Mouse
 
 1.13.3 mouse.move(x, y[, options])
 ----------------------------------
@@ -4400,7 +4400,7 @@ File: puppeteer.info,  Node: mousemovex y[ options],  Next: mouseup[options],  P
 Dispatches a ‘mousemove’ event.
 
 
-File: puppeteer.info,  Node: mouseup[options],  Prev: mousemovex y[ options],  Up: class Mouse
+File: puppeteer.info,  Node: mouse.up[options],  Prev: mouse.movex y[ options],  Up: class Mouse
 
 1.13.4 mouse.up([options])
 --------------------------
@@ -4426,10 +4426,10 @@ File: puppeteer.info,  Node: class Touchscreen,  Next: class Tracing,  Prev: cla
 
 * Menu:
 
-* touchscreentapx y::
+* touchscreen.tapx y::
 
 
-File: puppeteer.info,  Node: touchscreentapx y,  Up: class Touchscreen
+File: puppeteer.info,  Node: touchscreen.tapx y,  Up: class Touchscreen
 
 1.14.1 touchscreen.tap(x, y)
 ----------------------------
@@ -4460,11 +4460,11 @@ await page.tracing.stop();
 
 * Menu:
 
-* tracingstartoptions::
-* tracingstop::
+* tracing.start::
+* tracing.stop::
 
 
-File: puppeteer.info,  Node: tracingstartoptions,  Next: tracingstop,  Up: class Tracing
+File: puppeteer.info,  Node: tracing.start,  Next: tracing.stop,  Up: class Tracing
 
 1.15.1 tracing.start(options)
 -----------------------------
@@ -4488,7 +4488,7 @@ File: puppeteer.info,  Node: tracingstartoptions,  Next: tracingstop,  Up: class
 Only one trace can be active at a time per browser.
 
 
-File: puppeteer.info,  Node: tracingstop,  Prev: tracingstartoptions,  Up: class Tracing
+File: puppeteer.info,  Node: tracing.stop,  Prev: tracing.start,  Up: class Tracing
 
 1.15.2 tracing.stop()
 ---------------------
@@ -4523,14 +4523,14 @@ puppeteer.launch().then(async browser => {
 
 * Menu:
 
-* dialogaccept[promptText]::
-* dialogdefaultValue::
-* dialogdismiss::
-* dialogmessage::
-* dialogtype::
+* dialog.accept[promptText]::
+* dialog.defaultValue::
+* dialog.dismiss::
+* dialog.message::
+* dialog.type::
 
 
-File: puppeteer.info,  Node: dialogaccept[promptText],  Next: dialogdefaultValue,  Up: class Dialog
+File: puppeteer.info,  Node: dialog.accept[promptText],  Next: dialog.defaultValue,  Up: class Dialog
 
 1.16.1 dialog.accept([promptText])
 ----------------------------------
@@ -4544,7 +4544,7 @@ File: puppeteer.info,  Node: dialogaccept[promptText],  Next: dialogdefaultValue
      Promise which resolves when the dialog has been accepted.
 
 
-File: puppeteer.info,  Node: dialogdefaultValue,  Next: dialogdismiss,  Prev: dialogaccept[promptText],  Up: class Dialog
+File: puppeteer.info,  Node: dialog.defaultValue,  Next: dialog.dismiss,  Prev: dialog.accept[promptText],  Up: class Dialog
 
 1.16.2 dialog.defaultValue()
 ----------------------------
@@ -4555,7 +4555,7 @@ File: puppeteer.info,  Node: dialogdefaultValue,  Next: dialogdismiss,  Prev: di
      returns empty string.
 
 
-File: puppeteer.info,  Node: dialogdismiss,  Next: dialogmessage,  Prev: dialogdefaultValue,  Up: class Dialog
+File: puppeteer.info,  Node: dialog.dismiss,  Next: dialog.message,  Prev: dialog.defaultValue,  Up: class Dialog
 
 1.16.3 dialog.dismiss()
 -----------------------
@@ -4565,7 +4565,7 @@ File: puppeteer.info,  Node: dialogdismiss,  Next: dialogmessage,  Prev: dialogd
      Promise which resolves when the dialog has been dismissed.
 
 
-File: puppeteer.info,  Node: dialogmessage,  Next: dialogtype,  Prev: dialogdismiss,  Up: class Dialog
+File: puppeteer.info,  Node: dialog.message,  Next: dialog.type,  Prev: dialog.dismiss,  Up: class Dialog
 
 1.16.4 dialog.message()
 -----------------------
@@ -4575,7 +4575,7 @@ File: puppeteer.info,  Node: dialogmessage,  Next: dialogtype,  Prev: dialogdism
      A message displayed in the dialog.
 
 
-File: puppeteer.info,  Node: dialogtype,  Prev: dialogmessage,  Up: class Dialog
+File: puppeteer.info,  Node: dialog.type,  Prev: dialog.message,  Up: class Dialog
 
 1.16.5 dialog.type()
 --------------------
@@ -4596,13 +4596,13 @@ page via the *note ‘console’: #event-console. event.
 
 * Menu:
 
-* consoleMessageargs::
-* consoleMessagelocation::
-* consoleMessagetext::
-* consoleMessagetype::
+* consoleMessage.args::
+* consoleMessage.location::
+* consoleMessage.text::
+* consoleMessage.type::
 
 
-File: puppeteer.info,  Node: consoleMessageargs,  Next: consoleMessagelocation,  Up: class ConsoleMessage
+File: puppeteer.info,  Node: consoleMessage.args,  Next: consoleMessage.location,  Up: class ConsoleMessage
 
 1.17.1 consoleMessage.args()
 ----------------------------
@@ -4612,7 +4612,7 @@ File: puppeteer.info,  Node: consoleMessageargs,  Next: consoleMessagelocation, 
      JSHandle: #class-jshandle.>>
 
 
-File: puppeteer.info,  Node: consoleMessagelocation,  Next: consoleMessagetext,  Prev: consoleMessageargs,  Up: class ConsoleMessage
+File: puppeteer.info,  Node: consoleMessage.location,  Next: consoleMessage.text,  Prev: consoleMessage.args,  Up: class ConsoleMessage
 
 1.17.2 consoleMessage.location()
 --------------------------------
@@ -4632,7 +4632,7 @@ File: puppeteer.info,  Node: consoleMessagelocation,  Next: consoleMessagetext, 
           otherwise.
 
 
-File: puppeteer.info,  Node: consoleMessagetext,  Next: consoleMessagetype,  Prev: consoleMessagelocation,  Up: class ConsoleMessage
+File: puppeteer.info,  Node: consoleMessage.text,  Next: consoleMessage.type,  Prev: consoleMessage.location,  Up: class ConsoleMessage
 
 1.17.3 consoleMessage.text()
 ----------------------------
@@ -4641,7 +4641,7 @@ File: puppeteer.info,  Node: consoleMessagetext,  Next: consoleMessagetype,  Pre
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)>
 
 
-File: puppeteer.info,  Node: consoleMessagetype,  Prev: consoleMessagetext,  Up: class ConsoleMessage
+File: puppeteer.info,  Node: consoleMessage.type,  Prev: consoleMessage.text,  Up: class ConsoleMessage
 
 1.17.4 consoleMessage.type()
 ----------------------------
@@ -4698,39 +4698,39 @@ An example of getting text from an iframe element:
 
 * Menu:
 
-* frame$selector::
-* frame$$selector::
-* frame$$evalselector pageFunction[...args]::
-* frame$evalselector pageFunction[...args]::
-* frame$xexpression::
-* frameaddScriptTagoptions::
-* frameaddStyleTagoptions::
-* framechildFrames::
-* frameclickselector[ options]::
-* framecontent::
-* frameevaluatepageFunction[...args]::
-* frameevaluateHandlepageFunction[...args]::
-* frameexecutionContext::
-* framefocusselector::
-* framegotourl[ options]::
-* framehoverselector::
-* frameisDetached::
-* framename::
-* frameparentFrame::
-* frameselectselector...values::
-* framesetContenthtml[ options]::
-* frametapselector::
-* frametitle::
-* frametypeselector text[ options]::
-* frameurl::
-* framewaitForselectorOrFunctionOrTimeout[ options[...args]]::
-* framewaitForFunctionpageFunction[ options[...args]]::
-* framewaitForNavigation[options]::
-* framewaitForSelectorselector[ options]::
-* framewaitForXPathxpath[ options]::
+* frame.$selector::
+* frame.$$selector::
+* frame.$$evalselector pageFunction[...args]::
+* frame.$evalselector pageFunction[...args]::
+* frame.$xexpression::
+* frame.addScriptTag::
+* frame.addStyleTag::
+* frame.childFrames::
+* frame.clickselector[ options]::
+* frame.content::
+* frame.evaluatepageFunction[...args]::
+* frame.evaluateHandlepageFunction[...args]::
+* frame.executionContext::
+* frame.focusselector::
+* frame.gotourl[ options]::
+* frame.hoverselector::
+* frame.isDetached::
+* frame.name::
+* frame.parentFrame::
+* frame.selectselector...values::
+* frame.setContenthtml[ options]::
+* frame.tapselector::
+* frame.title::
+* frame.typeselector text[ options]::
+* frame.url::
+* frame.waitForselectorOrFunctionOrTimeout[ options[...args]]::
+* frame.waitForFunctionpageFunction[ options[...args]]::
+* frame.waitForNavigation[options]::
+* frame.waitForSelectorselector[ options]::
+* frame.waitForXPathxpath[ options]::
 
 
-File: puppeteer.info,  Node: frame$selector,  Next: frame$$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$selector,  Next: frame.$$selector,  Up: class Frame
 
 1.18.1 frame.$(selector)
 ------------------------
@@ -4749,7 +4749,7 @@ The method queries frame for the selector.  If there’s no such element
 within the frame, the method will resolve to ‘null’.
 
 
-File: puppeteer.info,  Node: frame$$selector,  Next: frame$$evalselector pageFunction[...args],  Prev: frame$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$$selector,  Next: frame.$$evalselector pageFunction[...args],  Prev: frame.$selector,  Up: class Frame
 
 1.18.2 frame.$$(selector)
 -------------------------
@@ -4769,7 +4769,7 @@ The method runs ‘document.querySelectorAll’ within the frame.  If no
 elements match the selector, the return value resolves to ‘[]’.
 
 
-File: puppeteer.info,  Node: frame$$evalselector pageFunction[...args],  Next: frame$evalselector pageFunction[...args],  Prev: frame$$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$$evalselector pageFunction[...args],  Next: frame.$evalselector pageFunction[...args],  Prev: frame.$$selector,  Up: class Frame
 
 1.18.3 frame.$$eval(selector, pageFunction[,...args])
 -----------------------------------------------------
@@ -4805,7 +4805,7 @@ Examples:
 const divsCounts = await frame.$$eval('div', divs => divs.length);
 
 
-File: puppeteer.info,  Node: frame$evalselector pageFunction[...args],  Next: frame$xexpression,  Prev: frame$$evalselector pageFunction[...args],  Up: class Frame
+File: puppeteer.info,  Node: frame.$evalselector pageFunction[...args],  Next: frame.$xexpression,  Prev: frame.$$evalselector pageFunction[...args],  Up: class Frame
 
 1.18.4 frame.$eval(selector, pageFunction[,...args])
 ----------------------------------------------------
@@ -4843,7 +4843,7 @@ const preloadHref = await frame.$eval('link[rel=preload]', el => el.href);
 const html = await frame.$eval('.main-container', e => e.outerHTML);
 
 
-File: puppeteer.info,  Node: frame$xexpression,  Next: frameaddScriptTagoptions,  Prev: frame$evalselector pageFunction[...args],  Up: class Frame
+File: puppeteer.info,  Node: frame.$xexpression,  Next: frame.addScriptTag,  Prev: frame.$evalselector pageFunction[...args],  Up: class Frame
 
 1.18.5 frame.$x(expression)
 ---------------------------
@@ -4860,7 +4860,7 @@ File: puppeteer.info,  Node: frame$xexpression,  Next: frameaddScriptTagoptions,
 The method evaluates the XPath expression.
 
 
-File: puppeteer.info,  Node: frameaddScriptTagoptions,  Next: frameaddStyleTagoptions,  Prev: frame$xexpression,  Up: class Frame
+File: puppeteer.info,  Node: frame.addScriptTag,  Next: frame.addStyleTag,  Prev: frame.$xexpression,  Up: class Frame
 
 1.18.6 frame.addScriptTag(options)
 ----------------------------------
@@ -4895,7 +4895,7 @@ File: puppeteer.info,  Node: frameaddScriptTagoptions,  Next: frameaddStyleTagop
 Adds a ‘<script>’ tag into the page with the desired url or content.
 
 
-File: puppeteer.info,  Node: frameaddStyleTagoptions,  Next: framechildFrames,  Prev: frameaddScriptTagoptions,  Up: class Frame
+File: puppeteer.info,  Node: frame.addStyleTag,  Next: frame.childFrames,  Prev: frame.addScriptTag,  Up: class Frame
 
 1.18.7 frame.addStyleTag(options)
 ---------------------------------
@@ -4925,7 +4925,7 @@ Adds a ‘<link rel="stylesheet">’ tag into the page with the desired url
 or a ‘<style type="text/css">’ tag with the content.
 
 
-File: puppeteer.info,  Node: framechildFrames,  Next: frameclickselector[ options],  Prev: frameaddStyleTagoptions,  Up: class Frame
+File: puppeteer.info,  Node: frame.childFrames,  Next: frame.clickselector[ options],  Prev: frame.addStyleTag,  Up: class Frame
 
 1.18.8 frame.childFrames()
 --------------------------
@@ -4935,7 +4935,7 @@ File: puppeteer.info,  Node: framechildFrames,  Next: frameclickselector[ option
      Frame: #class-frame.>>
 
 
-File: puppeteer.info,  Node: frameclickselector[ options],  Next: framecontent,  Prev: framechildFrames,  Up: class Frame
+File: puppeteer.info,  Node: frame.clickselector[ options],  Next: frame.content,  Prev: frame.childFrames,  Up: class Frame
 
 1.18.9 frame.click(selector[, options])
 ---------------------------------------
@@ -4980,7 +4980,7 @@ const [response] = await Promise.all([
 ]);
 
 
-File: puppeteer.info,  Node: framecontent,  Next: frameevaluatepageFunction[...args],  Prev: frameclickselector[ options],  Up: class Frame
+File: puppeteer.info,  Node: frame.content,  Next: frame.evaluatepageFunction[...args],  Prev: frame.clickselector[ options],  Up: class Frame
 
 1.18.10 frame.content()
 -----------------------
@@ -4992,7 +4992,7 @@ File: puppeteer.info,  Node: framecontent,  Next: frameevaluatepageFunction[...a
 Gets the full HTML contents of the frame, including the doctype.
 
 
-File: puppeteer.info,  Node: frameevaluatepageFunction[...args],  Next: frameevaluateHandlepageFunction[...args],  Prev: framecontent,  Up: class Frame
+File: puppeteer.info,  Node: frame.evaluatepageFunction[...args],  Next: frame.evaluateHandlepageFunction[...args],  Prev: frame.content,  Up: class Frame
 
 1.18.11 frame.evaluate(pageFunction[,...args])
 ----------------------------------------------
@@ -5039,7 +5039,7 @@ const html = await frame.evaluate(body => body.innerHTML, bodyHandle);
 await bodyHandle.dispose();
 
 
-File: puppeteer.info,  Node: frameevaluateHandlepageFunction[...args],  Next: frameexecutionContext,  Prev: frameevaluatepageFunction[...args],  Up: class Frame
+File: puppeteer.info,  Node: frame.evaluateHandlepageFunction[...args],  Next: frame.executionContext,  Prev: frame.evaluatepageFunction[...args],  Up: class Frame
 
 1.18.12 frame.evaluateHandle(pageFunction[,...args])
 ----------------------------------------------------
@@ -5080,7 +5080,7 @@ console.log(await resultHandle.jsonValue());
 await resultHandle.dispose();
 
 
-File: puppeteer.info,  Node: frameexecutionContext,  Next: framefocusselector,  Prev: frameevaluateHandlepageFunction[...args],  Up: class Frame
+File: puppeteer.info,  Node: frame.executionContext,  Next: frame.focusselector,  Prev: frame.evaluateHandlepageFunction[...args],  Up: class Frame
 
 1.18.13 frame.executionContext()
 --------------------------------
@@ -5092,7 +5092,7 @@ File: puppeteer.info,  Node: frameexecutionContext,  Next: framefocusselector,  
 Returns promise that resolves to the frame’s default execution context.
 
 
-File: puppeteer.info,  Node: framefocusselector,  Next: framegotourl[ options],  Prev: frameexecutionContext,  Up: class Frame
+File: puppeteer.info,  Node: frame.focusselector,  Next: frame.gotourl[ options],  Prev: frame.executionContext,  Up: class Frame
 
 1.18.14 frame.focus(selector)
 -----------------------------
@@ -5113,7 +5113,7 @@ This method fetches an element with ‘selector’ and focuses it.  If
 there’s no element matching ‘selector’, the method throws an error.
 
 
-File: puppeteer.info,  Node: framegotourl[ options],  Next: framehoverselector,  Prev: framefocusselector,  Up: class Frame
+File: puppeteer.info,  Node: frame.gotourl[ options],  Next: frame.hoverselector,  Prev: frame.focusselector,  Up: class Frame
 
 1.18.15 frame.goto(url[, options])
 ----------------------------------
@@ -5179,7 +5179,7 @@ load.
      (https://bugs.chromium.org/p/chromium/issues/detail?id=761295).
 
 
-File: puppeteer.info,  Node: framehoverselector,  Next: frameisDetached,  Prev: framegotourl[ options],  Up: class Frame
+File: puppeteer.info,  Node: frame.hoverselector,  Next: frame.isDetached,  Prev: frame.gotourl[ options],  Up: class Frame
 
 1.18.16 frame.hover(selector)
 -----------------------------
@@ -5202,7 +5202,7 @@ center of the element.  If there’s no element matching ‘selector’, the
 method throws an error.
 
 
-File: puppeteer.info,  Node: frameisDetached,  Next: framename,  Prev: framehoverselector,  Up: class Frame
+File: puppeteer.info,  Node: frame.isDetached,  Next: frame.name,  Prev: frame.hoverselector,  Up: class Frame
 
 1.18.17 frame.isDetached()
 --------------------------
@@ -5213,7 +5213,7 @@ File: puppeteer.info,  Node: frameisDetached,  Next: framename,  Prev: framehove
 Returns ‘true’ if the frame has been detached, or ‘false’ otherwise.
 
 
-File: puppeteer.info,  Node: framename,  Next: frameparentFrame,  Prev: frameisDetached,  Up: class Frame
+File: puppeteer.info,  Node: frame.name,  Next: frame.parentFrame,  Prev: frame.isDetached,  Up: class Frame
 
 1.18.18 frame.name()
 --------------------
@@ -5229,7 +5229,7 @@ If the name is empty, returns the id attribute instead.
      will not update if the attribute is changed later.
 
 
-File: puppeteer.info,  Node: frameparentFrame,  Next: frameselectselector...values,  Prev: framename,  Up: class Frame
+File: puppeteer.info,  Node: frame.parentFrame,  Next: frame.selectselector...values,  Prev: frame.name,  Up: class Frame
 
 1.18.19 frame.parentFrame()
 ---------------------------
@@ -5238,7 +5238,7 @@ File: puppeteer.info,  Node: frameparentFrame,  Next: frameselectselector...valu
      Detached frames and main frames return ‘null’.
 
 
-File: puppeteer.info,  Node: frameselectselector...values,  Next: framesetContenthtml[ options],  Prev: frameparentFrame,  Up: class Frame
+File: puppeteer.info,  Node: frame.selectselector...values,  Next: frame.setContenthtml[ options],  Prev: frame.parentFrame,  Up: class Frame
 
 1.18.20 frame.select(selector,...values)
 ----------------------------------------
@@ -5267,7 +5267,7 @@ frame.select('select#colors', 'blue'); // single selection
 frame.select('select#colors', 'red', 'green', 'blue'); // multiple selections
 
 
-File: puppeteer.info,  Node: framesetContenthtml[ options],  Next: frametapselector,  Prev: frameselectselector...values,  Up: class Frame
+File: puppeteer.info,  Node: frame.setContenthtml[ options],  Next: frame.tapselector,  Prev: frame.selectselector...values,  Up: class Frame
 
 1.18.21 frame.setContent(html[, options])
 -----------------------------------------
@@ -5310,7 +5310,7 @@ File: puppeteer.info,  Node: framesetContenthtml[ options],  Next: frametapselec
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)>
 
 
-File: puppeteer.info,  Node: frametapselector,  Next: frametitle,  Prev: framesetContenthtml[ options],  Up: class Frame
+File: puppeteer.info,  Node: frame.tapselector,  Next: frame.title,  Prev: frame.setContenthtml[ options],  Up: class Frame
 
 1.18.22 frame.tap(selector)
 ---------------------------
@@ -5330,7 +5330,7 @@ in the center of the element.  If there’s no element matching
 ‘selector’, the method throws an error.
 
 
-File: puppeteer.info,  Node: frametitle,  Next: frametypeselector text[ options],  Prev: frametapselector,  Up: class Frame
+File: puppeteer.info,  Node: frame.title,  Next: frame.typeselector text[ options],  Prev: frame.tapselector,  Up: class Frame
 
 1.18.23 frame.title()
 ---------------------
@@ -5341,7 +5341,7 @@ File: puppeteer.info,  Node: frametitle,  Next: frametypeselector text[ options]
      The page’s title.
 
 
-File: puppeteer.info,  Node: frametypeselector text[ options],  Next: frameurl,  Prev: frametitle,  Up: class Frame
+File: puppeteer.info,  Node: frame.typeselector text[ options],  Next: frame.url,  Prev: frame.title,  Up: class Frame
 
 1.18.24 frame.type(selector, text[, options])
 ---------------------------------------------
@@ -5375,7 +5375,7 @@ frame.type('#mytextarea', 'Hello'); // Types instantly
 frame.type('#mytextarea', 'World', {delay: 100}); // Types slower, like a user
 
 
-File: puppeteer.info,  Node: frameurl,  Next: framewaitForselectorOrFunctionOrTimeout[ options[...args]],  Prev: frametypeselector text[ options],  Up: class Frame
+File: puppeteer.info,  Node: frame.url,  Next: frame.waitForselectorOrFunctionOrTimeout[ options[...args]],  Prev: frame.typeselector text[ options],  Up: class Frame
 
 1.18.25 frame.url()
 -------------------
@@ -5386,7 +5386,7 @@ File: puppeteer.info,  Node: frameurl,  Next: framewaitForselectorOrFunctionOrTi
 Returns frame’s url.
 
 
-File: puppeteer.info,  Node: framewaitForselectorOrFunctionOrTimeout[ options[...args]],  Next: framewaitForFunctionpageFunction[ options[...args]],  Prev: frameurl,  Up: class Frame
+File: puppeteer.info,  Node: frame.waitForselectorOrFunctionOrTimeout[ options[...args]],  Next: frame.waitForFunctionpageFunction[ options[...args]],  Prev: frame.url,  Up: class Frame
 
 1.18.26 frame.waitFor(selectorOrFunctionOrTimeout[, options[,...args]])
 -----------------------------------------------------------------------
@@ -5439,7 +5439,7 @@ const selector = '.foo';
 await page.waitFor(selector => !!document.querySelector(selector), {}, selector);
 
 
-File: puppeteer.info,  Node: framewaitForFunctionpageFunction[ options[...args]],  Next: framewaitForNavigation[options],  Prev: framewaitForselectorOrFunctionOrTimeout[ options[...args]],  Up: class Frame
+File: puppeteer.info,  Node: frame.waitForFunctionpageFunction[ options[...args]],  Next: frame.waitForNavigation[options],  Prev: frame.waitForselectorOrFunctionOrTimeout[ options[...args]],  Up: class Frame
 
 1.18.27 frame.waitForFunction(pageFunction[, options[,...args]])
 ----------------------------------------------------------------
@@ -5502,7 +5502,7 @@ const selector = '.foo';
 await page.waitForFunction(selector => !!document.querySelector(selector), {}, selector);
 
 
-File: puppeteer.info,  Node: framewaitForNavigation[options],  Next: framewaitForSelectorselector[ options],  Prev: framewaitForFunctionpageFunction[ options[...args]],  Up: class Frame
+File: puppeteer.info,  Node: frame.waitForNavigation[options],  Next: frame.waitForSelectorselector[ options],  Prev: frame.waitForFunctionpageFunction[ options[...args]],  Up: class Frame
 
 1.18.28 frame.waitForNavigation([options])
 ------------------------------------------
@@ -5560,7 +5560,7 @@ const [response] = await Promise.all([
 the URL is considered a navigation.
 
 
-File: puppeteer.info,  Node: framewaitForSelectorselector[ options],  Next: framewaitForXPathxpath[ options],  Prev: framewaitForNavigation[options],  Up: class Frame
+File: puppeteer.info,  Node: frame.waitForSelectorselector[ options],  Next: frame.waitForXPathxpath[ options],  Prev: frame.waitForNavigation[options],  Up: class Frame
 
 1.18.29 frame.waitForSelector(selector[, options])
 --------------------------------------------------
@@ -5619,7 +5619,7 @@ puppeteer.launch().then(async browser => {
 });
 
 
-File: puppeteer.info,  Node: framewaitForXPathxpath[ options],  Prev: framewaitForSelectorselector[ options],  Up: class Frame
+File: puppeteer.info,  Node: frame.waitForXPathxpath[ options],  Prev: frame.waitForSelectorselector[ options],  Up: class Frame
 
 1.18.30 frame.waitForXPath(xpath[, options])
 --------------------------------------------
@@ -5695,13 +5695,13 @@ Besides pages, execution contexts can be found in workers
 
 * Menu:
 
-* executionContextevaluatepageFunction[...args]::
-* executionContextevaluateHandlepageFunction[...args]::
-* executionContextframe::
-* executionContextqueryObjectsprototypeHandle::
+* executionContext.evaluatepageFunction[...args]::
+* executionContext.evaluateHandlepageFunction[...args]::
+* executionContext.frame::
+* executionContext.queryObjectsprototypeHandle::
 
 
-File: puppeteer.info,  Node: executionContextevaluatepageFunction[...args],  Next: executionContextevaluateHandlepageFunction[...args],  Up: class ExecutionContext
+File: puppeteer.info,  Node: executionContext.evaluatepageFunction[...args],  Next: executionContext.evaluateHandlepageFunction[...args],  Up: class ExecutionContext
 
 1.19.1 executionContext.evaluate(pageFunction[,...args])
 --------------------------------------------------------
@@ -5751,7 +5751,7 @@ await twoHandle.dispose();
 console.log(result); // prints '3'.
 
 
-File: puppeteer.info,  Node: executionContextevaluateHandlepageFunction[...args],  Next: executionContextframe,  Prev: executionContextevaluatepageFunction[...args],  Up: class ExecutionContext
+File: puppeteer.info,  Node: executionContext.evaluateHandlepageFunction[...args],  Next: executionContext.frame,  Prev: executionContext.evaluatepageFunction[...args],  Up: class ExecutionContext
 
 1.19.2 executionContext.evaluateHandle(pageFunction[,...args])
 --------------------------------------------------------------
@@ -5796,7 +5796,7 @@ await aHandle.dispose();
 await resultHandle.dispose();
 
 
-File: puppeteer.info,  Node: executionContextframe,  Next: executionContextqueryObjectsprototypeHandle,  Prev: executionContextevaluateHandlepageFunction[...args],  Up: class ExecutionContext
+File: puppeteer.info,  Node: executionContext.frame,  Next: executionContext.queryObjectsprototypeHandle,  Prev: executionContext.evaluateHandlepageFunction[...args],  Up: class ExecutionContext
 
 1.19.3 executionContext.frame()
 -------------------------------
@@ -5809,7 +5809,7 @@ File: puppeteer.info,  Node: executionContextframe,  Next: executionContextquery
      not associated with frames.
 
 
-File: puppeteer.info,  Node: executionContextqueryObjectsprototypeHandle,  Prev: executionContextframe,  Up: class ExecutionContext
+File: puppeteer.info,  Node: executionContext.queryObjectsprototypeHandle,  Prev: executionContext.frame,  Up: class ExecutionContext
 
 1.19.4 executionContext.queryObjects(prototypeHandle)
 -----------------------------------------------------
@@ -5860,15 +5860,15 @@ JSHandle instances can be used as arguments in *note ‘page.$eval()’:
 
 * Menu:
 
-* jsHandleasElement::
-* jsHandledispose::
-* jsHandleexecutionContext::
-* jsHandlegetProperties::
-* jsHandlegetPropertypropertyName::
-* jsHandlejsonValue::
+* jsHandle.asElement::
+* jsHandle.dispose::
+* jsHandle.executionContext::
+* jsHandle.getProperties::
+* jsHandle.getPropertypropertyName::
+* jsHandle.jsonValue::
 
 
-File: puppeteer.info,  Node: jsHandleasElement,  Next: jsHandledispose,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.asElement,  Next: jsHandle.dispose,  Up: class JSHandle
 
 1.20.1 jsHandle.asElement()
 ---------------------------
@@ -5879,7 +5879,7 @@ Returns either ‘null’ or the object handle itself, if the object handle
 is an instance of *note ElementHandle: #class-elementhandle.
 
 
-File: puppeteer.info,  Node: jsHandledispose,  Next: jsHandleexecutionContext,  Prev: jsHandleasElement,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.dispose,  Next: jsHandle.executionContext,  Prev: jsHandle.asElement,  Up: class JSHandle
 
 1.20.2 jsHandle.dispose()
 -------------------------
@@ -5892,7 +5892,7 @@ File: puppeteer.info,  Node: jsHandledispose,  Next: jsHandleexecutionContext,  
 The ‘jsHandle.dispose’ method stops referencing the element handle.
 
 
-File: puppeteer.info,  Node: jsHandleexecutionContext,  Next: jsHandlegetProperties,  Prev: jsHandledispose,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.executionContext,  Next: jsHandle.getProperties,  Prev: jsHandle.dispose,  Up: class JSHandle
 
 1.20.3 jsHandle.executionContext()
 ----------------------------------
@@ -5902,7 +5902,7 @@ File: puppeteer.info,  Node: jsHandleexecutionContext,  Next: jsHandlegetPropert
 Returns execution context the handle belongs to.
 
 
-File: puppeteer.info,  Node: jsHandlegetProperties,  Next: jsHandlegetPropertypropertyName,  Prev: jsHandleexecutionContext,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.getProperties,  Next: jsHandle.getPropertypropertyName,  Prev: jsHandle.executionContext,  Up: class JSHandle
 
 1.20.4 jsHandle.getProperties()
 -------------------------------
@@ -5923,7 +5923,7 @@ const documentHandle = properties.get('document');
 await handle.dispose();
 
 
-File: puppeteer.info,  Node: jsHandlegetPropertypropertyName,  Next: jsHandlejsonValue,  Prev: jsHandlegetProperties,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.getPropertypropertyName,  Next: jsHandle.jsonValue,  Prev: jsHandle.getProperties,  Up: class JSHandle
 
 1.20.5 jsHandle.getProperty(propertyName)
 -----------------------------------------
@@ -5938,7 +5938,7 @@ File: puppeteer.info,  Node: jsHandlegetPropertypropertyName,  Next: jsHandlejso
 Fetches a single property from the referenced object.
 
 
-File: puppeteer.info,  Node: jsHandlejsonValue,  Prev: jsHandlegetPropertypropertyName,  Up: class JSHandle
+File: puppeteer.info,  Node: jsHandle.jsonValue,  Prev: jsHandle.getPropertypropertyName,  Up: class JSHandle
 
 1.20.6 jsHandle.jsonValue()
 ---------------------------
@@ -5987,33 +5987,33 @@ ElementHandle instances can be used as arguments in *note
 
 * Menu:
 
-* elementHandle$selector::
-* elementHandle$$selector::
-* elementHandle$$evalselector pageFunction[...args]::
-* elementHandle$evalselector pageFunction[...args]::
-* elementHandle$xexpression::
-* elementHandleasElement::
-* elementHandleboundingBox::
-* elementHandleboxModel::
-* elementHandleclick[options]::
-* elementHandlecontentFrame::
-* elementHandledispose::
-* elementHandleexecutionContext::
-* elementHandlefocus::
-* elementHandlegetProperties::
-* elementHandlegetPropertypropertyName::
-* elementHandlehover::
-* elementHandleisIntersectingViewport::
-* elementHandlejsonValue::
-* elementHandlepresskey[ options]::
-* elementHandlescreenshot[options]::
-* elementHandletap::
-* elementHandletoString::
-* elementHandletypetext[ options]::
-* elementHandleuploadFile...filePaths::
+* elementHandle.$selector::
+* elementHandle.$$selector::
+* elementHandle.$$evalselector pageFunction[...args]::
+* elementHandle.$evalselector pageFunction[...args]::
+* elementHandle.$xexpression::
+* elementHandle.asElement::
+* elementHandle.boundingBox::
+* elementHandle.boxModel::
+* elementHandle.click[options]::
+* elementHandle.contentFrame::
+* elementHandle.dispose::
+* elementHandle.executionContext::
+* elementHandle.focus::
+* elementHandle.getProperties::
+* elementHandle.getPropertypropertyName::
+* elementHandle.hover::
+* elementHandle.isIntersectingViewport::
+* elementHandle.jsonValue::
+* elementHandle.presskey[ options]::
+* elementHandle.screenshot[options]::
+* elementHandle.tap::
+* elementHandle.toString::
+* elementHandle.typetext[ options]::
+* elementHandle.uploadFile...filePaths::
 
 
-File: puppeteer.info,  Node: elementHandle$selector,  Next: elementHandle$$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$selector,  Next: elementHandle.$$selector,  Up: class ElementHandle
 
 1.21.1 elementHandle.$(selector)
 --------------------------------
@@ -6031,7 +6031,7 @@ The method runs ‘element.querySelector’ within the page.  If no element
 matches the selector, the return value resolves to ‘null’.
 
 
-File: puppeteer.info,  Node: elementHandle$$selector,  Next: elementHandle$$evalselector pageFunction[...args],  Prev: elementHandle$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$$selector,  Next: elementHandle.$$evalselector pageFunction[...args],  Prev: elementHandle.$selector,  Up: class ElementHandle
 
 1.21.2 elementHandle.$$(selector)
 ---------------------------------
@@ -6050,7 +6050,7 @@ The method runs ‘element.querySelectorAll’ within the page.  If no
 elements match the selector, the return value resolves to ‘[]’.
 
 
-File: puppeteer.info,  Node: elementHandle$$evalselector pageFunction[...args],  Next: elementHandle$evalselector pageFunction[...args],  Prev: elementHandle$$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$$evalselector pageFunction[...args],  Next: elementHandle.$evalselector pageFunction[...args],  Prev: elementHandle.$$selector,  Up: class ElementHandle
 
 1.21.3 elementHandle.$$eval(selector, pageFunction[,...args])
 -------------------------------------------------------------
@@ -6093,7 +6093,7 @@ const feedHandle = await page.$('.feed');
 expect(await feedHandle.$$eval('.tweet', nodes => nodes.map(n => n.innerText))).toEqual(['Hello!', 'Hi!']);
 
 
-File: puppeteer.info,  Node: elementHandle$evalselector pageFunction[...args],  Next: elementHandle$xexpression,  Prev: elementHandle$$evalselector pageFunction[...args],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$evalselector pageFunction[...args],  Next: elementHandle.$xexpression,  Prev: elementHandle.$$evalselector pageFunction[...args],  Up: class ElementHandle
 
 1.21.4 elementHandle.$eval(selector, pageFunction[,...args])
 ------------------------------------------------------------
@@ -6131,7 +6131,7 @@ expect(await tweetHandle.$eval('.like', node => node.innerText)).toBe('100');
 expect(await tweetHandle.$eval('.retweets', node => node.innerText)).toBe('10');
 
 
-File: puppeteer.info,  Node: elementHandle$xexpression,  Next: elementHandleasElement,  Prev: elementHandle$evalselector pageFunction[...args],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$xexpression,  Next: elementHandle.asElement,  Prev: elementHandle.$evalselector pageFunction[...args],  Up: class ElementHandle
 
 1.21.5 elementHandle.$x(expression)
 -----------------------------------
@@ -6150,7 +6150,7 @@ If there are no such elements, the method will resolve to an empty
 array.
 
 
-File: puppeteer.info,  Node: elementHandleasElement,  Next: elementHandleboundingBox,  Prev: elementHandle$xexpression,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.asElement,  Next: elementHandle.boundingBox,  Prev: elementHandle.$xexpression,  Up: class ElementHandle
 
 1.21.6 elementHandle.asElement()
 --------------------------------
@@ -6158,7 +6158,7 @@ File: puppeteer.info,  Node: elementHandleasElement,  Next: elementHandleboundin
    • returns: <*note ElementHandle: #class-elementhandle.>
 
 
-File: puppeteer.info,  Node: elementHandleboundingBox,  Next: elementHandleboxModel,  Prev: elementHandleasElement,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.boundingBox,  Next: elementHandle.boxModel,  Prev: elementHandle.asElement,  Up: class ElementHandle
 
 1.21.7 elementHandle.boundingBox()
 ----------------------------------
@@ -6183,7 +6183,7 @@ This method returns the bounding box of the element (relative to the
 main frame), or ‘null’ if the element is not visible.
 
 
-File: puppeteer.info,  Node: elementHandleboxModel,  Next: elementHandleclick[options],  Prev: elementHandleboundingBox,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.boxModel,  Next: elementHandle.click[options],  Prev: elementHandle.boundingBox,  Up: class ElementHandle
 
 1.21.8 elementHandle.boxModel()
 -------------------------------
@@ -6239,7 +6239,7 @@ not visible.  Boxes are represented as an array of points; each Point is
 an object ‘{x, y}’.  Box points are sorted clock-wise.
 
 
-File: puppeteer.info,  Node: elementHandleclick[options],  Next: elementHandlecontentFrame,  Prev: elementHandleboxModel,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.click[options],  Next: elementHandle.contentFrame,  Prev: elementHandle.boxModel,  Up: class ElementHandle
 
 1.21.9 elementHandle.click([options])
 -------------------------------------
@@ -6266,7 +6266,7 @@ page.mouse: #pagemouse. to click in the center of the element.  If the
 element is detached from DOM, the method throws an error.
 
 
-File: puppeteer.info,  Node: elementHandlecontentFrame,  Next: elementHandledispose,  Prev: elementHandleclick[options],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.contentFrame,  Next: elementHandle.dispose,  Prev: elementHandle.click[options],  Up: class ElementHandle
 
 1.21.10 elementHandle.contentFrame()
 ------------------------------------
@@ -6277,7 +6277,7 @@ File: puppeteer.info,  Node: elementHandlecontentFrame,  Next: elementHandledisp
      handles referencing iframe nodes, or null otherwise
 
 
-File: puppeteer.info,  Node: elementHandledispose,  Next: elementHandleexecutionContext,  Prev: elementHandlecontentFrame,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.dispose,  Next: elementHandle.executionContext,  Prev: elementHandle.contentFrame,  Up: class ElementHandle
 
 1.21.11 elementHandle.dispose()
 -------------------------------
@@ -6290,7 +6290,7 @@ File: puppeteer.info,  Node: elementHandledispose,  Next: elementHandleexecution
 The ‘elementHandle.dispose’ method stops referencing the element handle.
 
 
-File: puppeteer.info,  Node: elementHandleexecutionContext,  Next: elementHandlefocus,  Prev: elementHandledispose,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.executionContext,  Next: elementHandle.focus,  Prev: elementHandle.dispose,  Up: class ElementHandle
 
 1.21.12 elementHandle.executionContext()
 ----------------------------------------
@@ -6298,7 +6298,7 @@ File: puppeteer.info,  Node: elementHandleexecutionContext,  Next: elementHandle
    • returns: <*note ExecutionContext: #class-executioncontext.>
 
 
-File: puppeteer.info,  Node: elementHandlefocus,  Next: elementHandlegetProperties,  Prev: elementHandleexecutionContext,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.focus,  Next: elementHandle.getProperties,  Prev: elementHandle.executionContext,  Up: class ElementHandle
 
 1.21.13 elementHandle.focus()
 -----------------------------
@@ -6311,7 +6311,7 @@ Calls focus
 the element.
 
 
-File: puppeteer.info,  Node: elementHandlegetProperties,  Next: elementHandlegetPropertypropertyName,  Prev: elementHandlefocus,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.getProperties,  Next: elementHandle.getPropertypropertyName,  Prev: elementHandle.focus,  Up: class ElementHandle
 
 1.21.14 elementHandle.getProperties()
 -------------------------------------
@@ -6336,7 +6336,7 @@ for (const property of properties.values()) {
 children; // holds elementHandles to all children of document.body
 
 
-File: puppeteer.info,  Node: elementHandlegetPropertypropertyName,  Next: elementHandlehover,  Prev: elementHandlegetProperties,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.getPropertypropertyName,  Next: elementHandle.hover,  Prev: elementHandle.getProperties,  Up: class ElementHandle
 
 1.21.15 elementHandle.getProperty(propertyName)
 -----------------------------------------------
@@ -6351,7 +6351,7 @@ File: puppeteer.info,  Node: elementHandlegetPropertypropertyName,  Next: elemen
 Fetches a single property from the objectHandle.
 
 
-File: puppeteer.info,  Node: elementHandlehover,  Next: elementHandleisIntersectingViewport,  Prev: elementHandlegetPropertypropertyName,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.hover,  Next: elementHandle.isIntersectingViewport,  Prev: elementHandle.getPropertypropertyName,  Up: class ElementHandle
 
 1.21.16 elementHandle.hover()
 -----------------------------
@@ -6365,7 +6365,7 @@ page.mouse: #pagemouse. to hover over the center of the element.  If the
 element is detached from DOM, the method throws an error.
 
 
-File: puppeteer.info,  Node: elementHandleisIntersectingViewport,  Next: elementHandlejsonValue,  Prev: elementHandlehover,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.isIntersectingViewport,  Next: elementHandle.jsonValue,  Prev: elementHandle.hover,  Up: class ElementHandle
 
 1.21.17 elementHandle.isIntersectingViewport()
 ----------------------------------------------
@@ -6376,7 +6376,7 @@ File: puppeteer.info,  Node: elementHandleisIntersectingViewport,  Next: element
      Resolves to true if the element is visible in the current viewport.
 
 
-File: puppeteer.info,  Node: elementHandlejsonValue,  Next: elementHandlepresskey[ options],  Prev: elementHandleisIntersectingViewport,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.jsonValue,  Next: elementHandle.presskey[ options],  Prev: elementHandle.isIntersectingViewport,  Up: class ElementHandle
 
 1.21.18 elementHandle.jsonValue()
 ---------------------------------
@@ -6396,7 +6396,7 @@ in puppeteer.
      stringifiable.
 
 
-File: puppeteer.info,  Node: elementHandlepresskey[ options],  Next: elementHandlescreenshot[options],  Prev: elementHandlejsonValue,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.presskey[ options],  Next: elementHandle.screenshot[options],  Prev: elementHandle.jsonValue,  Up: class ElementHandle
 
 1.21.19 elementHandle.press(key[, options])
 -------------------------------------------
@@ -6429,7 +6429,7 @@ being held down, a ‘keypress’/‘input’ event will also be generated.  The
      ‘Shift’ will type the text in upper case.
 
 
-File: puppeteer.info,  Node: elementHandlescreenshot[options],  Next: elementHandletap,  Prev: elementHandlepresskey[ options],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.screenshot[options],  Next: elementHandle.tap,  Prev: elementHandle.presskey[ options],  Up: class ElementHandle
 
 1.21.20 elementHandle.screenshot([options])
 -------------------------------------------
@@ -6450,7 +6450,7 @@ element.  If the element is detached from DOM, the method throws an
 error.
 
 
-File: puppeteer.info,  Node: elementHandletap,  Next: elementHandletoString,  Prev: elementHandlescreenshot[options],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.tap,  Next: elementHandle.toString,  Prev: elementHandle.screenshot[options],  Up: class ElementHandle
 
 1.21.21 elementHandle.tap()
 ---------------------------
@@ -6466,7 +6466,7 @@ element.  If the element is detached from DOM, the method throws an
 error.
 
 
-File: puppeteer.info,  Node: elementHandletoString,  Next: elementHandletypetext[ options],  Prev: elementHandletap,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.toString,  Next: elementHandle.typetext[ options],  Prev: elementHandle.tap,  Up: class ElementHandle
 
 1.21.22 elementHandle.toString()
 --------------------------------
@@ -6475,7 +6475,7 @@ File: puppeteer.info,  Node: elementHandletoString,  Next: elementHandletypetext
      (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)>
 
 
-File: puppeteer.info,  Node: elementHandletypetext[ options],  Next: elementHandleuploadFile...filePaths,  Prev: elementHandletoString,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.typetext[ options],  Next: elementHandle.uploadFile...filePaths,  Prev: elementHandle.toString,  Up: class ElementHandle
 
 1.21.23 elementHandle.type(text[, options])
 -------------------------------------------
@@ -6509,7 +6509,7 @@ await elementHandle.type('some text');
 await elementHandle.press('Enter');
 
 
-File: puppeteer.info,  Node: elementHandleuploadFile...filePaths,  Prev: elementHandletypetext[ options],  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.uploadFile...filePaths,  Prev: elementHandle.typetext[ options],  Up: class ElementHandle
 
 1.21.24 elementHandle.uploadFile(...filePaths)
 ----------------------------------------------
@@ -6550,22 +6550,22 @@ to a redirected url.
 
 * Menu:
 
-* requestabort[errorCode]::
-* requestcontinue[overrides]::
-* requestfailure::
-* requestframe::
-* requestheaders::
-* requestisNavigationRequest::
-* requestmethod::
-* requestpostData::
-* requestredirectChain::
-* requestresourceType::
-* requestrespondresponse::
-* requestresponse::
-* requesturl::
+* request.abort[errorCode]::
+* request.continue[overrides]::
+* request.failure::
+* request.frame::
+* request.headers::
+* request.isNavigationRequest::
+* request.method::
+* request.postData::
+* request.redirectChain::
+* request.resourceType::
+* request.respondresponse::
+* request.response::
+* request.url::
 
 
-File: puppeteer.info,  Node: requestabort[errorCode],  Next: requestcontinue[overrides],  Up: class Request
+File: puppeteer.info,  Node: request.abort[errorCode],  Next: request.continue[overrides],  Up: class Request
 
 1.22.1 request.abort([errorCode])
 ---------------------------------
@@ -6607,7 +6607,7 @@ with ‘page.setRequestInterception’.  Exception is immediately thrown if
 the request interception is not enabled.
 
 
-File: puppeteer.info,  Node: requestcontinue[overrides],  Next: requestfailure,  Prev: requestabort[errorCode],  Up: class Request
+File: puppeteer.info,  Node: request.continue[overrides],  Next: request.failure,  Prev: request.abort[errorCode],  Up: class Request
 
 1.22.2 request.continue([overrides])
 ------------------------------------
@@ -6649,7 +6649,7 @@ page.on('request', request => {
 });
 
 
-File: puppeteer.info,  Node: requestfailure,  Next: requestframe,  Prev: requestcontinue[overrides],  Up: class Request
+File: puppeteer.info,  Node: request.failure,  Next: request.frame,  Prev: request.continue[overrides],  Up: class Request
 
 1.22.3 request.failure()
 ------------------------
@@ -6671,7 +6671,7 @@ page.on('requestfailed', request => {
 });
 
 
-File: puppeteer.info,  Node: requestframe,  Next: requestheaders,  Prev: requestfailure,  Up: class Request
+File: puppeteer.info,  Node: request.frame,  Next: request.headers,  Prev: request.failure,  Up: class Request
 
 1.22.4 request.frame()
 ----------------------
@@ -6681,7 +6681,7 @@ File: puppeteer.info,  Node: requestframe,  Next: requestheaders,  Prev: request
      pages.
 
 
-File: puppeteer.info,  Node: requestheaders,  Next: requestisNavigationRequest,  Prev: requestframe,  Up: class Request
+File: puppeteer.info,  Node: request.headers,  Next: request.isNavigationRequest,  Prev: request.frame,  Up: class Request
 
 1.22.5 request.headers()
 ------------------------
@@ -6692,7 +6692,7 @@ File: puppeteer.info,  Node: requestheaders,  Next: requestisNavigationRequest, 
      header names are lower-case.
 
 
-File: puppeteer.info,  Node: requestisNavigationRequest,  Next: requestmethod,  Prev: requestheaders,  Up: class Request
+File: puppeteer.info,  Node: request.isNavigationRequest,  Next: request.method,  Prev: request.headers,  Up: class Request
 
 1.22.6 request.isNavigationRequest()
 ------------------------------------
@@ -6703,7 +6703,7 @@ File: puppeteer.info,  Node: requestisNavigationRequest,  Next: requestmethod,  
 Whether this request is driving frame’s navigation.
 
 
-File: puppeteer.info,  Node: requestmethod,  Next: requestpostData,  Prev: requestisNavigationRequest,  Up: class Request
+File: puppeteer.info,  Node: request.method,  Next: request.postData,  Prev: request.isNavigationRequest,  Up: class Request
 
 1.22.7 request.method()
 -----------------------
@@ -6713,7 +6713,7 @@ File: puppeteer.info,  Node: requestmethod,  Next: requestpostData,  Prev: reque
      Request’s method (GET, POST, etc.)
 
 
-File: puppeteer.info,  Node: requestpostData,  Next: requestredirectChain,  Prev: requestmethod,  Up: class Request
+File: puppeteer.info,  Node: request.postData,  Next: request.redirectChain,  Prev: request.method,  Up: class Request
 
 1.22.8 request.postData()
 -------------------------
@@ -6723,7 +6723,7 @@ File: puppeteer.info,  Node: requestpostData,  Next: requestredirectChain,  Prev
      Request’s post body, if any.
 
 
-File: puppeteer.info,  Node: requestredirectChain,  Next: requestresourceType,  Prev: requestpostData,  Up: class Request
+File: puppeteer.info,  Node: request.redirectChain,  Next: request.resourceType,  Prev: request.postData,  Up: class Request
 
 1.22.9 request.redirectChain()
 ------------------------------
@@ -6755,7 +6755,7 @@ const chain = response.request().redirectChain();
 console.log(chain.length); // 0
 
 
-File: puppeteer.info,  Node: requestresourceType,  Next: requestrespondresponse,  Prev: requestredirectChain,  Up: class Request
+File: puppeteer.info,  Node: request.resourceType,  Next: request.respondresponse,  Prev: request.redirectChain,  Up: class Request
 
 1.22.10 request.resourceType()
 ------------------------------

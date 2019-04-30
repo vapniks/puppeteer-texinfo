@@ -251,16 +251,16 @@ puppeteer.launch().then(async browser => {
 @end verbatim
 
 @menu
-* puppeteerconnectoptions::
-* puppeteercreateBrowserFetcher[options]::
-* puppeteerdefaultArgs[options]::
-* puppeteerdevices::
-* puppeteererrors::
-* puppeteerexecutablePath::
-* puppeteerlaunch[options]::
+* puppeteer@asis{.}connect::
+* puppeteer@asis{.}createBrowserFetcher[options]::
+* puppeteer@asis{.}defaultArgs[options]::
+* puppeteer@asis{.}devices::
+* puppeteer@asis{.}errors::
+* puppeteer@asis{.}executablePath::
+* puppeteer@asis{.}launch[options]::
 @end menu
 
-@node puppeteerconnectoptions
+@node puppeteer@asis{.}connect
 @subsection puppeteer.connect(options)
 @findex puppeteer.connect
 @anchor{#puppeteerconnectoptions}
@@ -338,7 +338,7 @@ returns:
 
 This methods attaches Puppeteer to an existing Chromium instance.
 
-@node puppeteercreateBrowserFetcher[options]
+@node puppeteer@asis{.}createBrowserFetcher[options]
 @subsection puppeteer.createBrowserFetcher([options])
 @findex puppeteer.createBrowserFetcher
 @anchor{#puppeteercreatebrowserfetcheroptions}
@@ -369,7 +369,7 @@ Possible values are: @code{mac}, @code{win32}, @code{win64},
 returns: <@ref{#class-browserfetcher,BrowserFetcher}>
 @end itemize
 
-@node puppeteerdefaultArgs[options]
+@node puppeteer@asis{.}defaultArgs[options]
 @subsection puppeteer.defaultArgs([options])
 @findex puppeteer.defaultArgs
 @anchor{#puppeteerdefaultargsoptions}
@@ -413,7 +413,7 @@ returns:
 
 The default flags that Chromium will be launched with.
 
-@node puppeteerdevices
+@node puppeteer@asis{.}devices
 @subsection puppeteer.devices
 @findex puppeteer.devices
 @anchor{#puppeteerdevices}
@@ -446,7 +446,7 @@ puppeteer.launch().then(async browser => {
 obtained with @code{require('puppeteer/DeviceDescriptors')}.
 @end quotation
 
-@node puppeteererrors
+@node puppeteer@asis{.}errors
 @subsection puppeteer.errors
 @findex puppeteer.errors
 @anchor{#puppeteererrors}
@@ -489,7 +489,7 @@ try {
 obtained with @code{require('puppeteer/Errors')}.
 @end quotation
 
-@node puppeteerexecutablePath
+@node puppeteer@asis{.}executablePath
 @subsection puppeteer.executablePath()
 @findex puppeteer.executablePath
 @anchor{#puppeteerexecutablepath}
@@ -509,7 +509,7 @@ env variables. See @ref{#environment-variables,Environment Variables}
 for details.
 @end quotation
 
-@node puppeteerlaunch[options]
+@node puppeteer@asis{.}launch[options]
 @subsection puppeteer.launch([options])
 @findex puppeteer.launch
 @anchor{#puppeteerlaunchoptions}
@@ -701,15 +701,15 @@ directory.
 @end quotation
 
 @menu
-* browserFetchercanDownloadrevision::
-* browserFetcherdownloadrevision[ progressCallback]::
-* browserFetcherlocalRevisions::
-* browserFetcherplatform::
-* browserFetcherremoverevision::
-* browserFetcherrevisionInforevision::
+* browserFetcher@asis{.}canDownloadrevision::
+* browserFetcher@asis{.}downloadrevision[ progressCallback]::
+* browserFetcher@asis{.}localRevisions::
+* browserFetcher@asis{.}platform::
+* browserFetcher@asis{.}removerevision::
+* browserFetcher@asis{.}revisionInforevision::
 @end menu
 
-@node browserFetchercanDownloadrevision
+@node browserFetcher@asis{.}canDownloadrevision
 @subsection browserFetcher.canDownload(revision)
 @findex browserFetcher.canDownload
 @anchor{#browserfetchercandownloadrevision}
@@ -727,7 +727,7 @@ returns @code{true} if the revision could be downloaded from the host.
 The method initiates a HEAD request to check if the revision is
 available.
 
-@node browserFetcherdownloadrevision[ progressCallback]
+@node browserFetcher@asis{.}downloadrevision[ progressCallback]
 @subsection browserFetcher.download(revision[, progressCallback])
 @findex browserFetcher.download
 @anchor{#browserfetcherdownloadrevision-progresscallback}
@@ -783,7 +783,7 @@ whether the revision is locally available on disk
 The method initiates a GET request to download the revision from the
 host.
 
-@node browserFetcherlocalRevisions
+@node browserFetcher@asis{.}localRevisions
 @subsection browserFetcher.localRevisions()
 @findex browserFetcher.localRevisions
 @anchor{#browserfetcherlocalrevisions}
@@ -794,7 +794,7 @@ returns:
 A list of all revisions available locally on disk.
 @end itemize
 
-@node browserFetcherplatform
+@node browserFetcher@asis{.}platform
 @subsection browserFetcher.platform()
 @findex browserFetcher.platform
 @anchor{#browserfetcherplatform}
@@ -805,7 +805,7 @@ returns:
 One of @code{mac}, @code{linux}, @code{win32} or @code{win64}.
 @end itemize
 
-@node browserFetcherremoverevision
+@node browserFetcher@asis{.}removerevision
 @subsection browserFetcher.remove(revision)
 @findex browserFetcher.remove
 @anchor{#browserfetcherremoverevision}
@@ -821,7 +821,7 @@ returns:
 Resolves when the revision has been removed.
 @end itemize
 
-@node browserFetcherrevisionInforevision
+@node browserFetcher@asis{.}revisionInforevision
 @subsection browserFetcher.revisionInfo(revision)
 @findex browserFetcher.revisionInfo
 @anchor{#browserfetcherrevisioninforevision}
@@ -908,20 +908,20 @@ puppeteer.launch().then(async browser => {
 * event ‘targetchanged'::
 * event ‘targetcreated'::
 * event ‘targetdestroyed'::
-* browserbrowserContexts::
-* browserclose::
-* browsercreateIncognitoBrowserContext::
-* browserdefaultBrowserContext::
-* browserdisconnect::
-* browsernewPage::
-* browserpages::
-* browserprocess::
-* browsertarget::
-* browsertargets::
-* browseruserAgent::
-* browserversion::
-* browserwaitForTargetpredicate[ options]::
-* browserwsEndpoint::
+* browser@asis{.}browserContexts::
+* browser@asis{.}close::
+* browser@asis{.}createIncognitoBrowserContext::
+* browser@asis{.}defaultBrowserContext::
+* browser@asis{.}disconnect::
+* browser@asis{.}newPage::
+* browser@asis{.}pages::
+* browser@asis{.}process::
+* browser@asis{.}target::
+* browser@asis{.}targets::
+* browser@asis{.}userAgent::
+* browser@asis{.}version::
+* browser@asis{.}waitForTargetpredicate[ options]::
+* browser@asis{.}wsEndpoint::
 @end menu
 
 @node event ‘disconnected'
@@ -984,7 +984,7 @@ Emitted when a target is destroyed, for example when a page is closed.
 contexts.
 @end quotation
 
-@node browserbrowserContexts
+@node browser@asis{.}browserContexts
 @subsection browser.browserContexts()
 @findex browser.browserContexts
 @anchor{#browserbrowsercontexts}
@@ -998,7 +998,7 @@ Returns an array of all open browser contexts. In a newly created
 browser, this will return a single instance of
 @ref{#class-browsercontext,BrowserContext}.
 
-@node browserclose
+@node browser@asis{.}close
 @subsection browser.close()
 @findex browser.close
 @anchor{#browserclose}
@@ -1012,7 +1012,7 @@ Closes Chromium and all of its pages (if any were opened). The
 @ref{#class-browser,Browser} object itself is considered to be disposed
 and cannot be used anymore.
 
-@node browsercreateIncognitoBrowserContext
+@node browser@asis{.}createIncognitoBrowserContext
 @subsection browser.createIncognitoBrowserContext()
 @findex browser.createIncognitoBrowserContext
 @anchor{#browsercreateincognitobrowsercontext}
@@ -1035,7 +1035,7 @@ const page = await context.newPage();
 await page.goto('https://example.com');
 @end verbatim
 
-@node browserdefaultBrowserContext
+@node browser@asis{.}defaultBrowserContext
 @subsection browser.defaultBrowserContext()
 @findex browser.defaultBrowserContext
 @anchor{#browserdefaultbrowsercontext}
@@ -1047,7 +1047,7 @@ returns: <@ref{#class-browsercontext,BrowserContext}>
 Returns the default browser context. The default browser context can not
 be closed.
 
-@node browserdisconnect
+@node browser@asis{.}disconnect
 @subsection browser.disconnect()
 @findex browser.disconnect
 @anchor{#browserdisconnect}
@@ -1056,7 +1056,7 @@ running. After calling @code{disconnect}, the
 @ref{#class-browser,Browser} object is considered disposed and cannot be
 used anymore.
 
-@node browsernewPage
+@node browser@asis{.}newPage
 @subsection browser.newPage()
 @findex browser.newPage
 @anchor{#browsernewpage}
@@ -1069,7 +1069,7 @@ returns:
 Promise which resolves to a new @ref{#class-page,Page} object. The
 @ref{#class-page,Page} is created in a default browser context.
 
-@node browserpages
+@node browser@asis{.}pages
 @subsection browser.pages()
 @findex browser.pages
 @anchor{#browserpages}
@@ -1086,7 +1086,7 @@ An array of all pages inside the Browser. In case of multiple browser
 contexts, the method will return an array with all the pages in all
 browser contexts.
 
-@node browserprocess
+@node browser@asis{.}process
 @subsection browser.process()
 @findex browser.process
 @anchor{#browserprocess}
@@ -1098,7 +1098,7 @@ browser process. Returns @code{null} if the browser instance was created
 with @ref{#puppeteerconnectoptions,@code{puppeteer.connect}} method.
 @end itemize
 
-@node browsertarget
+@node browser@asis{.}target
 @subsection browser.target()
 @findex browser.target
 @anchor{#browsertarget}
@@ -1109,7 +1109,7 @@ returns: <@ref{#class-target,Target}>
 
 A target associated with the browser.
 
-@node browsertargets
+@node browser@asis{.}targets
 @subsection browser.targets()
 @findex browser.targets
 @anchor{#browsertargets}
@@ -1123,7 +1123,7 @@ An array of all active targets inside the Browser. In case of multiple
 browser contexts, the method will return an array with all the targets
 in all browser contexts.
 
-@node browseruserAgent
+@node browser@asis{.}userAgent
 @subsection browser.userAgent()
 @findex browser.userAgent
 @anchor{#browseruseragent}
@@ -1139,7 +1139,7 @@ Promise which resolves to the browser's original user agent.
 @ref{#pagesetuseragentuseragent,page.setUserAgent}
 @end quotation
 
-@node browserversion
+@node browser@asis{.}version
 @subsection browser.version()
 @findex browser.version
 @anchor{#browserversion}
@@ -1157,7 +1157,7 @@ For headless Chromium, this is similar to
 releases of Chromium.
 @end quotation
 
-@node browserwaitForTargetpredicate[ options]
+@node browser@asis{.}waitForTargetpredicate[ options]
 @subsection browser.waitForTarget(predicate[, options])
 @findex browser.waitForTarget
 @anchor{#browserwaitfortargetpredicate-options}
@@ -1193,7 +1193,7 @@ await page.evaluate(() => window.open('https://www.example.com/'));
 const newWindowTarget = await browser.waitForTarget(target => target.url() === 'https://www.example.com/');
 @end verbatim
 
-@node browserwsEndpoint
+@node browser@asis{.}wsEndpoint
 @subsection browser.wsEndpoint()
 @findex browser.wsEndpoint
 @anchor{#browserwsendpoint}
@@ -1251,15 +1251,15 @@ await context.close();
 * event ‘targetchanged' 1::
 * event ‘targetcreated' 1::
 * event ‘targetdestroyed' 1::
-* browserContextbrowser::
-* browserContextclearPermissionOverrides::
-* browserContextclose::
-* browserContextisIncognito::
-* browserContextnewPage::
-* browserContextoverridePermissionsorigin permissions::
-* browserContextpages::
-* browserContexttargets::
-* browserContextwaitForTargetpredicate[ options]::
+* browserContext@asis{.}browser::
+* browserContext@asis{.}clearPermissionOverrides::
+* browserContext@asis{.}close::
+* browserContext@asis{.}isIncognito::
+* browserContext@asis{.}newPage::
+* browserContext@asis{.}overridePermissionsorigin permissions::
+* browserContext@asis{.}pages::
+* browserContext@asis{.}targets::
+* browserContext@asis{.}waitForTargetpredicate[ options]::
 @end menu
 
 @node event ‘targetchanged' 1
@@ -1299,7 +1299,7 @@ or @ref{#browsercontextnewpage,@code{browserContext.newPage}}.
 Emitted when a target inside the browser context is destroyed, for
 example when a page is closed.
 
-@node browserContextbrowser
+@node browserContext@asis{.}browser
 @subsection browserContext.browser()
 @findex browserContext.browser
 @anchor{#browsercontextbrowser}
@@ -1310,7 +1310,7 @@ returns: <@ref{#class-browser,Browser}>
 
 The browser this browser context belongs to.
 
-@node browserContextclearPermissionOverrides
+@node browserContext@asis{.}clearPermissionOverrides
 @subsection browserContext.clearPermissionOverrides()
 @findex browserContext.clearPermissionOverrides
 @anchor{#browsercontextclearpermissionoverrides}
@@ -1329,7 +1329,7 @@ context.overridePermissions('https://example.com', ['clipboard-read']);
 context.clearPermissionOverrides();
 @end verbatim
 
-@node browserContextclose
+@node browserContext@asis{.}close
 @subsection browserContext.close()
 @findex browserContext.close
 @anchor{#browsercontextclose}
@@ -1346,7 +1346,7 @@ context will be closed.
 @strong{NOTE} only incognito browser contexts can be closed.
 @end quotation
 
-@node browserContextisIncognito
+@node browserContext@asis{.}isIncognito
 @subsection browserContext.isIncognito()
 @findex browserContext.isIncognito
 @anchor{#browsercontextisincognito}
@@ -1363,7 +1363,7 @@ is the only non-incognito browser context.
 @strong{NOTE} the default browser context cannot be closed.
 @end quotation
 
-@node browserContextnewPage
+@node browserContext@asis{.}newPage
 @subsection browserContext.newPage()
 @findex browserContext.newPage
 @anchor{#browsercontextnewpage}
@@ -1375,7 +1375,7 @@ returns:
 
 Creates a new page in the browser context.
 
-@node browserContextoverridePermissionsorigin permissions
+@node browserContext@asis{.}overridePermissionsorigin permissions
 @subsection browserContext.overridePermissions(origin, permissions)
 @findex browserContext.overridePermissions
 @anchor{#browsercontextoverridepermissionsorigin-permissions}
@@ -1437,7 +1437,7 @@ const context = browser.defaultBrowserContext();
 await context.overridePermissions('https://html5demos.com', ['geolocation']);
 @end verbatim
 
-@node browserContextpages
+@node browserContext@asis{.}pages
 @subsection browserContext.pages()
 @findex browserContext.pages
 @anchor{#browsercontextpages}
@@ -1452,7 +1452,7 @@ them using @ref{#targetpage,target.page()}.
 
 An array of all pages inside the browser context.
 
-@node browserContexttargets
+@node browserContext@asis{.}targets
 @subsection browserContext.targets()
 @findex browserContext.targets
 @anchor{#browsercontexttargets}
@@ -1464,7 +1464,7 @@ returns:
 
 An array of all active targets inside the browser context.
 
-@node browserContextwaitForTargetpredicate[ options]
+@node browserContext@asis{.}waitForTargetpredicate[ options]
 @subsection browserContext.waitForTarget(predicate[, options])
 @findex browserContext.waitForTarget
 @anchor{#browsercontextwaitfortargetpredicate-options}
@@ -1569,75 +1569,75 @@ page.removeListener('request', logRequest);
 * event ‘response'::
 * event ‘workercreated'::
 * event ‘workerdestroyed'::
-* page$selector::
-* page$$selector::
-* page$$evalselector pageFunction[@dots{}args]::
-* page$evalselector pageFunction[@dots{}args]::
-* page$xexpression::
-* pageaccessibility::
-* pageaddScriptTagoptions::
-* pageaddStyleTagoptions::
-* pageauthenticatecredentials::
-* pagebringToFront::
-* pagebrowser::
-* pagebrowserContext::
-* pageclickselector[ options]::
-* pageclose[options]::
-* pagecontent::
-* pagecookies[@dots{}urls]::
-* pagecoverage::
-* pagedeleteCookie@dots{}cookies::
-* pageemulateoptions::
-* pageemulateMediamediaType::
-* pageevaluatepageFunction[@dots{}args]::
-* pageevaluateHandlepageFunction[@dots{}args]::
-* pageevaluateOnNewDocumentpageFunction[@dots{}args]::
-* pageexposeFunctionname puppeteerFunction::
-* pagefocusselector::
-* pageframes::
-* pagegoBack[options]::
-* pagegoForward[options]::
-* pagegotourl[ options]::
-* pagehoverselector::
-* pageisClosed::
-* pagekeyboard::
-* pagemainFrame::
-* pagemetrics::
-* pagemouse::
-* pagepdf[options]::
-* pagequeryObjectsprototypeHandle::
-* pagereload[options]::
-* pagescreenshot[options]::
-* pageselectselector@dots{}values::
-* pagesetBypassCSPenabled::
-* pagesetCacheEnabled[enabled]::
-* pagesetContenthtml[ options]::
-* pagesetCookie@dots{}cookies::
-* pagesetDefaultNavigationTimeouttimeout::
-* pagesetDefaultTimeouttimeout::
-* pagesetExtraHTTPHeadersheaders::
-* pagesetGeolocationoptions::
-* pagesetJavaScriptEnabledenabled::
-* pagesetOfflineModeenabled::
-* pagesetRequestInterceptionvalue::
-* pagesetUserAgentuserAgent::
-* pagesetViewportviewport::
-* pagetapselector::
-* pagetarget::
-* pagetitle::
-* pagetouchscreen::
-* pagetracing::
-* pagetypeselector text[ options]::
-* pageurl::
-* pageviewport::
-* pagewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
-* pagewaitForFunctionpageFunction[ options[@dots{}args]]::
-* pagewaitForNavigation[options]::
-* pagewaitForRequesturlOrPredicate[ options]::
-* pagewaitForResponseurlOrPredicate[ options]::
-* pagewaitForSelectorselector[ options]::
-* pagewaitForXPathxpath[ options]::
-* pageworkers::
+* page@asis{.}$selector::
+* page@asis{.}$$selector::
+* page@asis{.}$$evalselector pageFunction[@dots{}args]::
+* page@asis{.}$evalselector pageFunction[@dots{}args]::
+* page@asis{.}$xexpression::
+* page@asis{.}accessibility::
+* page@asis{.}addScriptTag::
+* page@asis{.}addStyleTag::
+* page@asis{.}authenticatecredentials::
+* page@asis{.}bringToFront::
+* page@asis{.}browser::
+* page@asis{.}browserContext::
+* page@asis{.}clickselector[ options]::
+* page@asis{.}close[options]::
+* page@asis{.}content::
+* page@asis{.}cookies[@dots{}urls]::
+* page@asis{.}coverage::
+* page@asis{.}deleteCookie@dots{}cookies::
+* page@asis{.}emulate::
+* page@asis{.}emulateMediamediaType::
+* page@asis{.}evaluatepageFunction[@dots{}args]::
+* page@asis{.}evaluateHandlepageFunction[@dots{}args]::
+* page@asis{.}evaluateOnNewDocumentpageFunction[@dots{}args]::
+* page@asis{.}exposeFunctionname puppeteerFunction::
+* page@asis{.}focusselector::
+* page@asis{.}frames::
+* page@asis{.}goBack[options]::
+* page@asis{.}goForward[options]::
+* page@asis{.}gotourl[ options]::
+* page@asis{.}hoverselector::
+* page@asis{.}isClosed::
+* page@asis{.}keyboard::
+* page@asis{.}mainFrame::
+* page@asis{.}metrics::
+* page@asis{.}mouse::
+* page@asis{.}pdf[options]::
+* page@asis{.}queryObjectsprototypeHandle::
+* page@asis{.}reload[options]::
+* page@asis{.}screenshot[options]::
+* page@asis{.}selectselector@dots{}values::
+* page@asis{.}setBypassCSPenabled::
+* page@asis{.}setCacheEnabled[enabled]::
+* page@asis{.}setContenthtml[ options]::
+* page@asis{.}setCookie@dots{}cookies::
+* page@asis{.}setDefaultNavigationTimeouttimeout::
+* page@asis{.}setDefaultTimeouttimeout::
+* page@asis{.}setExtraHTTPHeadersheaders::
+* page@asis{.}setGeolocation::
+* page@asis{.}setJavaScriptEnabledenabled::
+* page@asis{.}setOfflineModeenabled::
+* page@asis{.}setRequestInterceptionvalue::
+* page@asis{.}setUserAgentuserAgent::
+* page@asis{.}setViewportviewport::
+* page@asis{.}tapselector::
+* page@asis{.}target::
+* page@asis{.}title::
+* page@asis{.}touchscreen::
+* page@asis{.}tracing::
+* page@asis{.}typeselector text[ options]::
+* page@asis{.}url::
+* page@asis{.}viewport::
+* page@asis{.}waitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
+* page@asis{.}waitForFunctionpageFunction[ options[@dots{}args]]::
+* page@asis{.}waitForNavigation[options]::
+* page@asis{.}waitForRequesturlOrPredicate[ options]::
+* page@asis{.}waitForResponseurlOrPredicate[ options]::
+* page@asis{.}waitForSelectorselector[ options]::
+* page@asis{.}waitForXPathxpath[ options]::
+* page@asis{.}workers::
 @end menu
 
 @node event ‘close'
@@ -1889,7 +1889,7 @@ Emitted when a dedicated
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API,WebWorker}
 is terminated.
 
-@node page$selector
+@node page@asis{.}$selector
 @subsection page.$(selector)
 @findex page.$
 @anchor{#pageselector}
@@ -1910,7 +1910,7 @@ element matches the selector, the return value resolves to @code{null}.
 
 Shortcut for @ref{#frameselector,page.mainFrame().$(selector)}.
 
-@node page$$selector
+@node page@asis{.}$$selector
 @subsection page.$$(selector)
 @findex page.$$
 @anchor{#pageselector-1}
@@ -1931,7 +1931,7 @@ elements match the selector, the return value resolves to @code{[]}.
 
 Shortcut for @ref{#frameselector-1,page.mainFrame().$$(selector)}.
 
-@node page$$evalselector pageFunction[@dots{}args]
+@node page@asis{.}$$evalselector pageFunction[@dots{}args]
 @subsection page.$$eval(selector, pageFunction[,@dots{}args])
 @findex page.$$eval
 @anchor{#pageevalselector-pagefunction-args}
@@ -1971,7 +1971,7 @@ Examples:
 const divsCounts = await page.$$eval('div', divs => divs.length);
 @end verbatim
 
-@node page$evalselector pageFunction[@dots{}args]
+@node page@asis{.}$evalselector pageFunction[@dots{}args]
 @subsection page.$eval(selector, pageFunction[,@dots{}args])
 @findex page.$eval
 @anchor{#pageevalselector-pagefunction-args-1}
@@ -2017,7 +2017,7 @@ Shortcut for
 @ref{#frameevalselector-pagefunction-args,page.mainFrame().$eval(selector,
 pageFunction)}.
 
-@node page$xexpression
+@node page@asis{.}$xexpression
 @subsection page.$x(expression)
 @findex page.$x
 @anchor{#pagexexpression}
@@ -2036,7 +2036,7 @@ The method evaluates the XPath expression.
 
 Shortcut for @ref{#framexexpression,page.mainFrame().$x(expression)}
 
-@node pageaccessibility
+@node page@asis{.}accessibility
 @subsection page.accessibility
 @findex page.accessibility
 @anchor{#pageaccessibility}
@@ -2045,7 +2045,7 @@ Shortcut for @ref{#framexexpression,page.mainFrame().$x(expression)}
 returns: <@ref{#class-accessibility,Accessibility}>
 @end itemize
 
-@node pageaddScriptTagoptions
+@node page@asis{.}addScriptTag
 @subsection page.addScriptTag(options)
 @findex page.addScriptTag
 @anchor{#pageaddscripttagoptions}
@@ -2090,7 +2090,7 @@ content.
 Shortcut for
 @ref{#frameaddscripttagoptions,page.mainFrame().addScriptTag(options)}.
 
-@node pageaddStyleTagoptions
+@node page@asis{.}addStyleTag
 @subsection page.addStyleTag(options)
 @findex page.addStyleTag
 @anchor{#pageaddstyletagoptions}
@@ -2129,7 +2129,7 @@ url or a @code{<style type="text/css">} tag with the content.
 Shortcut for
 @ref{#frameaddstyletagoptions,page.mainFrame().addStyleTag(options)}.
 
-@node pageauthenticatecredentials
+@node page@asis{.}authenticatecredentials
 @subsection page.authenticate(credentials)
 @findex page.authenticate
 @anchor{#pageauthenticatecredentials}
@@ -2157,7 +2157,7 @@ authentication}.
 
 To disable authentication, pass @code{null}.
 
-@node pagebringToFront
+@node page@asis{.}bringToFront
 @subsection page.bringToFront()
 @findex page.bringToFront
 @anchor{#pagebringtofront}
@@ -2169,7 +2169,7 @@ returns:
 
 Brings page to front (activates tab).
 
-@node pagebrowser
+@node page@asis{.}browser
 @subsection page.browser()
 @findex page.browser
 @anchor{#pagebrowser}
@@ -2180,7 +2180,7 @@ returns: <@ref{#class-browser,Browser}>
 
 Get the browser the page belongs to.
 
-@node pagebrowserContext
+@node page@asis{.}browserContext
 @subsection page.browserContext()
 @findex page.browserContext
 @anchor{#pagebrowsercontext}
@@ -2191,7 +2191,7 @@ returns: <@ref{#class-browsercontext,BrowserContext}>
 
 Get the browser context that the page belongs to.
 
-@node pageclickselector[ options]
+@node page@asis{.}clickselector[ options]
 @subsection page.click(selector[, options])
 @findex page.click
 @anchor{#pageclickselector-options}
@@ -2251,7 +2251,7 @@ Shortcut for
 @ref{#frameclickselector-options,page.mainFrame().click(selector[,
 options])}.
 
-@node pageclose[options]
+@node page@asis{.}close[options]
 @subsection page.close([options])
 @findex page.close
 @anchor{#pagecloseoptions}
@@ -2282,7 +2282,7 @@ handlers.
 manually via page's @ref{#event-dialog,`dialog'} event.
 @end quotation
 
-@node pagecontent
+@node page@asis{.}content
 @subsection page.content()
 @findex page.content
 @anchor{#pagecontent}
@@ -2294,7 +2294,7 @@ returns:
 
 Gets the full HTML contents of the page, including the doctype.
 
-@node pagecookies[@dots{}urls]
+@node page@asis{.}cookies[@dots{}urls]
 @subsection page.cookies([@dots{}urls])
 @findex page.cookies
 @anchor{#pagecookiesurls}
@@ -2344,7 +2344,7 @@ If no URLs are specified, this method returns cookies for the current
 page URL. If URLs are specified, only cookies for those URLs are
 returned.
 
-@node pagecoverage
+@node page@asis{.}coverage
 @subsection page.coverage
 @findex page.coverage
 @anchor{#pagecoverage}
@@ -2353,7 +2353,7 @@ returned.
 returns: <@ref{#class-coverage,Coverage}>
 @end itemize
 
-@node pagedeleteCookie@dots{}cookies
+@node page@asis{.}deleteCookie@dots{}cookies
 @subsection page.deleteCookie(@dots{}cookies)
 @findex page.deleteCookie
 @anchor{#pagedeletecookiecookies}
@@ -2382,7 +2382,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node pageemulateoptions
+@node page@asis{.}emulate
 @subsection page.emulate(options)
 @findex page.emulate
 @anchor{#pageemulateoptions}
@@ -2458,7 +2458,7 @@ puppeteer.launch().then(async browser => {
 List of all available devices is available in the source code:
 @uref{https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js,DeviceDescriptors.js}.
 
-@node pageemulateMediamediaType
+@node page@asis{.}emulateMediamediaType
 @subsection page.emulateMedia(mediaType)
 @findex page.emulateMedia
 @anchor{#pageemulatemediamediatype}
@@ -2474,7 +2474,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node pageevaluatepageFunction[@dots{}args]
+@node page@asis{.}evaluatepageFunction[@dots{}args]
 @subsection page.evaluate(pageFunction[,@dots{}args])
 @findex page.evaluate
 @anchor{#pageevaluatepagefunction-args}
@@ -2535,7 +2535,7 @@ Shortcut for
 @ref{#frameevaluatepagefunction-args,page.mainFrame().evaluate(pageFunction,
 @dots{}args)}.
 
-@node pageevaluateHandlepageFunction[@dots{}args]
+@node page@asis{.}evaluateHandlepageFunction[@dots{}args]
 @subsection page.evaluateHandle(pageFunction[,@dots{}args])
 @findex page.evaluateHandle
 @anchor{#pageevaluatehandlepagefunction-args}
@@ -2584,7 +2584,7 @@ Shortcut for
 @ref{#executioncontextevaluatehandlepagefunction-args,page.mainFrame().executionContext().evaluateHandle(pageFunction,
 @dots{}args)}.
 
-@node pageevaluateOnNewDocumentpageFunction[@dots{}args]
+@node page@asis{.}evaluateOnNewDocumentpageFunction[@dots{}args]
 @subsection page.evaluateOnNewDocument(pageFunction[,@dots{}args])
 @findex page.evaluateOnNewDocument
 @anchor{#pageevaluateonnewdocumentpagefunction-args}
@@ -2629,7 +2629,7 @@ const preloadFile = fs.readFileSync('./preload.js', 'utf8');
 await page.evaluateOnNewDocument(preloadFile);
 @end verbatim
 
-@node pageexposeFunctionname puppeteerFunction
+@node page@asis{.}exposeFunctionname puppeteerFunction
 @subsection page.exposeFunction(name, puppeteerFunction)
 @findex page.exposeFunction
 @anchor{#pageexposefunctionname-puppeteerfunction}
@@ -2711,7 +2711,7 @@ puppeteer.launch().then(async browser => {
 });
 @end verbatim
 
-@node pagefocusselector
+@node page@asis{.}focusselector
 @subsection page.focus(selector)
 @findex page.focus
 @anchor{#pagefocusselector}
@@ -2736,7 +2736,7 @@ there's no element matching @code{selector}, the method throws an error.
 
 Shortcut for @ref{#framefocusselector,page.mainFrame().focus(selector)}.
 
-@node pageframes
+@node page@asis{.}frames
 @subsection page.frames()
 @findex page.frames
 @anchor{#pageframes}
@@ -2747,7 +2747,7 @@ returns:
 An array of all frames attached to the page.
 @end itemize
 
-@node pagegoBack[options]
+@node page@asis{.}goBack[options]
 @subsection page.goBack([options])
 @findex page.goBack
 @anchor{#pagegobackoptions}
@@ -2799,7 +2799,7 @@ last redirect. If can not go back, resolves to @code{null}.
 
 Navigate to the previous page in history.
 
-@node pagegoForward[options]
+@node page@asis{.}goForward[options]
 @subsection page.goForward([options])
 @findex page.goForward
 @anchor{#pagegoforwardoptions}
@@ -2851,7 +2851,7 @@ last redirect. If can not go forward, resolves to @code{null}.
 
 Navigate to the next page in history.
 
-@node pagegotourl[ options]
+@node page@asis{.}gotourl[ options]
 @subsection page.goto(url[, options])
 @findex page.goto
 @anchor{#pagegotourl-options}
@@ -2932,7 +2932,7 @@ issue}.
 Shortcut for @ref{#framegotourl-options,page.mainFrame().goto(url,
 options)}
 
-@node pagehoverselector
+@node page@asis{.}hoverselector
 @subsection page.hover(selector)
 @findex page.hover
 @anchor{#pagehoverselector}
@@ -2959,7 +2959,7 @@ the center of the element. If there's no element matching
 
 Shortcut for @ref{#framehoverselector,page.mainFrame().hover(selector)}.
 
-@node pageisClosed
+@node page@asis{.}isClosed
 @subsection page.isClosed()
 @findex page.isClosed
 @anchor{#pageisclosed}
@@ -2971,7 +2971,7 @@ returns:
 
 Indicates that the page has been closed.
 
-@node pagekeyboard
+@node page@asis{.}keyboard
 @subsection page.keyboard
 @findex page.keyboard
 @anchor{#pagekeyboard}
@@ -2980,7 +2980,7 @@ Indicates that the page has been closed.
 returns: <@ref{#class-keyboard,Keyboard}>
 @end itemize
 
-@node pagemainFrame
+@node page@asis{.}mainFrame
 @subsection page.mainFrame()
 @findex page.mainFrame
 @anchor{#pagemainframe}
@@ -2992,7 +2992,7 @@ returns: <@ref{#class-frame,Frame}> The page's main frame.
 Page is guaranteed to have a main frame which persists during
 navigations.
 
-@node pagemetrics
+@node page@asis{.}metrics
 @subsection page.metrics()
 @findex page.metrics
 @anchor{#pagemetrics}
@@ -3063,7 +3063,7 @@ Total JavaScript heap size.
 increasing time in seconds since an arbitrary point in the past.
 @end quotation
 
-@node pagemouse
+@node page@asis{.}mouse
 @subsection page.mouse
 @findex page.mouse
 @anchor{#pagemouse}
@@ -3072,7 +3072,7 @@ increasing time in seconds since an arbitrary point in the past.
 returns: <@ref{#class-mouse,Mouse}>
 @end itemize
 
-@node pagepdf[options]
+@node page@asis{.}pdf[options]
 @subsection page.pdf([options])
 @findex page.pdf
 @anchor{#pagepdfoptions}
@@ -3232,7 +3232,7 @@ have the following limitations: 1. Script tags inside templates are not
 evaluated. 2. Page styles are not visible inside templates.
 @end quotation
 
-@node pagequeryObjectsprototypeHandle
+@node page@asis{.}queryObjectsprototypeHandle
 @subsection page.queryObjects(prototypeHandle)
 @findex page.queryObjects
 @anchor{#pagequeryobjectsprototypehandle}
@@ -3266,7 +3266,7 @@ await mapPrototype.dispose();
 Shortcut for
 @ref{#executioncontextqueryobjectsprototypehandle,page.mainFrame().executionContext().queryObjects(prototypeHandle)}.
 
-@node pagereload[options]
+@node page@asis{.}reload[options]
 @subsection page.reload([options])
 @findex page.reload
 @anchor{#pagereloadoptions}
@@ -3316,7 +3316,7 @@ multiple redirects, the navigation will resolve with the response of the
 last redirect.
 @end itemize
 
-@node pagescreenshot[options]
+@node page@asis{.}screenshot[options]
 @subsection page.screenshot([options])
 @findex page.screenshot
 @anchor{#pagescreenshotoptions}
@@ -3398,7 +3398,7 @@ value of @code{encoding}) with captured screenshot.
 https://crbug.com/741689 for discussion.
 @end quotation
 
-@node pageselectselector@dots{}values
+@node page@asis{.}selectselector@dots{}values
 @subsection page.select(selector,@dots{}values)
 @findex page.select
 @anchor{#pageselectselector-values}
@@ -3432,7 +3432,7 @@ page.select('select#colors', 'red', 'green', 'blue'); // multiple selections
 
 Shortcut for @ref{#frameselectselector-values,page.mainFrame().select()}
 
-@node pagesetBypassCSPenabled
+@node page@asis{.}setBypassCSPenabled
 @subsection page.setBypassCSP(enabled)
 @findex page.setBypassCSP
 @anchor{#pagesetbypasscspenabled}
@@ -3454,7 +3454,7 @@ rather then evaluation. Usually this means that @code{page.setBypassCSP}
 should be called before navigating to the domain.
 @end quotation
 
-@node pagesetCacheEnabled[enabled]
+@node page@asis{.}setCacheEnabled[enabled]
 @subsection page.setCacheEnabled([enabled])
 @findex page.setCacheEnabled
 @anchor{#pagesetcacheenabledenabled}
@@ -3471,7 +3471,7 @@ returns:
 Toggles ignoring cache for each request based on the enabled state. By
 default, caching is enabled.
 
-@node pagesetContenthtml[ options]
+@node page@asis{.}setContenthtml[ options]
 @subsection page.setContent(html[, options])
 @findex page.setContent
 @anchor{#pagesetcontenthtml-options}
@@ -3522,7 +3522,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node pagesetCookie@dots{}cookies
+@node page@asis{.}setCookie@dots{}cookies
 @subsection page.setCookie(@dots{}cookies)
 @findex page.setCookie
 @anchor{#pagesetcookiecookies}
@@ -3571,7 +3571,7 @@ returns:
 await page.setCookie(cookieObject1, cookieObject2);
 @end verbatim
 
-@node pagesetDefaultNavigationTimeouttimeout
+@node page@asis{.}setDefaultNavigationTimeouttimeout
 @subsection page.setDefaultNavigationTimeout(timeout)
 @findex page.setDefaultNavigationTimeout
 @anchor{#pagesetdefaultnavigationtimeouttimeout}
@@ -3598,7 +3598,7 @@ takes priority over
 @ref{#pagesetdefaulttimeouttimeout,@code{page.setDefaultTimeout}}
 @end quotation
 
-@node pagesetDefaultTimeouttimeout
+@node page@asis{.}setDefaultTimeouttimeout
 @subsection page.setDefaultTimeout(timeout)
 @findex page.setDefaultTimeout
 @anchor{#pagesetdefaulttimeouttimeout}
@@ -3636,7 +3636,7 @@ takes priority over
 @ref{#pagesetdefaulttimeouttimeout,@code{page.setDefaultTimeout}}
 @end quotation
 
-@node pagesetExtraHTTPHeadersheaders
+@node page@asis{.}setExtraHTTPHeadersheaders
 @subsection page.setExtraHTTPHeaders(headers)
 @findex page.setExtraHTTPHeaders
 @anchor{#pagesetextrahttpheadersheaders}
@@ -3659,7 +3659,7 @@ initiates.
 headers in the outgoing requests.
 @end quotation
 
-@node pagesetGeolocationoptions
+@node page@asis{.}setGeolocation
 @subsection page.setGeolocation(options)
 @findex page.setGeolocation
 @anchor{#pagesetgeolocationoptions}
@@ -3699,7 +3699,7 @@ await page.setGeolocation({latitude: 59.95, longitude: 30.31667});
 to grant permissions for the page to read its geolocation.
 @end quotation
 
-@node pagesetJavaScriptEnabledenabled
+@node page@asis{.}setJavaScriptEnabledenabled
 @subsection page.setJavaScriptEnabled(enabled)
 @findex page.setJavaScriptEnabled
 @anchor{#pagesetjavascriptenabledenabled}
@@ -3719,7 +3719,7 @@ been run. It will take full effect on the next
 @ref{#pagegotourl-options,navigation}.
 @end quotation
 
-@node pagesetOfflineModeenabled
+@node page@asis{.}setOfflineModeenabled
 @subsection page.setOfflineMode(enabled)
 @findex page.setOfflineMode
 @anchor{#pagesetofflinemodeenabled}
@@ -3733,7 +3733,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node pagesetRequestInterceptionvalue
+@node page@asis{.}setRequestInterceptionvalue
 @subsection page.setRequestInterception(value)
 @findex page.setRequestInterception
 @anchor{#pagesetrequestinterceptionvalue}
@@ -3777,7 +3777,7 @@ puppeteer.launch().then(async browser => {
 @strong{NOTE} Enabling request interception disables page caching.
 @end quotation
 
-@node pagesetUserAgentuserAgent
+@node page@asis{.}setUserAgentuserAgent
 @subsection page.setUserAgent(userAgent)
 @findex page.setUserAgent
 @anchor{#pagesetuseragentuseragent}
@@ -3792,7 +3792,7 @@ returns:
 Promise which resolves when the user agent is set.
 @end itemize
 
-@node pagesetViewportviewport
+@node page@asis{.}setViewportviewport
 @subsection page.setViewport(viewport)
 @findex page.setViewport
 @anchor{#pagesetviewportviewport}
@@ -3840,7 +3840,7 @@ order to set the @code{isMobile} or @code{hasTouch} properties.
 In the case of multiple pages in a single browser, each page can have
 its own viewport size.
 
-@node pagetapselector
+@node page@asis{.}tapselector
 @subsection page.tap(selector)
 @findex page.tap
 @anchor{#pagetapselector}
@@ -3864,7 +3864,7 @@ tap in the center of the element. If there's no element matching
 
 Shortcut for @ref{#frametapselector,page.mainFrame().tap(selector)}.
 
-@node pagetarget
+@node page@asis{.}target
 @subsection page.target()
 @findex page.target
 @anchor{#pagetarget}
@@ -3874,7 +3874,7 @@ returns: <@ref{#class-target,Target}> a target this page was created
 from.
 @end itemize
 
-@node pagetitle
+@node page@asis{.}title
 @subsection page.title()
 @findex page.title
 @anchor{#pagetitle}
@@ -3887,7 +3887,7 @@ The page's title.
 
 Shortcut for @ref{#frametitle,page.mainFrame().title()}.
 
-@node pagetouchscreen
+@node page@asis{.}touchscreen
 @subsection page.touchscreen
 @findex page.touchscreen
 @anchor{#pagetouchscreen}
@@ -3896,7 +3896,7 @@ Shortcut for @ref{#frametitle,page.mainFrame().title()}.
 returns: <@ref{#class-touchscreen,Touchscreen}>
 @end itemize
 
-@node pagetracing
+@node page@asis{.}tracing
 @subsection page.tracing
 @findex page.tracing
 @anchor{#pagetracing}
@@ -3905,7 +3905,7 @@ returns: <@ref{#class-touchscreen,Touchscreen}>
 returns: <@ref{#class-tracing,Tracing}>
 @end itemize
 
-@node pagetypeselector text[ options]
+@node page@asis{.}typeselector text[ options]
 @subsection page.type(selector, text[, options])
 @findex page.type
 @anchor{#pagetypeselector-text-options}
@@ -3951,7 +3951,7 @@ Shortcut for
 @ref{#frametypeselector-text-options,page.mainFrame().type(selector,
 text[, options])}.
 
-@node pageurl
+@node page@asis{.}url
 @subsection page.url()
 @findex page.url
 @anchor{#pageurl}
@@ -3963,7 +3963,7 @@ returns:
 
 This is a shortcut for @ref{#frameurl,page.mainFrame().url()}
 
-@node pageviewport
+@node page@asis{.}viewport
 @subsection page.viewport()
 @findex page.viewport
 @anchor{#pageviewport}
@@ -4001,7 +4001,7 @@ Specifies if viewport is in landscape mode. Defaults to @code{false}.
 
 @end itemize
 
-@node pagewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
+@node page@asis{.}waitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
 @subsection page.waitFor(selectorOrFunctionOrTimeout[, options[,@dots{}args]])
 @findex page.waitFor
 @anchor{#pagewaitforselectororfunctionortimeout-options-args}
@@ -4065,7 +4065,7 @@ Shortcut for
 @ref{#framewaitforselectororfunctionortimeout-options-args,page.mainFrame().waitFor(selectorOrFunctionOrTimeout[,
 options[,@dots{}args]])}.
 
-@node pagewaitForFunctionpageFunction[ options[@dots{}args]]
+@node page@asis{.}waitForFunctionpageFunction[ options[@dots{}args]]
 @subsection page.waitForFunction(pageFunction[, options[,@dots{}args]])
 @findex page.waitForFunction
 @anchor{#pagewaitforfunctionpagefunction-options-args}
@@ -4142,7 +4142,7 @@ Shortcut for
 @ref{#framewaitforfunctionpagefunction-options-args,page.mainFrame().waitForFunction(pageFunction[,
 options[,@dots{}args]])}.
 
-@node pagewaitForNavigation[options]
+@node page@asis{.}waitForNavigation[options]
 @subsection page.waitForNavigation([options])
 @findex page.waitForNavigation
 @anchor{#pagewaitfornavigationoptions}
@@ -4211,7 +4211,7 @@ API} to change the URL is considered a navigation.
 Shortcut for
 @ref{#framewaitfornavigationoptions,page.mainFrame().waitForNavigation(options)}.
 
-@node pagewaitForRequesturlOrPredicate[ options]
+@node page@asis{.}waitForRequesturlOrPredicate[ options]
 @subsection page.waitForRequest(urlOrPredicate[, options])
 @findex page.waitForRequest
 @anchor{#pagewaitforrequesturlorpredicate-options}
@@ -4246,7 +4246,7 @@ const finalRequest = await page.waitForRequest(request => request.url() === 'htt
 return firstRequest.url();
 @end verbatim
 
-@node pagewaitForResponseurlOrPredicate[ options]
+@node page@asis{.}waitForResponseurlOrPredicate[ options]
 @subsection page.waitForResponse(urlOrPredicate[, options])
 @findex page.waitForResponse
 @anchor{#pagewaitforresponseurlorpredicate-options}
@@ -4281,7 +4281,7 @@ const finalResponse = await page.waitForResponse(response => response.url() === 
 return finalResponse.ok();
 @end verbatim
 
-@node pagewaitForSelectorselector[ options]
+@node page@asis{.}waitForSelectorselector[ options]
 @subsection page.waitForSelector(selector[, options])
 @findex page.waitForSelector
 @anchor{#pagewaitforselectorselector-options}
@@ -4353,7 +4353,7 @@ Shortcut for
 @ref{#framewaitforselectorselector-options,page.mainFrame().waitForSelector(selector[,
 options])}.
 
-@node pagewaitForXPathxpath[ options]
+@node page@asis{.}waitForXPathxpath[ options]
 @subsection page.waitForXPath(xpath[, options])
 @findex page.waitForXPath
 @anchor{#pagewaitforxpathxpath-options}
@@ -4424,7 +4424,7 @@ Shortcut for
 @ref{#framewaitforxpathxpath-options,page.mainFrame().waitForXPath(xpath[,
 options])}.
 
-@node pageworkers
+@node page@asis{.}workers
 @subsection page.workers()
 @findex page.workers
 @anchor{#pageworkers}
@@ -4459,13 +4459,13 @@ for (const worker of page.workers())
 @end verbatim
 
 @menu
-* workerevaluatepageFunction[@dots{}args]::
-* workerevaluateHandlepageFunction[@dots{}args]::
-* workerexecutionContext::
-* workerurl::
+* worker@asis{.}evaluatepageFunction[@dots{}args]::
+* worker@asis{.}evaluateHandlepageFunction[@dots{}args]::
+* worker@asis{.}executionContext::
+* worker@asis{.}url::
 @end menu
 
-@node workerevaluatepageFunction[@dots{}args]
+@node worker@asis{.}evaluatepageFunction[@dots{}args]
 @subsection worker.evaluate(pageFunction[,@dots{}args])
 @findex worker.evaluate
 @anchor{#workerevaluatepagefunction-args}
@@ -4499,7 +4499,7 @@ are not serializable by @code{JSON}: @code{-0}, @code{NaN},
 Shortcut for @ref{#executioncontextevaluatepagefunction-args,(await
 worker.executionContext()).evaluate(pageFunction,@dots{}args)}.
 
-@node workerevaluateHandlepageFunction[@dots{}args]
+@node worker@asis{.}evaluateHandlepageFunction[@dots{}args]
 @subsection worker.evaluateHandle(pageFunction[,@dots{}args])
 @findex worker.evaluateHandle
 @anchor{#workerevaluatehandlepagefunction-args}
@@ -4532,7 +4532,7 @@ Shortcut for
 @ref{#executioncontextevaluatehandlepagefunction-args,(await
 worker.executionContext()).evaluateHandle(pageFunction,@dots{}args)}.
 
-@node workerexecutionContext
+@node worker@asis{.}executionContext
 @subsection worker.executionContext()
 @findex worker.executionContext
 @anchor{#workerexecutioncontext}
@@ -4542,7 +4542,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}<@ref{#class-executioncontext,ExecutionContext}>>
 @end itemize
 
-@node workerurl
+@node worker@asis{.}url
 @subsection worker.url()
 @findex worker.url
 @anchor{#workerurl}
@@ -4575,10 +4575,10 @@ themselves. By default, Puppeteer tries to approximate this filtering,
 exposing only the ``interesting'' nodes of the tree.
 
 @menu
-* accessibilitysnapshot[options]::
+* accessibility@asis{.}snapshot[options]::
 @end menu
 
-@node accessibilitysnapshot[options]
+@node accessibility@asis{.}snapshot[options]
 @subsection accessibility.snapshot([options])
 @findex accessibility.snapshot
 @anchor{#accessibilitysnapshotoptions}
@@ -4787,14 +4787,14 @@ do not work. See
 @end quotation
 
 @menu
-* keyboarddownkey[ options]::
-* keyboardpresskey[ options]::
-* keyboardsendCharacterchar::
-* keyboardtypetext[ options]::
-* keyboardupkey::
+* keyboard@asis{.}downkey[ options]::
+* keyboard@asis{.}presskey[ options]::
+* keyboard@asis{.}sendCharacterchar::
+* keyboard@asis{.}typetext[ options]::
+* keyboard@asis{.}upkey::
 @end menu
 
-@node keyboarddownkey[ options]
+@node keyboard@asis{.}downkey[ options]
 @subsection keyboard.down(key[, options])
 @findex keyboard.down
 @anchor{#keyboarddownkey-options}
@@ -4843,7 +4843,7 @@ set to true. To release the key, use
 down @code{Shift} will type the text in upper case.
 @end quotation
 
-@node keyboardpresskey[ options]
+@node keyboard@asis{.}presskey[ options]
 @subsection keyboard.press(key[, options])
 @findex keyboard.press
 @anchor{#keyboardpresskey-options}
@@ -4886,7 +4886,7 @@ down @code{Shift} will type the text in upper case.
 Shortcut for @ref{#keyboarddownkey-options,@code{keyboard.down}} and
 @ref{#keyboardupkey,@code{keyboard.up}}.
 
-@node keyboardsendCharacterchar
+@node keyboard@asis{.}sendCharacterchar
 @subsection keyboard.sendCharacter(char)
 @findex keyboard.sendCharacter
 @anchor{#keyboardsendcharacterchar}
@@ -4912,7 +4912,7 @@ page.keyboard.sendCharacter('嗨');
 Holding down @code{Shift} will not type the text in upper case.
 @end quotation
 
-@node keyboardtypetext[ options]
+@node keyboard@asis{.}typetext[ options]
 @subsection keyboard.type(text[, options])
 @findex keyboard.type
 @anchor{#keyboardtypetext-options}
@@ -4952,7 +4952,7 @@ page.keyboard.type('World', {delay: 100}); // Types slower, like a user
 down @code{Shift} will not type the text in upper case.
 @end quotation
 
-@node keyboardupkey
+@node keyboard@asis{.}upkey
 @subsection keyboard.up(key)
 @findex keyboard.up
 @anchor{#keyboardupkey}
@@ -4991,13 +4991,13 @@ await page.mouse.up();
 @end verbatim
 
 @menu
-* mouseclickx y[ options]::
-* mousedown[options]::
-* mousemovex y[ options]::
-* mouseup[options]::
+* mouse@asis{.}clickx y[ options]::
+* mouse@asis{.}down[options]::
+* mouse@asis{.}movex y[ options]::
+* mouse@asis{.}up[options]::
 @end menu
 
-@node mouseclickx y[ options]
+@node mouse@asis{.}clickx y[ options]
 @subsection mouse.click(x, y[, options])
 @findex mouse.click
 @anchor{#mouseclickx-y-options}
@@ -5035,7 +5035,7 @@ Shortcut for @ref{#mousemovex-y-options,@code{mouse.move}},
 @ref{#mousedownoptions,@code{mouse.down}} and
 @ref{#mouseupoptions,@code{mouse.up}}.
 
-@node mousedown[options]
+@node mouse@asis{.}down[options]
 @subsection mouse.down([options])
 @findex mouse.down
 @anchor{#mousedownoptions}
@@ -5060,7 +5060,7 @@ returns:
 
 Dispatches a @code{mousedown} event.
 
-@node mousemovex y[ options]
+@node mouse@asis{.}movex y[ options]
 @subsection mouse.move(x, y[, options])
 @findex mouse.move
 @anchor{#mousemovex-y-options}
@@ -5088,7 +5088,7 @@ returns:
 
 Dispatches a @code{mousemove} event.
 
-@node mouseup[options]
+@node mouse@asis{.}up[options]
 @subsection mouse.up([options])
 @findex mouse.up
 @anchor{#mouseupoptions}
@@ -5118,10 +5118,10 @@ Dispatches a @code{mouseup} event.
 @anchor{#class-touchscreen}
 
 @menu
-* touchscreentapx y::
+* touchscreen@asis{.}tapx y::
 @end menu
 
-@node touchscreentapx y
+@node touchscreen@asis{.}tapx y
 @subsection touchscreen.tap(x, y)
 @findex touchscreen.tap
 @anchor{#touchscreentapx-y}
@@ -5155,11 +5155,11 @@ await page.tracing.stop();
 @end verbatim
 
 @menu
-* tracingstartoptions::
-* tracingstop::
+* tracing@asis{.}start::
+* tracing@asis{.}stop::
 @end menu
 
-@node tracingstartoptions
+@node tracing@asis{.}start
 @subsection tracing.start(options)
 @findex tracing.start
 @anchor{#tracingstartoptions}
@@ -5189,7 +5189,7 @@ returns:
 
 Only one trace can be active at a time per browser.
 
-@node tracingstop
+@node tracing@asis{.}stop
 @subsection tracing.stop()
 @findex tracing.stop
 @anchor{#tracingstop}
@@ -5223,14 +5223,14 @@ puppeteer.launch().then(async browser => {
 @end verbatim
 
 @menu
-* dialogaccept[promptText]::
-* dialogdefaultValue::
-* dialogdismiss::
-* dialogmessage::
-* dialogtype::
+* dialog@asis{.}accept[promptText]::
+* dialog@asis{.}defaultValue::
+* dialog@asis{.}dismiss::
+* dialog@asis{.}message::
+* dialog@asis{.}type::
 @end menu
 
-@node dialogaccept[promptText]
+@node dialog@asis{.}accept[promptText]
 @subsection dialog.accept([promptText])
 @findex dialog.accept
 @anchor{#dialogacceptprompttext}
@@ -5246,7 +5246,7 @@ returns:
 Promise which resolves when the dialog has been accepted.
 @end itemize
 
-@node dialogdefaultValue
+@node dialog@asis{.}defaultValue
 @subsection dialog.defaultValue()
 @findex dialog.defaultValue
 @anchor{#dialogdefaultvalue}
@@ -5258,7 +5258,7 @@ If dialog is prompt, returns default prompt value. Otherwise, returns
 empty string.
 @end itemize
 
-@node dialogdismiss
+@node dialog@asis{.}dismiss
 @subsection dialog.dismiss()
 @findex dialog.dismiss
 @anchor{#dialogdismiss}
@@ -5269,7 +5269,7 @@ returns:
 Promise which resolves when the dialog has been dismissed.
 @end itemize
 
-@node dialogmessage
+@node dialog@asis{.}message
 @subsection dialog.message()
 @findex dialog.message
 @anchor{#dialogmessage}
@@ -5280,7 +5280,7 @@ returns:
 A message displayed in the dialog.
 @end itemize
 
-@node dialogtype
+@node dialog@asis{.}type
 @subsection dialog.type()
 @findex dialog.type
 @anchor{#dialogtype}
@@ -5299,13 +5299,13 @@ Dialog's type, can be one of @code{alert}, @code{beforeunload},
 page via the @ref{#event-console,`console'} event.
 
 @menu
-* consoleMessageargs::
-* consoleMessagelocation::
-* consoleMessagetext::
-* consoleMessagetype::
+* consoleMessage@asis{.}args::
+* consoleMessage@asis{.}location::
+* consoleMessage@asis{.}text::
+* consoleMessage@asis{.}type::
 @end menu
 
-@node consoleMessageargs
+@node consoleMessage@asis{.}args
 @subsection consoleMessage.args()
 @findex consoleMessage.args
 @anchor{#consolemessageargs}
@@ -5315,7 +5315,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array,Array}<@ref{#class-jshandle,JSHandle}>>
 @end itemize
 
-@node consoleMessagelocation
+@node consoleMessage@asis{.}location
 @subsection consoleMessage.location()
 @findex consoleMessage.location
 @anchor{#consolemessagelocation}
@@ -5342,7 +5342,7 @@ otherwise.
 
 @end itemize
 
-@node consoleMessagetext
+@node consoleMessage@asis{.}text
 @subsection consoleMessage.text()
 @findex consoleMessage.text
 @anchor{#consolemessagetext}
@@ -5352,7 +5352,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type,string}>
 @end itemize
 
-@node consoleMessagetype
+@node consoleMessage@asis{.}type
 @subsection consoleMessage.type()
 @findex consoleMessage.type
 @anchor{#consolemessagetype}
@@ -5413,39 +5413,39 @@ An example of getting text from an iframe element:
 @end verbatim
 
 @menu
-* frame$selector::
-* frame$$selector::
-* frame$$evalselector pageFunction[@dots{}args]::
-* frame$evalselector pageFunction[@dots{}args]::
-* frame$xexpression::
-* frameaddScriptTagoptions::
-* frameaddStyleTagoptions::
-* framechildFrames::
-* frameclickselector[ options]::
-* framecontent::
-* frameevaluatepageFunction[@dots{}args]::
-* frameevaluateHandlepageFunction[@dots{}args]::
-* frameexecutionContext::
-* framefocusselector::
-* framegotourl[ options]::
-* framehoverselector::
-* frameisDetached::
-* framename::
-* frameparentFrame::
-* frameselectselector@dots{}values::
-* framesetContenthtml[ options]::
-* frametapselector::
-* frametitle::
-* frametypeselector text[ options]::
-* frameurl::
-* framewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
-* framewaitForFunctionpageFunction[ options[@dots{}args]]::
-* framewaitForNavigation[options]::
-* framewaitForSelectorselector[ options]::
-* framewaitForXPathxpath[ options]::
+* frame@asis{.}$selector::
+* frame@asis{.}$$selector::
+* frame@asis{.}$$evalselector pageFunction[@dots{}args]::
+* frame@asis{.}$evalselector pageFunction[@dots{}args]::
+* frame@asis{.}$xexpression::
+* frame@asis{.}addScriptTag::
+* frame@asis{.}addStyleTag::
+* frame@asis{.}childFrames::
+* frame@asis{.}clickselector[ options]::
+* frame@asis{.}content::
+* frame@asis{.}evaluatepageFunction[@dots{}args]::
+* frame@asis{.}evaluateHandlepageFunction[@dots{}args]::
+* frame@asis{.}executionContext::
+* frame@asis{.}focusselector::
+* frame@asis{.}gotourl[ options]::
+* frame@asis{.}hoverselector::
+* frame@asis{.}isDetached::
+* frame@asis{.}name::
+* frame@asis{.}parentFrame::
+* frame@asis{.}selectselector@dots{}values::
+* frame@asis{.}setContenthtml[ options]::
+* frame@asis{.}tapselector::
+* frame@asis{.}title::
+* frame@asis{.}typeselector text[ options]::
+* frame@asis{.}url::
+* frame@asis{.}waitForselectorOrFunctionOrTimeout[ options[@dots{}args]]::
+* frame@asis{.}waitForFunctionpageFunction[ options[@dots{}args]]::
+* frame@asis{.}waitForNavigation[options]::
+* frame@asis{.}waitForSelectorselector[ options]::
+* frame@asis{.}waitForXPathxpath[ options]::
 @end menu
 
-@node frame$selector
+@node frame@asis{.}$selector
 @subsection frame.$(selector)
 @findex frame.$
 @anchor{#frameselector}
@@ -5465,7 +5465,7 @@ Promise which resolves to ElementHandle pointing to the frame element.
 The method queries frame for the selector. If there's no such element
 within the frame, the method will resolve to @code{null}.
 
-@node frame$$selector
+@node frame@asis{.}$$selector
 @subsection frame.$$(selector)
 @findex frame.$$
 @anchor{#frameselector-1}
@@ -5485,7 +5485,7 @@ Promise which resolves to ElementHandles pointing to the frame elements.
 The method runs @code{document.querySelectorAll} within the frame. If no
 elements match the selector, the return value resolves to @code{[]}.
 
-@node frame$$evalselector pageFunction[@dots{}args]
+@node frame@asis{.}$$evalselector pageFunction[@dots{}args]
 @subsection frame.$$eval(selector, pageFunction[,@dots{}args])
 @findex frame.$$eval
 @anchor{#frameevalselector-pagefunction-args}
@@ -5525,7 +5525,7 @@ Examples:
 const divsCounts = await frame.$$eval('div', divs => divs.length);
 @end verbatim
 
-@node frame$evalselector pageFunction[@dots{}args]
+@node frame@asis{.}$evalselector pageFunction[@dots{}args]
 @subsection frame.$eval(selector, pageFunction[,@dots{}args])
 @findex frame.$eval
 @anchor{#frameevalselector-pagefunction-args-1}
@@ -5567,7 +5567,7 @@ const preloadHref = await frame.$eval('link[rel=preload]', el => el.href);
 const html = await frame.$eval('.main-container', e => e.outerHTML);
 @end verbatim
 
-@node frame$xexpression
+@node frame@asis{.}$xexpression
 @subsection frame.$x(expression)
 @findex frame.$x
 @anchor{#framexexpression}
@@ -5584,7 +5584,7 @@ returns:
 
 The method evaluates the XPath expression.
 
-@node frameaddScriptTagoptions
+@node frame@asis{.}addScriptTag
 @subsection frame.addScriptTag(options)
 @findex frame.addScriptTag
 @anchor{#frameaddscripttagoptions}
@@ -5626,7 +5626,7 @@ the script content was injected into frame.
 Adds a @code{<script>} tag into the page with the desired url or
 content.
 
-@node frameaddStyleTagoptions
+@node frame@asis{.}addStyleTag
 @subsection frame.addStyleTag(options)
 @findex frame.addStyleTag
 @anchor{#frameaddstyletagoptions}
@@ -5662,7 +5662,7 @@ when the CSS content was injected into frame.
 Adds a @code{<link rel="stylesheet">} tag into the page with the desired
 url or a @code{<style type="text/css">} tag with the content.
 
-@node framechildFrames
+@node frame@asis{.}childFrames
 @subsection frame.childFrames()
 @findex frame.childFrames
 @anchor{#framechildframes}
@@ -5672,7 +5672,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array,Array}<@ref{#class-frame,Frame}>>
 @end itemize
 
-@node frameclickselector[ options]
+@node frame@asis{.}clickselector[ options]
 @subsection frame.click(selector[, options])
 @findex frame.click
 @anchor{#frameclickselector-options}
@@ -5728,7 +5728,7 @@ const [response] = await Promise.all([
 ]);
 @end verbatim
 
-@node framecontent
+@node frame@asis{.}content
 @subsection frame.content()
 @findex frame.content
 @anchor{#framecontent}
@@ -5740,7 +5740,7 @@ returns:
 
 Gets the full HTML contents of the frame, including the doctype.
 
-@node frameevaluatepageFunction[@dots{}args]
+@node frame@asis{.}evaluatepageFunction[@dots{}args]
 @subsection frame.evaluate(pageFunction[,@dots{}args])
 @findex frame.evaluate
 @anchor{#frameevaluatepagefunction-args}
@@ -5793,7 +5793,7 @@ const html = await frame.evaluate(body => body.innerHTML, bodyHandle);
 await bodyHandle.dispose();
 @end verbatim
 
-@node frameevaluateHandlepageFunction[@dots{}args]
+@node frame@asis{.}evaluateHandlepageFunction[@dots{}args]
 @subsection frame.evaluateHandle(pageFunction[,@dots{}args])
 @findex frame.evaluateHandle
 @anchor{#frameevaluatehandlepagefunction-args}
@@ -5843,7 +5843,7 @@ console.log(await resultHandle.jsonValue());
 await resultHandle.dispose();
 @end verbatim
 
-@node frameexecutionContext
+@node frame@asis{.}executionContext
 @subsection frame.executionContext()
 @findex frame.executionContext
 @anchor{#frameexecutioncontext}
@@ -5855,7 +5855,7 @@ returns:
 
 Returns promise that resolves to the frame's default execution context.
 
-@node framefocusselector
+@node frame@asis{.}focusselector
 @subsection frame.focus(selector)
 @findex frame.focus
 @anchor{#framefocusselector}
@@ -5878,7 +5878,7 @@ element matching @code{selector}.
 This method fetches an element with @code{selector} and focuses it. If
 there's no element matching @code{selector}, the method throws an error.
 
-@node framegotourl[ options]
+@node frame@asis{.}gotourl[ options]
 @subsection frame.goto(url[, options])
 @findex frame.goto
 @anchor{#framegotourl-options}
@@ -5957,7 +5957,7 @@ document. See the
 issue}.
 @end quotation
 
-@node framehoverselector
+@node frame@asis{.}hoverselector
 @subsection frame.hover(selector)
 @findex frame.hover
 @anchor{#framehoverselector}
@@ -5982,7 +5982,7 @@ view if needed, and then uses @ref{#pagemouse,page.mouse} to hover over
 the center of the element. If there's no element matching
 @code{selector}, the method throws an error.
 
-@node frameisDetached
+@node frame@asis{.}isDetached
 @subsection frame.isDetached()
 @findex frame.isDetached
 @anchor{#frameisdetached}
@@ -5995,7 +5995,7 @@ returns:
 Returns @code{true} if the frame has been detached, or @code{false}
 otherwise.
 
-@node framename
+@node frame@asis{.}name
 @subsection frame.name()
 @findex frame.name
 @anchor{#framename}
@@ -6014,7 +6014,7 @@ If the name is empty, returns the id attribute instead.
 and will not update if the attribute is changed later.
 @end quotation
 
-@node frameparentFrame
+@node frame@asis{.}parentFrame
 @subsection frame.parentFrame()
 @findex frame.parentFrame
 @anchor{#frameparentframe}
@@ -6024,7 +6024,7 @@ returns: <?@ref{#class-frame,Frame}> Parent frame, if any. Detached
 frames and main frames return @code{null}.
 @end itemize
 
-@node frameselectselector@dots{}values
+@node frame@asis{.}selectselector@dots{}values
 @subsection frame.select(selector,@dots{}values)
 @findex frame.select
 @anchor{#frameselectselector-values}
@@ -6056,7 +6056,7 @@ frame.select('select#colors', 'blue'); // single selection
 frame.select('select#colors', 'red', 'green', 'blue'); // multiple selections
 @end verbatim
 
-@node framesetContenthtml[ options]
+@node frame@asis{.}setContenthtml[ options]
 @subsection frame.setContent(html[, options])
 @findex frame.setContent
 @anchor{#framesetcontenthtml-options}
@@ -6107,7 +6107,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise,Promise}>
 @end itemize
 
-@node frametapselector
+@node frame@asis{.}tapselector
 @subsection frame.tap(selector)
 @findex frame.tap
 @anchor{#frametapselector}
@@ -6129,7 +6129,7 @@ view if needed, and then uses @ref{#pagetouchscreen,page.touchscreen} to
 tap in the center of the element. If there's no element matching
 @code{selector}, the method throws an error.
 
-@node frametitle
+@node frame@asis{.}title
 @subsection frame.title()
 @findex frame.title
 @anchor{#frametitle}
@@ -6140,7 +6140,7 @@ returns:
 The page's title.
 @end itemize
 
-@node frametypeselector text[ options]
+@node frame@asis{.}typeselector text[ options]
 @subsection frame.type(selector, text[, options])
 @findex frame.type
 @anchor{#frametypeselector-text-options}
@@ -6182,7 +6182,7 @@ frame.type('#mytextarea', 'Hello'); // Types instantly
 frame.type('#mytextarea', 'World', {delay: 100}); // Types slower, like a user
 @end verbatim
 
-@node frameurl
+@node frame@asis{.}url
 @subsection frame.url()
 @findex frame.url
 @anchor{#frameurl}
@@ -6194,7 +6194,7 @@ returns:
 
 Returns frame's url.
 
-@node framewaitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
+@node frame@asis{.}waitForselectorOrFunctionOrTimeout[ options[@dots{}args]]
 @subsection frame.waitFor(selectorOrFunctionOrTimeout[, options[,@dots{}args]])
 @findex frame.waitFor
 @anchor{#framewaitforselectororfunctionortimeout-options-args}
@@ -6254,7 +6254,7 @@ const selector = '.foo';
 await page.waitFor(selector => !!document.querySelector(selector), {}, selector);
 @end verbatim
 
-@node framewaitForFunctionpageFunction[ options[@dots{}args]]
+@node frame@asis{.}waitForFunctionpageFunction[ options[@dots{}args]]
 @subsection frame.waitForFunction(pageFunction[, options[,@dots{}args]])
 @findex frame.waitForFunction
 @anchor{#framewaitforfunctionpagefunction-options-args}
@@ -6327,7 +6327,7 @@ const selector = '.foo';
 await page.waitForFunction(selector => !!document.querySelector(selector), {}, selector);
 @end verbatim
 
-@node framewaitForNavigation[options]
+@node frame@asis{.}waitForNavigation[options]
 @subsection frame.waitForNavigation([options])
 @findex frame.waitForNavigation
 @anchor{#framewaitfornavigationoptions}
@@ -6393,7 +6393,7 @@ const [response] = await Promise.all([
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/History_API,History
 API} to change the URL is considered a navigation.
 
-@node framewaitForSelectorselector[ options]
+@node frame@asis{.}waitForSelectorselector[ options]
 @subsection frame.waitForSelector(selector[, options])
 @findex frame.waitForSelector
 @anchor{#framewaitforselectorselector-options}
@@ -6461,7 +6461,7 @@ puppeteer.launch().then(async browser => {
 });
 @end verbatim
 
-@node framewaitForXPathxpath[ options]
+@node frame@asis{.}waitForXPathxpath[ options]
 @subsection frame.waitForXPath(xpath[, options])
 @findex frame.waitForXPath
 @anchor{#framewaitforxpathxpath-options}
@@ -6544,13 +6544,13 @@ Besides pages, execution contexts can be found in
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API,workers}.
 
 @menu
-* executionContextevaluatepageFunction[@dots{}args]::
-* executionContextevaluateHandlepageFunction[@dots{}args]::
-* executionContextframe::
-* executionContextqueryObjectsprototypeHandle::
+* executionContext@asis{.}evaluatepageFunction[@dots{}args]::
+* executionContext@asis{.}evaluateHandlepageFunction[@dots{}args]::
+* executionContext@asis{.}frame::
+* executionContext@asis{.}queryObjectsprototypeHandle::
 @end menu
 
-@node executionContextevaluatepageFunction[@dots{}args]
+@node executionContext@asis{.}evaluatepageFunction[@dots{}args]
 @subsection executionContext.evaluate(pageFunction[,@dots{}args])
 @findex executionContext.evaluate
 @anchor{#executioncontextevaluatepagefunction-args}
@@ -6605,7 +6605,7 @@ await twoHandle.dispose();
 console.log(result); // prints '3'.
 @end verbatim
 
-@node executionContextevaluateHandlepageFunction[@dots{}args]
+@node executionContext@asis{.}evaluateHandlepageFunction[@dots{}args]
 @subsection executionContext.evaluateHandle(pageFunction[,@dots{}args])
 @findex executionContext.evaluateHandle
 @anchor{#executioncontextevaluatehandlepagefunction-args}
@@ -6659,7 +6659,7 @@ await aHandle.dispose();
 await resultHandle.dispose();
 @end verbatim
 
-@node executionContextframe
+@node executionContext@asis{.}frame
 @subsection executionContext.frame()
 @findex executionContext.frame
 @anchor{#executioncontextframe}
@@ -6675,7 +6675,7 @@ For example, workers and extensions have execution contexts that are not
 associated with frames.
 @end quotation
 
-@node executionContextqueryObjectsprototypeHandle
+@node executionContext@asis{.}queryObjectsprototypeHandle
 @subsection executionContext.queryObjects(prototypeHandle)
 @findex executionContext.queryObjects
 @anchor{#executioncontextqueryobjectsprototypehandle}
@@ -6729,15 +6729,15 @@ JSHandle instances can be used as arguments in
 methods.
 
 @menu
-* jsHandleasElement::
-* jsHandledispose::
-* jsHandleexecutionContext::
-* jsHandlegetProperties::
-* jsHandlegetPropertypropertyName::
-* jsHandlejsonValue::
+* jsHandle@asis{.}asElement::
+* jsHandle@asis{.}dispose::
+* jsHandle@asis{.}executionContext::
+* jsHandle@asis{.}getProperties::
+* jsHandle@asis{.}getPropertypropertyName::
+* jsHandle@asis{.}jsonValue::
 @end menu
 
-@node jsHandleasElement
+@node jsHandle@asis{.}asElement
 @subsection jsHandle.asElement()
 @findex jsHandle.asElement
 @anchor{#jshandleaselement}
@@ -6749,7 +6749,7 @@ returns: <?@ref{#class-elementhandle,ElementHandle}>
 Returns either @code{null} or the object handle itself, if the object
 handle is an instance of @ref{#class-elementhandle,ElementHandle}.
 
-@node jsHandledispose
+@node jsHandle@asis{.}dispose
 @subsection jsHandle.dispose()
 @findex jsHandle.dispose
 @anchor{#jshandledispose}
@@ -6762,7 +6762,7 @@ Promise which resolves when the object handle is successfully disposed.
 
 The @code{jsHandle.dispose} method stops referencing the element handle.
 
-@node jsHandleexecutionContext
+@node jsHandle@asis{.}executionContext
 @subsection jsHandle.executionContext()
 @findex jsHandle.executionContext
 @anchor{#jshandleexecutioncontext}
@@ -6773,7 +6773,7 @@ returns: <@ref{#class-executioncontext,ExecutionContext}>
 
 Returns execution context the handle belongs to.
 
-@node jsHandlegetProperties
+@node jsHandle@asis{.}getProperties
 @subsection jsHandle.getProperties()
 @findex jsHandle.getProperties
 @anchor{#jshandlegetproperties}
@@ -6795,7 +6795,7 @@ const documentHandle = properties.get('document');
 await handle.dispose();
 @end verbatim
 
-@node jsHandlegetPropertypropertyName
+@node jsHandle@asis{.}getPropertypropertyName
 @subsection jsHandle.getProperty(propertyName)
 @findex jsHandle.getProperty
 @anchor{#jshandlegetpropertypropertyname}
@@ -6811,7 +6811,7 @@ returns:
 
 Fetches a single property from the referenced object.
 
-@node jsHandlejsonValue
+@node jsHandle@asis{.}jsonValue
 @subsection jsHandle.jsonValue()
 @findex jsHandle.jsonValue
 @anchor{#jshandlejsonvalue}
@@ -6863,33 +6863,33 @@ ElementHandle instances can be used as arguments in
 @ref{#pageevaluatepagefunction-args,@code{page.evaluate()}} methods.
 
 @menu
-* elementHandle$selector::
-* elementHandle$$selector::
-* elementHandle$$evalselector pageFunction[@dots{}args]::
-* elementHandle$evalselector pageFunction[@dots{}args]::
-* elementHandle$xexpression::
-* elementHandleasElement::
-* elementHandleboundingBox::
-* elementHandleboxModel::
-* elementHandleclick[options]::
-* elementHandlecontentFrame::
-* elementHandledispose::
-* elementHandleexecutionContext::
-* elementHandlefocus::
-* elementHandlegetProperties::
-* elementHandlegetPropertypropertyName::
-* elementHandlehover::
-* elementHandleisIntersectingViewport::
-* elementHandlejsonValue::
-* elementHandlepresskey[ options]::
-* elementHandlescreenshot[options]::
-* elementHandletap::
-* elementHandletoString::
-* elementHandletypetext[ options]::
-* elementHandleuploadFile@dots{}filePaths::
+* elementHandle@asis{.}$selector::
+* elementHandle@asis{.}$$selector::
+* elementHandle@asis{.}$$evalselector pageFunction[@dots{}args]::
+* elementHandle@asis{.}$evalselector pageFunction[@dots{}args]::
+* elementHandle@asis{.}$xexpression::
+* elementHandle@asis{.}asElement::
+* elementHandle@asis{.}boundingBox::
+* elementHandle@asis{.}boxModel::
+* elementHandle@asis{.}click[options]::
+* elementHandle@asis{.}contentFrame::
+* elementHandle@asis{.}dispose::
+* elementHandle@asis{.}executionContext::
+* elementHandle@asis{.}focus::
+* elementHandle@asis{.}getProperties::
+* elementHandle@asis{.}getPropertypropertyName::
+* elementHandle@asis{.}hover::
+* elementHandle@asis{.}isIntersectingViewport::
+* elementHandle@asis{.}jsonValue::
+* elementHandle@asis{.}presskey[ options]::
+* elementHandle@asis{.}screenshot[options]::
+* elementHandle@asis{.}tap::
+* elementHandle@asis{.}toString::
+* elementHandle@asis{.}typetext[ options]::
+* elementHandle@asis{.}uploadFile@dots{}filePaths::
 @end menu
 
-@node elementHandle$selector
+@node elementHandle@asis{.}$selector
 @subsection elementHandle.$(selector)
 @findex elementHandle.$
 @anchor{#elementhandleselector}
@@ -6908,7 +6908,7 @@ returns:
 The method runs @code{element.querySelector} within the page. If no
 element matches the selector, the return value resolves to @code{null}.
 
-@node elementHandle$$selector
+@node elementHandle@asis{.}$$selector
 @subsection elementHandle.$$(selector)
 @findex elementHandle.$$
 @anchor{#elementhandleselector-1}
@@ -6927,7 +6927,7 @@ returns:
 The method runs @code{element.querySelectorAll} within the page. If no
 elements match the selector, the return value resolves to @code{[]}.
 
-@node elementHandle$$evalselector pageFunction[@dots{}args]
+@node elementHandle@asis{.}$$evalselector pageFunction[@dots{}args]
 @subsection elementHandle.$$eval(selector, pageFunction[,@dots{}args])
 @findex elementHandle.$$eval
 @anchor{#elementhandleevalselector-pagefunction-args}
@@ -6975,7 +6975,7 @@ const feedHandle = await page.$('.feed');
 expect(await feedHandle.$$eval('.tweet', nodes => nodes.map(n => n.innerText))).toEqual(['Hello!', 'Hi!']);
 @end verbatim
 
-@node elementHandle$evalselector pageFunction[@dots{}args]
+@node elementHandle@asis{.}$evalselector pageFunction[@dots{}args]
 @subsection elementHandle.$eval(selector, pageFunction[,@dots{}args])
 @findex elementHandle.$eval
 @anchor{#elementhandleevalselector-pagefunction-args-1}
@@ -7017,7 +7017,7 @@ expect(await tweetHandle.$eval('.like', node => node.innerText)).toBe('100');
 expect(await tweetHandle.$eval('.retweets', node => node.innerText)).toBe('10');
 @end verbatim
 
-@node elementHandle$xexpression
+@node elementHandle@asis{.}$xexpression
 @subsection elementHandle.$x(expression)
 @findex elementHandle.$x
 @anchor{#elementhandlexexpression}
@@ -7036,7 +7036,7 @@ The method evaluates the XPath expression relative to the elementHandle.
 If there are no such elements, the method will resolve to an empty
 array.
 
-@node elementHandleasElement
+@node elementHandle@asis{.}asElement
 @subsection elementHandle.asElement()
 @findex elementHandle.asElement
 @anchor{#elementhandleaselement}
@@ -7045,7 +7045,7 @@ array.
 returns: <@ref{#class-elementhandle,ElementHandle}>
 @end itemize
 
-@node elementHandleboundingBox
+@node elementHandle@asis{.}boundingBox
 @subsection elementHandle.boundingBox()
 @findex elementHandle.boundingBox
 @anchor{#elementhandleboundingbox}
@@ -7077,7 +7077,7 @@ the height of the element in pixels.
 This method returns the bounding box of the element (relative to the
 main frame), or @code{null} if the element is not visible.
 
-@node elementHandleboxModel
+@node elementHandle@asis{.}boxModel
 @subsection elementHandle.boxModel()
 @findex elementHandle.boxModel
 @anchor{#elementhandleboxmodel}
@@ -7154,7 +7154,7 @@ This method returns boxes of the element, or @code{null} if the element
 is not visible. Boxes are represented as an array of points; each Point
 is an object @code{@{x, y@}}. Box points are sorted clock-wise.
 
-@node elementHandleclick[options]
+@node elementHandle@asis{.}click[options]
 @subsection elementHandle.click([options])
 @findex elementHandle.click
 @anchor{#elementhandleclickoptions}
@@ -7188,7 +7188,7 @@ This method scrolls element into view if needed, and then uses
 @ref{#pagemouse,page.mouse} to click in the center of the element. If
 the element is detached from DOM, the method throws an error.
 
-@node elementHandlecontentFrame
+@node elementHandle@asis{.}contentFrame
 @subsection elementHandle.contentFrame()
 @findex elementHandle.contentFrame
 @anchor{#elementhandlecontentframe}
@@ -7200,7 +7200,7 @@ Resolves to the content frame for element handles referencing iframe
 nodes, or null otherwise
 @end itemize
 
-@node elementHandledispose
+@node elementHandle@asis{.}dispose
 @subsection elementHandle.dispose()
 @findex elementHandle.dispose
 @anchor{#elementhandledispose}
@@ -7214,7 +7214,7 @@ Promise which resolves when the element handle is successfully disposed.
 The @code{elementHandle.dispose} method stops referencing the element
 handle.
 
-@node elementHandleexecutionContext
+@node elementHandle@asis{.}executionContext
 @subsection elementHandle.executionContext()
 @findex elementHandle.executionContext
 @anchor{#elementhandleexecutioncontext}
@@ -7223,7 +7223,7 @@ handle.
 returns: <@ref{#class-executioncontext,ExecutionContext}>
 @end itemize
 
-@node elementHandlefocus
+@node elementHandle@asis{.}focus
 @subsection elementHandle.focus()
 @findex elementHandle.focus
 @anchor{#elementhandlefocus}
@@ -7237,7 +7237,7 @@ Calls
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus,focus}
 on the element.
 
-@node elementHandlegetProperties
+@node elementHandle@asis{.}getProperties
 @subsection elementHandle.getProperties()
 @findex elementHandle.getProperties
 @anchor{#elementhandlegetproperties}
@@ -7263,7 +7263,7 @@ for (const property of properties.values()) {
 children; // holds elementHandles to all children of document.body
 @end verbatim
 
-@node elementHandlegetPropertypropertyName
+@node elementHandle@asis{.}getPropertypropertyName
 @subsection elementHandle.getProperty(propertyName)
 @findex elementHandle.getProperty
 @anchor{#elementhandlegetpropertypropertyname}
@@ -7279,7 +7279,7 @@ returns:
 
 Fetches a single property from the objectHandle.
 
-@node elementHandlehover
+@node elementHandle@asis{.}hover
 @subsection elementHandle.hover()
 @findex elementHandle.hover
 @anchor{#elementhandlehover}
@@ -7294,7 +7294,7 @@ This method scrolls element into view if needed, and then uses
 @ref{#pagemouse,page.mouse} to hover over the center of the element. If
 the element is detached from DOM, the method throws an error.
 
-@node elementHandleisIntersectingViewport
+@node elementHandle@asis{.}isIntersectingViewport
 @subsection elementHandle.isIntersectingViewport()
 @findex elementHandle.isIntersectingViewport
 @anchor{#elementhandleisintersectingviewport}
@@ -7305,7 +7305,7 @@ returns:
 Resolves to true if the element is visible in the current viewport.
 @end itemize
 
-@node elementHandlejsonValue
+@node elementHandle@asis{.}jsonValue
 @subsection elementHandle.jsonValue()
 @findex elementHandle.jsonValue
 @anchor{#elementhandlejsonvalue}
@@ -7327,7 +7327,7 @@ in puppeteer.
 stringifiable.
 @end quotation
 
-@node elementHandlepresskey[ options]
+@node elementHandle@asis{.}presskey[ options]
 @subsection elementHandle.press(key[, options])
 @findex elementHandle.press
 @anchor{#elementhandlepresskey-options}
@@ -7372,7 +7372,7 @@ an input event to be generated.
 Holding down @code{Shift} will type the text in upper case.
 @end quotation
 
-@node elementHandlescreenshot[options]
+@node elementHandle@asis{.}screenshot[options]
 @subsection elementHandle.screenshot([options])
 @findex elementHandle.screenshot
 @anchor{#elementhandlescreenshotoptions}
@@ -7393,7 +7393,7 @@ This method scrolls element into view if needed, and then uses
 element. If the element is detached from DOM, the method throws an
 error.
 
-@node elementHandletap
+@node elementHandle@asis{.}tap
 @subsection elementHandle.tap()
 @findex elementHandle.tap
 @anchor{#elementhandletap}
@@ -7410,7 +7410,7 @@ This method scrolls element into view if needed, and then uses
 element. If the element is detached from DOM, the method throws an
 error.
 
-@node elementHandletoString
+@node elementHandle@asis{.}toString
 @subsection elementHandle.toString()
 @findex elementHandle.toString
 @anchor{#elementhandletostring}
@@ -7420,7 +7420,7 @@ returns:
 <@uref{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type,string}>
 @end itemize
 
-@node elementHandletypetext[ options]
+@node elementHandle@asis{.}typetext[ options]
 @subsection elementHandle.type(text[, options])
 @findex elementHandle.type
 @anchor{#elementhandletypetext-options}
@@ -7464,7 +7464,7 @@ await elementHandle.type('some text');
 await elementHandle.press('Enter');
 @end verbatim
 
-@node elementHandleuploadFile@dots{}filePaths
+@node elementHandle@asis{.}uploadFile@dots{}filePaths
 @subsection elementHandle.uploadFile(@dots{}filePaths)
 @findex elementHandle.uploadFile
 @anchor{#elementhandleuploadfilefilepaths}
@@ -7505,22 +7505,22 @@ finished with the `requestfinished' event, and a new request is issued
 to a redirected url.
 
 @menu
-* requestabort[errorCode]::
-* requestcontinue[overrides]::
-* requestfailure::
-* requestframe::
-* requestheaders::
-* requestisNavigationRequest::
-* requestmethod::
-* requestpostData::
-* requestredirectChain::
-* requestresourceType::
-* requestrespondresponse::
-* requestresponse::
-* requesturl::
+* request@asis{.}abort[errorCode]::
+* request@asis{.}continue[overrides]::
+* request@asis{.}failure::
+* request@asis{.}frame::
+* request@asis{.}headers::
+* request@asis{.}isNavigationRequest::
+* request@asis{.}method::
+* request@asis{.}postData::
+* request@asis{.}redirectChain::
+* request@asis{.}resourceType::
+* request@asis{.}respondresponse::
+* request@asis{.}response::
+* request@asis{.}url::
 @end menu
 
-@node requestabort[errorCode]
+@node request@asis{.}abort[errorCode]
 @subsection request.abort([errorCode])
 @findex request.abort
 @anchor{#requestaborterrorcode}
@@ -7577,7 +7577,7 @@ Aborts request. To use this, request interception should be enabled with
 @code{page.setRequestInterception}. Exception is immediately thrown if
 the request interception is not enabled.
 
-@node requestcontinue[overrides]
+@node request@asis{.}continue[overrides]
 @subsection request.continue([overrides])
 @findex request.continue
 @anchor{#requestcontinueoverrides}
@@ -7629,7 +7629,7 @@ page.on('request', request => {
 });
 @end verbatim
 
-@node requestfailure
+@node request@asis{.}failure
 @subsection request.failure()
 @findex request.failure
 @anchor{#requestfailure}
@@ -7658,7 +7658,7 @@ page.on('requestfailed', request => {
 });
 @end verbatim
 
-@node requestframe
+@node request@asis{.}frame
 @subsection request.frame()
 @findex request.frame
 @anchor{#requestframe}
@@ -7668,7 +7668,7 @@ returns: <?@ref{#class-frame,Frame}> A @ref{#class-frame,Frame} that
 initiated this request, or @code{null} if navigating to error pages.
 @end itemize
 
-@node requestheaders
+@node request@asis{.}headers
 @subsection request.headers()
 @findex request.headers
 @anchor{#requestheaders}
@@ -7680,7 +7680,7 @@ An object with HTTP headers associated with the request. All header
 names are lower-case.
 @end itemize
 
-@node requestisNavigationRequest
+@node request@asis{.}isNavigationRequest
 @subsection request.isNavigationRequest()
 @findex request.isNavigationRequest
 @anchor{#requestisnavigationrequest}
@@ -7692,7 +7692,7 @@ returns:
 
 Whether this request is driving frame's navigation.
 
-@node requestmethod
+@node request@asis{.}method
 @subsection request.method()
 @findex request.method
 @anchor{#requestmethod}
@@ -7703,7 +7703,7 @@ returns:
 Request's method (GET, POST, etc.)
 @end itemize
 
-@node requestpostData
+@node request@asis{.}postData
 @subsection request.postData()
 @findex request.postData
 @anchor{#requestpostdata}
@@ -7714,7 +7714,7 @@ returns:
 Request's post body, if any.
 @end itemize
 
-@node requestredirectChain
+@node request@asis{.}redirectChain
 @subsection request.redirectChain()
 @findex request.redirectChain
 @anchor{#requestredirectchain}
@@ -7753,7 +7753,7 @@ const chain = response.request().redirectChain();
 console.log(chain.length); // 0
 @end verbatim
 
-@node requestresourceType
+@node request@asis{.}resourceType
 @subsection request.resourceType()
 @findex request.resourceType
 @anchor{#requestresourcetype}
@@ -7769,7 +7769,7 @@ rendering engine. ResourceType will be one of the following:
 @code{font}, @code{script}, @code{texttrack}, @code{xhr}, @code{fetch},
 @code{eventsource}, @code{websocket}, @code{manifest}, @code{other}.
 
-@node requestrespondresponse
+@node request@asis{.}respondresponse
 @subsection request.respond(response)
 @findex request.respond
 @anchor{#requestrespondresponse}
@@ -7824,7 +7824,7 @@ page.on('request', request => {
 Calling @code{request.respond} for a dataURL request is a noop.
 @end quotation
 
-@node requestresponse
+@node request@asis{.}response
 @subsection request.response()
 @findex request.response
 @anchor{#requestresponse}
@@ -7835,7 +7835,7 @@ returns: <?@ref{#class-response,Response}> A matching
 has not been received yet.
 @end itemize
 
-@node requesturl
+@node request@asis{.}url
 @subsection request.url()
 @findex request.url
 @anchor{#requesturl}
@@ -7853,23 +7853,23 @@ URL of the request.
 received by page.
 
 @menu
-* responsebuffer::
-* responseframe::
-* responsefromCache::
-* responsefromServiceWorker::
-* responseheaders::
-* responsejson::
-* responseok::
-* responseremoteAddress::
-* responserequest::
-* responsesecurityDetails::
-* responsestatus::
-* responsestatusText::
-* responsetext::
-* responseurl::
+* response@asis{.}buffer::
+* response@asis{.}frame::
+* response@asis{.}fromCache::
+* response@asis{.}fromServiceWorker::
+* response@asis{.}headers::
+* response@asis{.}json::
+* response@asis{.}ok::
+* response@asis{.}remoteAddress::
+* response@asis{.}request::
+* response@asis{.}securityDetails::
+* response@asis{.}status::
+* response@asis{.}statusText::
+* response@asis{.}text::
+* response@asis{.}url::
 @end menu
 
-@node responsebuffer
+@node response@asis{.}buffer
 @subsection response.buffer()
 @findex response.buffer
 @anchor{#responsebuffer}
@@ -7880,7 +7880,7 @@ returns:
 Promise which resolves to a buffer with response body.
 @end itemize
 
-@node responseframe
+@node response@asis{.}frame
 @subsection response.frame()
 @findex response.frame
 @anchor{#responseframe}
@@ -7890,7 +7890,7 @@ returns: <?@ref{#class-frame,Frame}> A @ref{#class-frame,Frame} that
 initiated this response, or @code{null} if navigating to error pages.
 @end itemize
 
-@node responsefromCache
+@node response@asis{.}fromCache
 @subsection response.fromCache()
 @findex response.fromCache
 @anchor{#responsefromcache}
@@ -7903,7 +7903,7 @@ returns:
 True if the response was served from either the browser's disk cache or
 memory cache.
 
-@node responsefromServiceWorker
+@node response@asis{.}fromServiceWorker
 @subsection response.fromServiceWorker()
 @findex response.fromServiceWorker
 @anchor{#responsefromserviceworker}
@@ -7915,7 +7915,7 @@ returns:
 
 True if the response was served by a service worker.
 
-@node responseheaders
+@node response@asis{.}headers
 @subsection response.headers()
 @findex response.headers
 @anchor{#responseheaders}
@@ -7927,7 +7927,7 @@ An object with HTTP headers associated with the response. All header
 names are lower-case.
 @end itemize
 
-@node responsejson
+@node response@asis{.}json
 @subsection response.json()
 @findex response.json
 @anchor{#responsejson}
@@ -7941,7 +7941,7 @@ Promise which resolves to a JSON representation of response body.
 This method will throw if the response body is not parsable via
 @code{JSON.parse}.
 
-@node responseok
+@node response@asis{.}ok
 @subsection response.ok()
 @findex response.ok
 @anchor{#responseok}
@@ -7954,7 +7954,7 @@ returns:
 Contains a boolean stating whether the response was successful (status
 in the range 200-299) or not.
 
-@node responseremoteAddress
+@node response@asis{.}remoteAddress
 @subsection response.remoteAddress()
 @findex response.remoteAddress
 @anchor{#responseremoteaddress}
@@ -7975,7 +7975,7 @@ the port used to connect to the remote server
 
 @end itemize
 
-@node responserequest
+@node response@asis{.}request
 @subsection response.request()
 @findex response.request
 @anchor{#responserequest}
@@ -7985,7 +7985,7 @@ returns: <@ref{#class-request,Request}> A matching
 @ref{#class-request,Request} object.
 @end itemize
 
-@node responsesecurityDetails
+@node response@asis{.}securityDetails
 @subsection response.securityDetails()
 @findex response.securityDetails
 @anchor{#responsesecuritydetails}
@@ -7996,7 +7996,7 @@ details if the response was received over the secure connection, or
 @code{null} otherwise.
 @end itemize
 
-@node responsestatus
+@node response@asis{.}status
 @subsection response.status()
 @findex response.status
 @anchor{#responsestatus}
@@ -8008,7 +8008,7 @@ returns:
 
 Contains the status code of the response (e.g., 200 for a success).
 
-@node responsestatusText
+@node response@asis{.}statusText
 @subsection response.statusText()
 @findex response.statusText
 @anchor{#responsestatustext}
@@ -8021,7 +8021,7 @@ returns:
 Contains the status text of the response (e.g.@ usually an ``OK'' for a
 success).
 
-@node responsetext
+@node response@asis{.}text
 @subsection response.text()
 @findex response.text
 @anchor{#responsetext}
@@ -8032,7 +8032,7 @@ returns:
 Promise which resolves to a text representation of response body.
 @end itemize
 
-@node responseurl
+@node response@asis{.}url
 @subsection response.url()
 @findex response.url
 @anchor{#responseurl}
@@ -8051,14 +8051,14 @@ Contains the URL of the response.
 security details when response was received over the secure connection.
 
 @menu
-* securityDetailsissuer::
-* securityDetailsprotocol::
-* securityDetailssubjectName::
-* securityDetailsvalidFrom::
-* securityDetailsvalidTo::
+* securityDetails@asis{.}issuer::
+* securityDetails@asis{.}protocol::
+* securityDetails@asis{.}subjectName::
+* securityDetails@asis{.}validFrom::
+* securityDetails@asis{.}validTo::
 @end menu
 
-@node securityDetailsissuer
+@node securityDetails@asis{.}issuer
 @subsection securityDetails.issuer()
 @findex securityDetails.issuer
 @anchor{#securitydetailsissuer}
@@ -8069,7 +8069,7 @@ returns:
 A string with the name of issuer of the certificate.
 @end itemize
 
-@node securityDetailsprotocol
+@node securityDetails@asis{.}protocol
 @subsection securityDetails.protocol()
 @findex securityDetails.protocol
 @anchor{#securitydetailsprotocol}
@@ -8080,7 +8080,7 @@ returns:
 String with the security protocol, eg. ``TLS 1.2''.
 @end itemize
 
-@node securityDetailssubjectName
+@node securityDetails@asis{.}subjectName
 @subsection securityDetails.subjectName()
 @findex securityDetails.subjectName
 @anchor{#securitydetailssubjectname}
@@ -8091,7 +8091,7 @@ returns:
 Name of the subject to which the certificate was issued to.
 @end itemize
 
-@node securityDetailsvalidFrom
+@node securityDetails@asis{.}validFrom
 @subsection securityDetails.validFrom()
 @findex securityDetails.validFrom
 @anchor{#securitydetailsvalidfrom}
@@ -8103,7 +8103,7 @@ returns:
 start of validity of the certificate.
 @end itemize
 
-@node securityDetailsvalidTo
+@node securityDetails@asis{.}validTo
 @subsection securityDetails.validTo()
 @findex securityDetails.validTo
 @anchor{#securitydetailsvalidto}
@@ -8120,16 +8120,16 @@ of validity of the certificate.
 @anchor{#class-target}
 
 @menu
-* targetbrowser::
-* targetbrowserContext::
-* targetcreateCDPSession::
-* targetopener::
-* targetpage::
-* targettype::
-* targeturl::
+* target@asis{.}browser::
+* target@asis{.}browserContext::
+* target@asis{.}createCDPSession::
+* target@asis{.}opener::
+* target@asis{.}page::
+* target@asis{.}type::
+* target@asis{.}url::
 @end menu
 
-@node targetbrowser
+@node target@asis{.}browser
 @subsection target.browser()
 @findex target.browser
 @anchor{#targetbrowser}
@@ -8140,7 +8140,7 @@ returns: <@ref{#class-browser,Browser}>
 
 Get the browser the target belongs to.
 
-@node targetbrowserContext
+@node target@asis{.}browserContext
 @subsection target.browserContext()
 @findex target.browserContext
 @anchor{#targetbrowsercontext}
@@ -8151,7 +8151,7 @@ returns: <@ref{#class-browsercontext,BrowserContext}>
 
 The browser context the target belongs to.
 
-@node targetcreateCDPSession
+@node target@asis{.}createCDPSession
 @subsection target.createCDPSession()
 @findex target.createCDPSession
 @anchor{#targetcreatecdpsession}
@@ -8163,7 +8163,7 @@ returns:
 
 Creates a Chrome Devtools Protocol session attached to the target.
 
-@node targetopener
+@node target@asis{.}opener
 @subsection target.opener()
 @findex target.opener
 @anchor{#targetopener}
@@ -8175,7 +8175,7 @@ returns: <?@ref{#class-target,Target}>
 Get the target that opened this target. Top-level targets return
 @code{null}.
 
-@node targetpage
+@node target@asis{.}page
 @subsection target.page()
 @findex target.page
 @anchor{#targetpage}
@@ -8188,7 +8188,7 @@ returns:
 If the target is not of type @code{"page"} or @code{"background_page"},
 returns @code{null}.
 
-@node targettype
+@node target@asis{.}type
 @subsection target.type()
 @findex target.type
 @anchor{#targettype}
@@ -8202,7 +8202,7 @@ Identifies what kind of target this is. Can be @code{"page"},
 @uref{https://developer.chrome.com/extensions/background_pages,@code{"background_page"}},
 @code{"service_worker"}, @code{"browser"} or @code{"other"}.
 
-@node targeturl
+@node target@asis{.}url
 @subsection target.url()
 @findex target.url
 @anchor{#targeturl}
@@ -8243,11 +8243,11 @@ await client.send('Animation.setPlaybackRate', {
 @end verbatim
 
 @menu
-* cdpSessiondetach::
-* cdpSessionsendmethod[ params]::
+* cdpSession@asis{.}detach::
+* cdpSession@asis{.}sendmethod[ params]::
 @end menu
 
-@node cdpSessiondetach
+@node cdpSession@asis{.}detach
 @subsection cdpSession.detach()
 @findex cdpSession.detach
 @anchor{#cdpsessiondetach}
@@ -8260,7 +8260,7 @@ returns:
 Detaches the cdpSession from the target. Once detached, the cdpSession
 object won't emit any events and can't be used to send messages.
 
-@node cdpSessionsendmethod[ params]
+@node cdpSession@asis{.}sendmethod[ params]
 @subsection cdpSession.send(method[, params])
 @findex cdpSession.send
 @anchor{#cdpsessionsendmethod-params}
@@ -8316,13 +8316,13 @@ console.log(`Bytes used: ${usedBytes / totalBytes * 100}%`);
 @uref{https://github.com/istanbuljs/puppeteer-to-istanbul,puppeteer-to-istanbul}.}
 
 @menu
-* coveragestartCSSCoverage[options]::
-* coveragestartJSCoverage[options]::
-* coveragestopCSSCoverage::
-* coveragestopJSCoverage::
+* coverage@asis{.}startCSSCoverage[options]::
+* coverage@asis{.}startJSCoverage[options]::
+* coverage@asis{.}stopCSSCoverage::
+* coverage@asis{.}stopJSCoverage::
 @end menu
 
-@node coveragestartCSSCoverage[options]
+@node coverage@asis{.}startCSSCoverage[options]
 @subsection coverage.startCSSCoverage([options])
 @findex coverage.startCSSCoverage
 @anchor{#coveragestartcsscoverageoptions}
@@ -8344,7 +8344,7 @@ returns:
 Promise that resolves when coverage is started
 @end itemize
 
-@node coveragestartJSCoverage[options]
+@node coverage@asis{.}startJSCoverage[options]
 @subsection coverage.startJSCoverage([options])
 @findex coverage.startJSCoverage
 @anchor{#coveragestartjscoverageoptions}
@@ -8379,7 +8379,7 @@ set to @code{true}, anonymous scripts will have
 @code{__puppeteer_evaluation_script__} as their URL.
 @end quotation
 
-@node coveragestopCSSCoverage
+@node coverage@asis{.}stopCSSCoverage
 @subsection coverage.stopCSSCoverage()
 @findex coverage.stopCSSCoverage
 @anchor{#coveragestopcsscoverage}
@@ -8422,7 +8422,7 @@ An end offset in text, exclusive
 tags without sourceURLs.
 @end quotation
 
-@node coveragestopJSCoverage
+@node coverage@asis{.}stopJSCoverage
 @subsection coverage.stopJSCoverage()
 @findex coverage.stopJSCoverage
 @anchor{#coveragestopjscoverage}

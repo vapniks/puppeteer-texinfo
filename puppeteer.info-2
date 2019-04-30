@@ -7,7 +7,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: puppeteer.info,  Node: requestrespondresponse,  Next: requestresponse,  Prev: requestresourceType,  Up: class Request
+File: puppeteer.info,  Node: request.respondresponse,  Next: request.response,  Prev: request.resourceType,  Up: class Request
 
 1.22.11 request.respond(response)
 ---------------------------------
@@ -51,7 +51,7 @@ page.on('request', request => {
      Calling ‘request.respond’ for a dataURL request is a noop.
 
 
-File: puppeteer.info,  Node: requestresponse,  Next: requesturl,  Prev: requestrespondresponse,  Up: class Request
+File: puppeteer.info,  Node: request.response,  Next: request.url,  Prev: request.respondresponse,  Up: class Request
 
 1.22.12 request.response()
 --------------------------
@@ -61,7 +61,7 @@ File: puppeteer.info,  Node: requestresponse,  Next: requesturl,  Prev: requestr
      not been received yet.
 
 
-File: puppeteer.info,  Node: requesturl,  Prev: requestresponse,  Up: class Request
+File: puppeteer.info,  Node: request.url,  Prev: request.response,  Up: class Request
 
 1.22.13 request.url()
 ---------------------
@@ -81,23 +81,23 @@ received by page.
 
 * Menu:
 
-* responsebuffer::
-* responseframe::
-* responsefromCache::
-* responsefromServiceWorker::
-* responseheaders::
-* responsejson::
-* responseok::
-* responseremoteAddress::
-* responserequest::
-* responsesecurityDetails::
-* responsestatus::
-* responsestatusText::
-* responsetext::
-* responseurl::
+* response.buffer::
+* response.frame::
+* response.fromCache::
+* response.fromServiceWorker::
+* response.headers::
+* response.json::
+* response.ok::
+* response.remoteAddress::
+* response.request::
+* response.securityDetails::
+* response.status::
+* response.statusText::
+* response.text::
+* response.url::
 
 
-File: puppeteer.info,  Node: responsebuffer,  Next: responseframe,  Up: class Response
+File: puppeteer.info,  Node: response.buffer,  Next: response.frame,  Up: class Response
 
 1.23.1 response.buffer()
 ------------------------
@@ -107,7 +107,7 @@ File: puppeteer.info,  Node: responsebuffer,  Next: responseframe,  Up: class Re
      which resolves to a buffer with response body.
 
 
-File: puppeteer.info,  Node: responseframe,  Next: responsefromCache,  Prev: responsebuffer,  Up: class Response
+File: puppeteer.info,  Node: response.frame,  Next: response.fromCache,  Prev: response.buffer,  Up: class Response
 
 1.23.2 response.frame()
 -----------------------
@@ -117,7 +117,7 @@ File: puppeteer.info,  Node: responseframe,  Next: responsefromCache,  Prev: res
      pages.
 
 
-File: puppeteer.info,  Node: responsefromCache,  Next: responsefromServiceWorker,  Prev: responseframe,  Up: class Response
+File: puppeteer.info,  Node: response.fromCache,  Next: response.fromServiceWorker,  Prev: response.frame,  Up: class Response
 
 1.23.3 response.fromCache()
 ---------------------------
@@ -129,7 +129,7 @@ True if the response was served from either the browser’s disk cache or
 memory cache.
 
 
-File: puppeteer.info,  Node: responsefromServiceWorker,  Next: responseheaders,  Prev: responsefromCache,  Up: class Response
+File: puppeteer.info,  Node: response.fromServiceWorker,  Next: response.headers,  Prev: response.fromCache,  Up: class Response
 
 1.23.4 response.fromServiceWorker()
 -----------------------------------
@@ -140,7 +140,7 @@ File: puppeteer.info,  Node: responsefromServiceWorker,  Next: responseheaders, 
 True if the response was served by a service worker.
 
 
-File: puppeteer.info,  Node: responseheaders,  Next: responsejson,  Prev: responsefromServiceWorker,  Up: class Response
+File: puppeteer.info,  Node: response.headers,  Next: response.json,  Prev: response.fromServiceWorker,  Up: class Response
 
 1.23.5 response.headers()
 -------------------------
@@ -151,7 +151,7 @@ File: puppeteer.info,  Node: responseheaders,  Next: responsejson,  Prev: respon
      header names are lower-case.
 
 
-File: puppeteer.info,  Node: responsejson,  Next: responseok,  Prev: responseheaders,  Up: class Response
+File: puppeteer.info,  Node: response.json,  Next: response.ok,  Prev: response.headers,  Up: class Response
 
 1.23.6 response.json()
 ----------------------
@@ -164,7 +164,7 @@ This method will throw if the response body is not parsable via
 ‘JSON.parse’.
 
 
-File: puppeteer.info,  Node: responseok,  Next: responseremoteAddress,  Prev: responsejson,  Up: class Response
+File: puppeteer.info,  Node: response.ok,  Next: response.remoteAddress,  Prev: response.json,  Up: class Response
 
 1.23.7 response.ok()
 --------------------
@@ -176,7 +176,7 @@ Contains a boolean stating whether the response was successful (status
 in the range 200-299) or not.
 
 
-File: puppeteer.info,  Node: responseremoteAddress,  Next: responserequest,  Prev: responseok,  Up: class Response
+File: puppeteer.info,  Node: response.remoteAddress,  Next: response.request,  Prev: response.ok,  Up: class Response
 
 1.23.8 response.remoteAddress()
 -------------------------------
@@ -191,7 +191,7 @@ File: puppeteer.info,  Node: responseremoteAddress,  Next: responserequest,  Pre
           the port used to connect to the remote server
 
 
-File: puppeteer.info,  Node: responserequest,  Next: responsesecurityDetails,  Prev: responseremoteAddress,  Up: class Response
+File: puppeteer.info,  Node: response.request,  Next: response.securityDetails,  Prev: response.remoteAddress,  Up: class Response
 
 1.23.9 response.request()
 -------------------------
@@ -200,7 +200,7 @@ File: puppeteer.info,  Node: responserequest,  Next: responsesecurityDetails,  P
      #class-request. object.
 
 
-File: puppeteer.info,  Node: responsesecurityDetails,  Next: responsestatus,  Prev: responserequest,  Up: class Response
+File: puppeteer.info,  Node: response.securityDetails,  Next: response.status,  Prev: response.request,  Up: class Response
 
 1.23.10 response.securityDetails()
 ----------------------------------
@@ -210,7 +210,7 @@ File: puppeteer.info,  Node: responsesecurityDetails,  Next: responsestatus,  Pr
      ‘null’ otherwise.
 
 
-File: puppeteer.info,  Node: responsestatus,  Next: responsestatusText,  Prev: responsesecurityDetails,  Up: class Response
+File: puppeteer.info,  Node: response.status,  Next: response.statusText,  Prev: response.securityDetails,  Up: class Response
 
 1.23.11 response.status()
 -------------------------
@@ -221,7 +221,7 @@ File: puppeteer.info,  Node: responsestatus,  Next: responsestatusText,  Prev: r
 Contains the status code of the response (e.g., 200 for a success).
 
 
-File: puppeteer.info,  Node: responsestatusText,  Next: responsetext,  Prev: responsestatus,  Up: class Response
+File: puppeteer.info,  Node: response.statusText,  Next: response.text,  Prev: response.status,  Up: class Response
 
 1.23.12 response.statusText()
 -----------------------------
@@ -233,7 +233,7 @@ Contains the status text of the response (e.g. usually an “OK” for a
 success).
 
 
-File: puppeteer.info,  Node: responsetext,  Next: responseurl,  Prev: responsestatusText,  Up: class Response
+File: puppeteer.info,  Node: response.text,  Next: response.url,  Prev: response.statusText,  Up: class Response
 
 1.23.13 response.text()
 -----------------------
@@ -244,7 +244,7 @@ File: puppeteer.info,  Node: responsetext,  Next: responseurl,  Prev: responsest
      Promise which resolves to a text representation of response body.
 
 
-File: puppeteer.info,  Node: responseurl,  Prev: responsetext,  Up: class Response
+File: puppeteer.info,  Node: response.url,  Prev: response.text,  Up: class Response
 
 1.23.14 response.url()
 ----------------------
@@ -265,14 +265,14 @@ security details when response was received over the secure connection.
 
 * Menu:
 
-* securityDetailsissuer::
-* securityDetailsprotocol::
-* securityDetailssubjectName::
-* securityDetailsvalidFrom::
-* securityDetailsvalidTo::
+* securityDetails.issuer::
+* securityDetails.protocol::
+* securityDetails.subjectName::
+* securityDetails.validFrom::
+* securityDetails.validTo::
 
 
-File: puppeteer.info,  Node: securityDetailsissuer,  Next: securityDetailsprotocol,  Up: class SecurityDetails
+File: puppeteer.info,  Node: securityDetails.issuer,  Next: securityDetails.protocol,  Up: class SecurityDetails
 
 1.24.1 securityDetails.issuer()
 -------------------------------
@@ -282,7 +282,7 @@ File: puppeteer.info,  Node: securityDetailsissuer,  Next: securityDetailsprotoc
      A string with the name of issuer of the certificate.
 
 
-File: puppeteer.info,  Node: securityDetailsprotocol,  Next: securityDetailssubjectName,  Prev: securityDetailsissuer,  Up: class SecurityDetails
+File: puppeteer.info,  Node: securityDetails.protocol,  Next: securityDetails.subjectName,  Prev: securityDetails.issuer,  Up: class SecurityDetails
 
 1.24.2 securityDetails.protocol()
 ---------------------------------
@@ -292,7 +292,7 @@ File: puppeteer.info,  Node: securityDetailsprotocol,  Next: securityDetailssubj
      String with the security protocol, eg.  “TLS 1.2”.
 
 
-File: puppeteer.info,  Node: securityDetailssubjectName,  Next: securityDetailsvalidFrom,  Prev: securityDetailsprotocol,  Up: class SecurityDetails
+File: puppeteer.info,  Node: securityDetails.subjectName,  Next: securityDetails.validFrom,  Prev: securityDetails.protocol,  Up: class SecurityDetails
 
 1.24.3 securityDetails.subjectName()
 ------------------------------------
@@ -302,7 +302,7 @@ File: puppeteer.info,  Node: securityDetailssubjectName,  Next: securityDetailsv
      Name of the subject to which the certificate was issued to.
 
 
-File: puppeteer.info,  Node: securityDetailsvalidFrom,  Next: securityDetailsvalidTo,  Prev: securityDetailssubjectName,  Up: class SecurityDetails
+File: puppeteer.info,  Node: securityDetails.validFrom,  Next: securityDetails.validTo,  Prev: securityDetails.subjectName,  Up: class SecurityDetails
 
 1.24.4 securityDetails.validFrom()
 ----------------------------------
@@ -313,7 +313,7 @@ File: puppeteer.info,  Node: securityDetailsvalidFrom,  Next: securityDetailsval
      start of validity of the certificate.
 
 
-File: puppeteer.info,  Node: securityDetailsvalidTo,  Prev: securityDetailsvalidFrom,  Up: class SecurityDetails
+File: puppeteer.info,  Node: securityDetails.validTo,  Prev: securityDetails.validFrom,  Up: class SecurityDetails
 
 1.24.5 securityDetails.validTo()
 --------------------------------
@@ -331,16 +331,16 @@ File: puppeteer.info,  Node: class Target,  Next: class CDPSession,  Prev: class
 
 * Menu:
 
-* targetbrowser::
-* targetbrowserContext::
-* targetcreateCDPSession::
-* targetopener::
-* targetpage::
-* targettype::
-* targeturl::
+* target.browser::
+* target.browserContext::
+* target.createCDPSession::
+* target.opener::
+* target.page::
+* target.type::
+* target.url::
 
 
-File: puppeteer.info,  Node: targetbrowser,  Next: targetbrowserContext,  Up: class Target
+File: puppeteer.info,  Node: target.browser,  Next: target.browserContext,  Up: class Target
 
 1.25.1 target.browser()
 -----------------------
@@ -350,7 +350,7 @@ File: puppeteer.info,  Node: targetbrowser,  Next: targetbrowserContext,  Up: cl
 Get the browser the target belongs to.
 
 
-File: puppeteer.info,  Node: targetbrowserContext,  Next: targetcreateCDPSession,  Prev: targetbrowser,  Up: class Target
+File: puppeteer.info,  Node: target.browserContext,  Next: target.createCDPSession,  Prev: target.browser,  Up: class Target
 
 1.25.2 target.browserContext()
 ------------------------------
@@ -360,7 +360,7 @@ File: puppeteer.info,  Node: targetbrowserContext,  Next: targetcreateCDPSession
 The browser context the target belongs to.
 
 
-File: puppeteer.info,  Node: targetcreateCDPSession,  Next: targetopener,  Prev: targetbrowserContext,  Up: class Target
+File: puppeteer.info,  Node: target.createCDPSession,  Next: target.opener,  Prev: target.browserContext,  Up: class Target
 
 1.25.3 target.createCDPSession()
 --------------------------------
@@ -372,7 +372,7 @@ File: puppeteer.info,  Node: targetcreateCDPSession,  Next: targetopener,  Prev:
 Creates a Chrome Devtools Protocol session attached to the target.
 
 
-File: puppeteer.info,  Node: targetopener,  Next: targetpage,  Prev: targetcreateCDPSession,  Up: class Target
+File: puppeteer.info,  Node: target.opener,  Next: target.page,  Prev: target.createCDPSession,  Up: class Target
 
 1.25.4 target.opener()
 ----------------------
@@ -383,7 +383,7 @@ Get the target that opened this target.  Top-level targets return
 ‘null’.
 
 
-File: puppeteer.info,  Node: targetpage,  Next: targettype,  Prev: targetopener,  Up: class Target
+File: puppeteer.info,  Node: target.page,  Next: target.type,  Prev: target.opener,  Up: class Target
 
 1.25.5 target.page()
 --------------------
@@ -396,7 +396,7 @@ If the target is not of type ‘"page"’ or ‘"background_page"’, returns
 ‘null’.
 
 
-File: puppeteer.info,  Node: targettype,  Next: targeturl,  Prev: targetpage,  Up: class Target
+File: puppeteer.info,  Node: target.type,  Next: target.url,  Prev: target.page,  Up: class Target
 
 1.25.6 target.type()
 --------------------
@@ -410,7 +410,7 @@ Identifies what kind of target this is.  Can be ‘"page"’,
 ‘"service_worker"’, ‘"browser"’ or ‘"other"’.
 
 
-File: puppeteer.info,  Node: targeturl,  Prev: targettype,  Up: class Target
+File: puppeteer.info,  Node: target.url,  Prev: target.type,  Up: class Target
 
 1.25.7 target.url()
 -------------------
@@ -448,11 +448,11 @@ await client.send('Animation.setPlaybackRate', {
 
 * Menu:
 
-* cdpSessiondetach::
-* cdpSessionsendmethod[ params]::
+* cdpSession.detach::
+* cdpSession.sendmethod[ params]::
 
 
-File: puppeteer.info,  Node: cdpSessiondetach,  Next: cdpSessionsendmethod[ params],  Up: class CDPSession
+File: puppeteer.info,  Node: cdpSession.detach,  Next: cdpSession.sendmethod[ params],  Up: class CDPSession
 
 1.26.1 cdpSession.detach()
 --------------------------
@@ -464,7 +464,7 @@ Detaches the cdpSession from the target.  Once detached, the cdpSession
 object won’t emit any events and can’t be used to send messages.
 
 
-File: puppeteer.info,  Node: cdpSessionsendmethod[ params],  Prev: cdpSessiondetach,  Up: class CDPSession
+File: puppeteer.info,  Node: cdpSession.sendmethod[ params],  Prev: cdpSession.detach,  Up: class CDPSession
 
 1.26.2 cdpSession.send(method[, params])
 ----------------------------------------
@@ -519,13 +519,13 @@ _To output coverage in a form consumable by Istanbul
 
 * Menu:
 
-* coveragestartCSSCoverage[options]::
-* coveragestartJSCoverage[options]::
-* coveragestopCSSCoverage::
-* coveragestopJSCoverage::
+* coverage.startCSSCoverage[options]::
+* coverage.startJSCoverage[options]::
+* coverage.stopCSSCoverage::
+* coverage.stopJSCoverage::
 
 
-File: puppeteer.info,  Node: coveragestartCSSCoverage[options],  Next: coveragestartJSCoverage[options],  Up: class Coverage
+File: puppeteer.info,  Node: coverage.startCSSCoverage[options],  Next: coverage.startJSCoverage[options],  Up: class Coverage
 
 1.27.1 coverage.startCSSCoverage([options])
 -------------------------------------------
@@ -543,7 +543,7 @@ File: puppeteer.info,  Node: coveragestartCSSCoverage[options],  Next: coverages
      Promise that resolves when coverage is started
 
 
-File: puppeteer.info,  Node: coveragestartJSCoverage[options],  Next: coveragestopCSSCoverage,  Prev: coveragestartCSSCoverage[options],  Up: class Coverage
+File: puppeteer.info,  Node: coverage.startJSCoverage[options],  Next: coverage.stopCSSCoverage,  Prev: coverage.startCSSCoverage[options],  Up: class Coverage
 
 1.27.2 coverage.startJSCoverage([options])
 ------------------------------------------
@@ -571,7 +571,7 @@ File: puppeteer.info,  Node: coveragestartJSCoverage[options],  Next: coveragest
      ‘__puppeteer_evaluation_script__’ as their URL.
 
 
-File: puppeteer.info,  Node: coveragestopCSSCoverage,  Next: coveragestopJSCoverage,  Prev: coveragestartJSCoverage[options],  Up: class Coverage
+File: puppeteer.info,  Node: coverage.stopCSSCoverage,  Next: coverage.stopJSCoverage,  Prev: coverage.startJSCoverage[options],  Up: class Coverage
 
 1.27.3 coverage.stopCSSCoverage()
 ---------------------------------
@@ -604,7 +604,7 @@ File: puppeteer.info,  Node: coveragestopCSSCoverage,  Next: coveragestopJSCover
      without sourceURLs.
 
 
-File: puppeteer.info,  Node: coveragestopJSCoverage,  Prev: coveragestopCSSCoverage,  Up: class Coverage
+File: puppeteer.info,  Node: coverage.stopJSCoverage,  Prev: coverage.stopCSSCoverage,  Up: class Coverage
 
 1.27.4 coverage.stopJSCoverage()
 --------------------------------
@@ -659,369 +659,374 @@ Function Index
  [index ]
 * Menu:
 
-* accessibility.snapshot:                accessibilitysnapshot[options].
+* accessibility.snapshot:                accessibility.snapshot[options].
                                                                 (line 6)
-* browser.browserContexts:               browserbrowserContexts.
+* browser.browserContexts:               browser.browserContexts.
                                                                 (line 6)
-* browser.close:                         browserclose.          (line 6)
-* browser.createIncognitoBrowserContext: browsercreateIncognitoBrowserContext.
+* browser.close:                         browser.close.         (line 6)
+* browser.createIncognitoBrowserContext: browser.createIncognitoBrowserContext.
                                                                 (line 6)
-* browser.defaultBrowserContext:         browserdefaultBrowserContext.
+* browser.defaultBrowserContext:         browser.defaultBrowserContext.
                                                                 (line 6)
-* browser.disconnect:                    browserdisconnect.     (line 6)
-* browser.newPage:                       browsernewPage.        (line 6)
-* browser.pages:                         browserpages.          (line 6)
-* browser.process:                       browserprocess.        (line 6)
-* browser.target:                        browsertarget.         (line 6)
-* browser.targets:                       browsertargets.        (line 6)
-* browser.userAgent:                     browseruserAgent.      (line 6)
-* browser.version:                       browserversion.        (line 6)
-* browser.waitForTarget:                 browserwaitForTargetpredicate[ options].
+* browser.disconnect:                    browser.disconnect.    (line 6)
+* browser.newPage:                       browser.newPage.       (line 6)
+* browser.pages:                         browser.pages.         (line 6)
+* browser.process:                       browser.process.       (line 6)
+* browser.target:                        browser.target.        (line 6)
+* browser.targets:                       browser.targets.       (line 6)
+* browser.userAgent:                     browser.userAgent.     (line 6)
+* browser.version:                       browser.version.       (line 6)
+* browser.waitForTarget:                 browser.waitForTargetpredicate[ options].
                                                                 (line 6)
-* browser.wsEndpoint:                    browserwsEndpoint.     (line 6)
-* browserContext.browser:                browserContextbrowser. (line 6)
-* browserContext.clearPermissionOverrides: browserContextclearPermissionOverrides.
+* browser.wsEndpoint:                    browser.wsEndpoint.    (line 6)
+* browserContext.browser:                browserContext.browser.
                                                                 (line 6)
-* browserContext.close:                  browserContextclose.   (line 6)
-* browserContext.isIncognito:            browserContextisIncognito.
+* browserContext.clearPermissionOverrides: browserContext.clearPermissionOverrides.
                                                                 (line 6)
-* browserContext.newPage:                browserContextnewPage. (line 6)
-* browserContext.overridePermissions:    browserContextoverridePermissionsorigin permissions.
+* browserContext.close:                  browserContext.close.  (line 6)
+* browserContext.isIncognito:            browserContext.isIncognito.
                                                                 (line 6)
-* browserContext.pages:                  browserContextpages.   (line 6)
-* browserContext.targets:                browserContexttargets. (line 6)
-* browserContext.waitForTarget:          browserContextwaitForTargetpredicate[ options].
+* browserContext.newPage:                browserContext.newPage.
                                                                 (line 6)
-* browserFetcher.canDownload:            browserFetchercanDownloadrevision.
+* browserContext.overridePermissions:    browserContext.overridePermissionsorigin permissions.
                                                                 (line 6)
-* browserFetcher.download:               browserFetcherdownloadrevision[ progressCallback].
+* browserContext.pages:                  browserContext.pages.  (line 6)
+* browserContext.targets:                browserContext.targets.
                                                                 (line 6)
-* browserFetcher.localRevisions:         browserFetcherlocalRevisions.
+* browserContext.waitForTarget:          browserContext.waitForTargetpredicate[ options].
                                                                 (line 6)
-* browserFetcher.platform:               browserFetcherplatform.
+* browserFetcher.canDownload:            browserFetcher.canDownloadrevision.
                                                                 (line 6)
-* browserFetcher.remove:                 browserFetcherremoverevision.
+* browserFetcher.download:               browserFetcher.downloadrevision[ progressCallback].
                                                                 (line 6)
-* browserFetcher.revisionInfo:           browserFetcherrevisionInforevision.
+* browserFetcher.localRevisions:         browserFetcher.localRevisions.
                                                                 (line 6)
-* cdpSession.detach:                     cdpSessiondetach.      (line 6)
-* cdpSession.send:                       cdpSessionsendmethod[ params].
+* browserFetcher.platform:               browserFetcher.platform.
                                                                 (line 6)
-* consoleMessage.args:                   consoleMessageargs.    (line 6)
-* consoleMessage.location:               consoleMessagelocation.
+* browserFetcher.remove:                 browserFetcher.removerevision.
                                                                 (line 6)
-* consoleMessage.text:                   consoleMessagetext.    (line 6)
-* consoleMessage.type:                   consoleMessagetype.    (line 6)
-* coverage.startCSSCoverage:             coveragestartCSSCoverage[options].
+* browserFetcher.revisionInfo:           browserFetcher.revisionInforevision.
                                                                 (line 6)
-* coverage.startJSCoverage:              coveragestartJSCoverage[options].
+* cdpSession.detach:                     cdpSession.detach.     (line 6)
+* cdpSession.send:                       cdpSession.sendmethod[ params].
                                                                 (line 6)
-* coverage.stopCSSCoverage:              coveragestopCSSCoverage.
+* consoleMessage.args:                   consoleMessage.args.   (line 6)
+* consoleMessage.location:               consoleMessage.location.
                                                                 (line 6)
-* coverage.stopJSCoverage:               coveragestopJSCoverage.
+* consoleMessage.text:                   consoleMessage.text.   (line 6)
+* consoleMessage.type:                   consoleMessage.type.   (line 6)
+* coverage.startCSSCoverage:             coverage.startCSSCoverage[options].
                                                                 (line 6)
-* dialog.accept:                         dialogaccept[promptText].
+* coverage.startJSCoverage:              coverage.startJSCoverage[options].
                                                                 (line 6)
-* dialog.defaultValue:                   dialogdefaultValue.    (line 6)
-* dialog.dismiss:                        dialogdismiss.         (line 6)
-* dialog.message:                        dialogmessage.         (line 6)
-* dialog.type:                           dialogtype.            (line 6)
-* elementHandle.$:                       elementHandle$selector.
+* coverage.stopCSSCoverage:              coverage.stopCSSCoverage.
                                                                 (line 6)
-* elementHandle.$$:                      elementHandle$$selector.
+* coverage.stopJSCoverage:               coverage.stopJSCoverage.
                                                                 (line 6)
-* elementHandle.$$eval:                  elementHandle$$evalselector pageFunction[...args].
+* dialog.accept:                         dialog.accept[promptText].
                                                                 (line 6)
-* elementHandle.$eval:                   elementHandle$evalselector pageFunction[...args].
+* dialog.defaultValue:                   dialog.defaultValue.   (line 6)
+* dialog.dismiss:                        dialog.dismiss.        (line 6)
+* dialog.message:                        dialog.message.        (line 6)
+* dialog.type:                           dialog.type.           (line 6)
+* elementHandle.$:                       elementHandle.$selector.
                                                                 (line 6)
-* elementHandle.$x:                      elementHandle$xexpression.
+* elementHandle.$$:                      elementHandle.$$selector.
                                                                 (line 6)
-* elementHandle.asElement:               elementHandleasElement.
+* elementHandle.$$eval:                  elementHandle.$$evalselector pageFunction[...args].
                                                                 (line 6)
-* elementHandle.boundingBox:             elementHandleboundingBox.
+* elementHandle.$eval:                   elementHandle.$evalselector pageFunction[...args].
                                                                 (line 6)
-* elementHandle.boxModel:                elementHandleboxModel. (line 6)
-* elementHandle.click:                   elementHandleclick[options].
+* elementHandle.$x:                      elementHandle.$xexpression.
                                                                 (line 6)
-* elementHandle.contentFrame:            elementHandlecontentFrame.
+* elementHandle.asElement:               elementHandle.asElement.
                                                                 (line 6)
-* elementHandle.dispose:                 elementHandledispose.  (line 6)
-* elementHandle.executionContext:        elementHandleexecutionContext.
+* elementHandle.boundingBox:             elementHandle.boundingBox.
                                                                 (line 6)
-* elementHandle.focus:                   elementHandlefocus.    (line 6)
-* elementHandle.getProperties:           elementHandlegetProperties.
+* elementHandle.boxModel:                elementHandle.boxModel.
                                                                 (line 6)
-* elementHandle.getProperty:             elementHandlegetPropertypropertyName.
+* elementHandle.click:                   elementHandle.click[options].
                                                                 (line 6)
-* elementHandle.hover:                   elementHandlehover.    (line 6)
-* elementHandle.isIntersectingViewport:  elementHandleisIntersectingViewport.
+* elementHandle.contentFrame:            elementHandle.contentFrame.
                                                                 (line 6)
-* elementHandle.jsonValue:               elementHandlejsonValue.
+* elementHandle.dispose:                 elementHandle.dispose. (line 6)
+* elementHandle.executionContext:        elementHandle.executionContext.
                                                                 (line 6)
-* elementHandle.press:                   elementHandlepresskey[ options].
+* elementHandle.focus:                   elementHandle.focus.   (line 6)
+* elementHandle.getProperties:           elementHandle.getProperties.
                                                                 (line 6)
-* elementHandle.screenshot:              elementHandlescreenshot[options].
+* elementHandle.getProperty:             elementHandle.getPropertypropertyName.
                                                                 (line 6)
-* elementHandle.tap:                     elementHandletap.      (line 6)
-* elementHandle.toString:                elementHandletoString. (line 6)
-* elementHandle.type:                    elementHandletypetext[ options].
+* elementHandle.hover:                   elementHandle.hover.   (line 6)
+* elementHandle.isIntersectingViewport:  elementHandle.isIntersectingViewport.
                                                                 (line 6)
-* elementHandle.uploadFile:              elementHandleuploadFile...filePaths.
+* elementHandle.jsonValue:               elementHandle.jsonValue.
                                                                 (line 6)
-* executionContext.evaluate:             executionContextevaluatepageFunction[...args].
+* elementHandle.press:                   elementHandle.presskey[ options].
                                                                 (line 6)
-* executionContext.evaluateHandle:       executionContextevaluateHandlepageFunction[...args].
+* elementHandle.screenshot:              elementHandle.screenshot[options].
                                                                 (line 6)
-* executionContext.frame:                executionContextframe. (line 6)
-* executionContext.queryObjects:         executionContextqueryObjectsprototypeHandle.
+* elementHandle.tap:                     elementHandle.tap.     (line 6)
+* elementHandle.toString:                elementHandle.toString.
                                                                 (line 6)
-* frame.$:                               frame$selector.        (line 6)
-* frame.$$:                              frame$$selector.       (line 6)
-* frame.$$eval:                          frame$$evalselector pageFunction[...args].
+* elementHandle.type:                    elementHandle.typetext[ options].
                                                                 (line 6)
-* frame.$eval:                           frame$evalselector pageFunction[...args].
+* elementHandle.uploadFile:              elementHandle.uploadFile...filePaths.
                                                                 (line 6)
-* frame.$x:                              frame$xexpression.     (line 6)
-* frame.addScriptTag:                    frameaddScriptTagoptions.
+* executionContext.evaluate:             executionContext.evaluatepageFunction[...args].
                                                                 (line 6)
-* frame.addStyleTag:                     frameaddStyleTagoptions.
+* executionContext.evaluateHandle:       executionContext.evaluateHandlepageFunction[...args].
                                                                 (line 6)
-* frame.childFrames:                     framechildFrames.      (line 6)
-* frame.click:                           frameclickselector[ options].
+* executionContext.frame:                executionContext.frame.
                                                                 (line 6)
-* frame.content:                         framecontent.          (line 6)
-* frame.evaluate:                        frameevaluatepageFunction[...args].
+* executionContext.queryObjects:         executionContext.queryObjectsprototypeHandle.
                                                                 (line 6)
-* frame.evaluateHandle:                  frameevaluateHandlepageFunction[...args].
+* frame.$:                               frame.$selector.       (line 6)
+* frame.$$:                              frame.$$selector.      (line 6)
+* frame.$$eval:                          frame.$$evalselector pageFunction[...args].
                                                                 (line 6)
-* frame.executionContext:                frameexecutionContext. (line 6)
-* frame.focus:                           framefocusselector.    (line 6)
-* frame.goto:                            framegotourl[ options].
+* frame.$eval:                           frame.$evalselector pageFunction[...args].
                                                                 (line 6)
-* frame.hover:                           framehoverselector.    (line 6)
-* frame.isDetached:                      frameisDetached.       (line 6)
-* frame.name:                            framename.             (line 6)
-* frame.parentFrame:                     frameparentFrame.      (line 6)
-* frame.select:                          frameselectselector...values.
+* frame.$x:                              frame.$xexpression.    (line 6)
+* frame.addScriptTag:                    frame.addScriptTag.    (line 6)
+* frame.addStyleTag:                     frame.addStyleTag.     (line 6)
+* frame.childFrames:                     frame.childFrames.     (line 6)
+* frame.click:                           frame.clickselector[ options].
                                                                 (line 6)
-* frame.setContent:                      framesetContenthtml[ options].
+* frame.content:                         frame.content.         (line 6)
+* frame.evaluate:                        frame.evaluatepageFunction[...args].
                                                                 (line 6)
-* frame.tap:                             frametapselector.      (line 6)
-* frame.title:                           frametitle.            (line 6)
-* frame.type:                            frametypeselector text[ options].
+* frame.evaluateHandle:                  frame.evaluateHandlepageFunction[...args].
                                                                 (line 6)
-* frame.url:                             frameurl.              (line 6)
-* frame.waitFor:                         framewaitForselectorOrFunctionOrTimeout[ options[...args]].
+* frame.executionContext:                frame.executionContext.
                                                                 (line 6)
-* frame.waitForFunction:                 framewaitForFunctionpageFunction[ options[...args]].
+* frame.focus:                           frame.focusselector.   (line 6)
+* frame.goto:                            frame.gotourl[ options].
                                                                 (line 6)
-* frame.waitForNavigation:               framewaitForNavigation[options].
+* frame.hover:                           frame.hoverselector.   (line 6)
+* frame.isDetached:                      frame.isDetached.      (line 6)
+* frame.name:                            frame.name.            (line 6)
+* frame.parentFrame:                     frame.parentFrame.     (line 6)
+* frame.select:                          frame.selectselector...values.
                                                                 (line 6)
-* frame.waitForSelector:                 framewaitForSelectorselector[ options].
+* frame.setContent:                      frame.setContenthtml[ options].
                                                                 (line 6)
-* frame.waitForXPath:                    framewaitForXPathxpath[ options].
+* frame.tap:                             frame.tapselector.     (line 6)
+* frame.title:                           frame.title.           (line 6)
+* frame.type:                            frame.typeselector text[ options].
                                                                 (line 6)
-* jsHandle.asElement:                    jsHandleasElement.     (line 6)
-* jsHandle.dispose:                      jsHandledispose.       (line 6)
-* jsHandle.executionContext:             jsHandleexecutionContext.
+* frame.url:                             frame.url.             (line 6)
+* frame.waitFor:                         frame.waitForselectorOrFunctionOrTimeout[ options[...args]].
                                                                 (line 6)
-* jsHandle.getProperties:                jsHandlegetProperties. (line 6)
-* jsHandle.getProperty:                  jsHandlegetPropertypropertyName.
+* frame.waitForFunction:                 frame.waitForFunctionpageFunction[ options[...args]].
                                                                 (line 6)
-* jsHandle.jsonValue:                    jsHandlejsonValue.     (line 6)
-* keyboard.down:                         keyboarddownkey[ options].
+* frame.waitForNavigation:               frame.waitForNavigation[options].
                                                                 (line 6)
-* keyboard.press:                        keyboardpresskey[ options].
+* frame.waitForSelector:                 frame.waitForSelectorselector[ options].
                                                                 (line 6)
-* keyboard.sendCharacter:                keyboardsendCharacterchar.
+* frame.waitForXPath:                    frame.waitForXPathxpath[ options].
                                                                 (line 6)
-* keyboard.type:                         keyboardtypetext[ options].
+* jsHandle.asElement:                    jsHandle.asElement.    (line 6)
+* jsHandle.dispose:                      jsHandle.dispose.      (line 6)
+* jsHandle.executionContext:             jsHandle.executionContext.
                                                                 (line 6)
-* keyboard.up:                           keyboardupkey.         (line 6)
-* mouse.click:                           mouseclickx y[ options].
+* jsHandle.getProperties:                jsHandle.getProperties.
                                                                 (line 6)
-* mouse.down:                            mousedown[options].    (line 6)
-* mouse.move:                            mousemovex y[ options].
+* jsHandle.getProperty:                  jsHandle.getPropertypropertyName.
                                                                 (line 6)
-* mouse.up:                              mouseup[options].      (line 6)
-* page.$:                                page$selector.         (line 6)
-* page.$$:                               page$$selector.        (line 6)
-* page.$$eval:                           page$$evalselector pageFunction[...args].
+* jsHandle.jsonValue:                    jsHandle.jsonValue.    (line 6)
+* keyboard.down:                         keyboard.downkey[ options].
                                                                 (line 6)
-* page.$eval:                            page$evalselector pageFunction[...args].
+* keyboard.press:                        keyboard.presskey[ options].
                                                                 (line 6)
-* page.$x:                               page$xexpression.      (line 6)
-* page.accessibility:                    pageaccessibility.     (line 6)
-* page.addScriptTag:                     pageaddScriptTagoptions.
+* keyboard.sendCharacter:                keyboard.sendCharacterchar.
                                                                 (line 6)
-* page.addStyleTag:                      pageaddStyleTagoptions.
+* keyboard.type:                         keyboard.typetext[ options].
                                                                 (line 6)
-* page.authenticate:                     pageauthenticatecredentials.
+* keyboard.up:                           keyboard.upkey.        (line 6)
+* mouse.click:                           mouse.clickx y[ options].
                                                                 (line 6)
-* page.bringToFront:                     pagebringToFront.      (line 6)
-* page.browser:                          pagebrowser.           (line 6)
-* page.browserContext:                   pagebrowserContext.    (line 6)
-* page.click:                            pageclickselector[ options].
+* mouse.down:                            mouse.down[options].   (line 6)
+* mouse.move:                            mouse.movex y[ options].
                                                                 (line 6)
-* page.close:                            pageclose[options].    (line 6)
-* page.content:                          pagecontent.           (line 6)
-* page.cookies:                          pagecookies[...urls].  (line 6)
-* page.coverage:                         pagecoverage.          (line 6)
-* page.deleteCookie:                     pagedeleteCookie...cookies.
+* mouse.up:                              mouse.up[options].     (line 6)
+* page.$:                                page.$selector.        (line 6)
+* page.$$:                               page.$$selector.       (line 6)
+* page.$$eval:                           page.$$evalselector pageFunction[...args].
                                                                 (line 6)
-* page.emulate:                          pageemulateoptions.    (line 6)
-* page.emulateMedia:                     pageemulateMediamediaType.
+* page.$eval:                            page.$evalselector pageFunction[...args].
                                                                 (line 6)
-* page.evaluate:                         pageevaluatepageFunction[...args].
+* page.$x:                               page.$xexpression.     (line 6)
+* page.accessibility:                    page.accessibility.    (line 6)
+* page.addScriptTag:                     page.addScriptTag.     (line 6)
+* page.addStyleTag:                      page.addStyleTag.      (line 6)
+* page.authenticate:                     page.authenticatecredentials.
                                                                 (line 6)
-* page.evaluateHandle:                   pageevaluateHandlepageFunction[...args].
+* page.bringToFront:                     page.bringToFront.     (line 6)
+* page.browser:                          page.browser.          (line 6)
+* page.browserContext:                   page.browserContext.   (line 6)
+* page.click:                            page.clickselector[ options].
                                                                 (line 6)
-* page.evaluateOnNewDocument:            pageevaluateOnNewDocumentpageFunction[...args].
+* page.close:                            page.close[options].   (line 6)
+* page.content:                          page.content.          (line 6)
+* page.cookies:                          page.cookies[...urls]. (line 6)
+* page.coverage:                         page.coverage.         (line 6)
+* page.deleteCookie:                     page.deleteCookie...cookies.
                                                                 (line 6)
-* page.exposeFunction:                   pageexposeFunctionname puppeteerFunction.
+* page.emulate:                          page.emulate.          (line 6)
+* page.emulateMedia:                     page.emulateMediamediaType.
                                                                 (line 6)
-* page.focus:                            pagefocusselector.     (line 6)
-* page.frames:                           pageframes.            (line 6)
-* page.goBack:                           pagegoBack[options].   (line 6)
-* page.goForward:                        pagegoForward[options].
+* page.evaluate:                         page.evaluatepageFunction[...args].
                                                                 (line 6)
-* page.goto:                             pagegotourl[ options]. (line 6)
-* page.hover:                            pagehoverselector.     (line 6)
-* page.isClosed:                         pageisClosed.          (line 6)
-* page.keyboard:                         pagekeyboard.          (line 6)
-* page.mainFrame:                        pagemainFrame.         (line 6)
-* page.metrics:                          pagemetrics.           (line 6)
-* page.mouse:                            pagemouse.             (line 6)
-* page.pdf:                              pagepdf[options].      (line 6)
-* page.queryObjects:                     pagequeryObjectsprototypeHandle.
+* page.evaluateHandle:                   page.evaluateHandlepageFunction[...args].
                                                                 (line 6)
-* page.reload:                           pagereload[options].   (line 6)
-* page.screenshot:                       pagescreenshot[options].
+* page.evaluateOnNewDocument:            page.evaluateOnNewDocumentpageFunction[...args].
                                                                 (line 6)
-* page.select:                           pageselectselector...values.
+* page.exposeFunction:                   page.exposeFunctionname puppeteerFunction.
                                                                 (line 6)
-* page.setBypassCSP:                     pagesetBypassCSPenabled.
+* page.focus:                            page.focusselector.    (line 6)
+* page.frames:                           page.frames.           (line 6)
+* page.goBack:                           page.goBack[options].  (line 6)
+* page.goForward:                        page.goForward[options].
                                                                 (line 6)
-* page.setCacheEnabled:                  pagesetCacheEnabled[enabled].
+* page.goto:                             page.gotourl[ options].
                                                                 (line 6)
-* page.setContent:                       pagesetContenthtml[ options].
+* page.hover:                            page.hoverselector.    (line 6)
+* page.isClosed:                         page.isClosed.         (line 6)
+* page.keyboard:                         page.keyboard.         (line 6)
+* page.mainFrame:                        page.mainFrame.        (line 6)
+* page.metrics:                          page.metrics.          (line 6)
+* page.mouse:                            page.mouse.            (line 6)
+* page.pdf:                              page.pdf[options].     (line 6)
+* page.queryObjects:                     page.queryObjectsprototypeHandle.
                                                                 (line 6)
-* page.setCookie:                        pagesetCookie...cookies.
+* page.reload:                           page.reload[options].  (line 6)
+* page.screenshot:                       page.screenshot[options].
                                                                 (line 6)
-* page.setDefaultNavigationTimeout:      pagesetDefaultNavigationTimeouttimeout.
+* page.select:                           page.selectselector...values.
                                                                 (line 6)
-* page.setDefaultTimeout:                pagesetDefaultTimeouttimeout.
+* page.setBypassCSP:                     page.setBypassCSPenabled.
                                                                 (line 6)
-* page.setExtraHTTPHeaders:              pagesetExtraHTTPHeadersheaders.
+* page.setCacheEnabled:                  page.setCacheEnabled[enabled].
                                                                 (line 6)
-* page.setGeolocation:                   pagesetGeolocationoptions.
+* page.setContent:                       page.setContenthtml[ options].
                                                                 (line 6)
-* page.setJavaScriptEnabled:             pagesetJavaScriptEnabledenabled.
+* page.setCookie:                        page.setCookie...cookies.
                                                                 (line 6)
-* page.setOfflineMode:                   pagesetOfflineModeenabled.
+* page.setDefaultNavigationTimeout:      page.setDefaultNavigationTimeouttimeout.
                                                                 (line 6)
-* page.setRequestInterception:           pagesetRequestInterceptionvalue.
+* page.setDefaultTimeout:                page.setDefaultTimeouttimeout.
                                                                 (line 6)
-* page.setUserAgent:                     pagesetUserAgentuserAgent.
+* page.setExtraHTTPHeaders:              page.setExtraHTTPHeadersheaders.
                                                                 (line 6)
-* page.setViewport:                      pagesetViewportviewport.
+* page.setGeolocation:                   page.setGeolocation.   (line 6)
+* page.setJavaScriptEnabled:             page.setJavaScriptEnabledenabled.
                                                                 (line 6)
-* page.tap:                              pagetapselector.       (line 6)
-* page.target:                           pagetarget.            (line 6)
-* page.title:                            pagetitle.             (line 6)
-* page.touchscreen:                      pagetouchscreen.       (line 6)
-* page.tracing:                          pagetracing.           (line 6)
-* page.type:                             pagetypeselector text[ options].
+* page.setOfflineMode:                   page.setOfflineModeenabled.
                                                                 (line 6)
-* page.url:                              pageurl.               (line 6)
-* page.viewport:                         pageviewport.          (line 6)
-* page.waitFor:                          pagewaitForselectorOrFunctionOrTimeout[ options[...args]].
+* page.setRequestInterception:           page.setRequestInterceptionvalue.
                                                                 (line 6)
-* page.waitForFunction:                  pagewaitForFunctionpageFunction[ options[...args]].
+* page.setUserAgent:                     page.setUserAgentuserAgent.
                                                                 (line 6)
-* page.waitForNavigation:                pagewaitForNavigation[options].
+* page.setViewport:                      page.setViewportviewport.
                                                                 (line 6)
-* page.waitForRequest:                   pagewaitForRequesturlOrPredicate[ options].
+* page.tap:                              page.tapselector.      (line 6)
+* page.target:                           page.target.           (line 6)
+* page.title:                            page.title.            (line 6)
+* page.touchscreen:                      page.touchscreen.      (line 6)
+* page.tracing:                          page.tracing.          (line 6)
+* page.type:                             page.typeselector text[ options].
                                                                 (line 6)
-* page.waitForResponse:                  pagewaitForResponseurlOrPredicate[ options].
+* page.url:                              page.url.              (line 6)
+* page.viewport:                         page.viewport.         (line 6)
+* page.waitFor:                          page.waitForselectorOrFunctionOrTimeout[ options[...args]].
                                                                 (line 6)
-* page.waitForSelector:                  pagewaitForSelectorselector[ options].
+* page.waitForFunction:                  page.waitForFunctionpageFunction[ options[...args]].
                                                                 (line 6)
-* page.waitForXPath:                     pagewaitForXPathxpath[ options].
+* page.waitForNavigation:                page.waitForNavigation[options].
                                                                 (line 6)
-* page.workers:                          pageworkers.           (line 6)
-* puppeteer.connect:                     puppeteerconnectoptions.
+* page.waitForRequest:                   page.waitForRequesturlOrPredicate[ options].
                                                                 (line 6)
-* puppeteer.createBrowserFetcher:        puppeteercreateBrowserFetcher[options].
+* page.waitForResponse:                  page.waitForResponseurlOrPredicate[ options].
                                                                 (line 6)
-* puppeteer.defaultArgs:                 puppeteerdefaultArgs[options].
+* page.waitForSelector:                  page.waitForSelectorselector[ options].
                                                                 (line 6)
-* puppeteer.devices:                     puppeteerdevices.      (line 6)
-* puppeteer.errors:                      puppeteererrors.       (line 6)
-* puppeteer.executablePath:              puppeteerexecutablePath.
+* page.waitForXPath:                     page.waitForXPathxpath[ options].
                                                                 (line 6)
-* puppeteer.launch:                      puppeteerlaunch[options].
+* page.workers:                          page.workers.          (line 6)
+* puppeteer.connect:                     puppeteer.connect.     (line 6)
+* puppeteer.createBrowserFetcher:        puppeteer.createBrowserFetcher[options].
                                                                 (line 6)
-* request.abort:                         requestabort[errorCode].
+* puppeteer.defaultArgs:                 puppeteer.defaultArgs[options].
                                                                 (line 6)
-* request.continue:                      requestcontinue[overrides].
+* puppeteer.devices:                     puppeteer.devices.     (line 6)
+* puppeteer.errors:                      puppeteer.errors.      (line 6)
+* puppeteer.executablePath:              puppeteer.executablePath.
                                                                 (line 6)
-* request.failure:                       requestfailure.        (line 6)
-* request.frame:                         requestframe.          (line 6)
-* request.headers:                       requestheaders.        (line 6)
-* request.isNavigationRequest:           requestisNavigationRequest.
+* puppeteer.launch:                      puppeteer.launch[options].
                                                                 (line 6)
-* request.method:                        requestmethod.         (line 6)
-* request.postData:                      requestpostData.       (line 6)
-* request.redirectChain:                 requestredirectChain.  (line 6)
-* request.resourceType:                  requestresourceType.   (line 6)
-* request.respond:                       requestrespondresponse.
+* request.abort:                         request.abort[errorCode].
                                                                 (line 6)
-* request.response:                      requestresponse.       (line 6)
-* request.url:                           requesturl.            (line 6)
-* response.buffer:                       responsebuffer.        (line 6)
-* response.frame:                        responseframe.         (line 6)
-* response.fromCache:                    responsefromCache.     (line 6)
-* response.fromServiceWorker:            responsefromServiceWorker.
+* request.continue:                      request.continue[overrides].
                                                                 (line 6)
-* response.headers:                      responseheaders.       (line 6)
-* response.json:                         responsejson.          (line 6)
-* response.ok:                           responseok.            (line 6)
-* response.remoteAddress:                responseremoteAddress. (line 6)
-* response.request:                      responserequest.       (line 6)
-* response.securityDetails:              responsesecurityDetails.
+* request.failure:                       request.failure.       (line 6)
+* request.frame:                         request.frame.         (line 6)
+* request.headers:                       request.headers.       (line 6)
+* request.isNavigationRequest:           request.isNavigationRequest.
                                                                 (line 6)
-* response.status:                       responsestatus.        (line 6)
-* response.statusText:                   responsestatusText.    (line 6)
-* response.text:                         responsetext.          (line 6)
-* response.url:                          responseurl.           (line 6)
-* securityDetails.issuer:                securityDetailsissuer. (line 6)
-* securityDetails.protocol:              securityDetailsprotocol.
+* request.method:                        request.method.        (line 6)
+* request.postData:                      request.postData.      (line 6)
+* request.redirectChain:                 request.redirectChain. (line 6)
+* request.resourceType:                  request.resourceType.  (line 6)
+* request.respond:                       request.respondresponse.
                                                                 (line 6)
-* securityDetails.subjectName:           securityDetailssubjectName.
+* request.response:                      request.response.      (line 6)
+* request.url:                           request.url.           (line 6)
+* response.buffer:                       response.buffer.       (line 6)
+* response.frame:                        response.frame.        (line 6)
+* response.fromCache:                    response.fromCache.    (line 6)
+* response.fromServiceWorker:            response.fromServiceWorker.
                                                                 (line 6)
-* securityDetails.validFrom:             securityDetailsvalidFrom.
+* response.headers:                      response.headers.      (line 6)
+* response.json:                         response.json.         (line 6)
+* response.ok:                           response.ok.           (line 6)
+* response.remoteAddress:                response.remoteAddress.
                                                                 (line 6)
-* securityDetails.validTo:               securityDetailsvalidTo.
+* response.request:                      response.request.      (line 6)
+* response.securityDetails:              response.securityDetails.
                                                                 (line 6)
-* target.browser:                        targetbrowser.         (line 6)
-* target.browserContext:                 targetbrowserContext.  (line 6)
-* target.createCDPSession:               targetcreateCDPSession.
+* response.status:                       response.status.       (line 6)
+* response.statusText:                   response.statusText.   (line 6)
+* response.text:                         response.text.         (line 6)
+* response.url:                          response.url.          (line 6)
+* securityDetails.issuer:                securityDetails.issuer.
                                                                 (line 6)
-* target.opener:                         targetopener.          (line 6)
-* target.page:                           targetpage.            (line 6)
-* target.type:                           targettype.            (line 6)
-* target.url:                            targeturl.             (line 6)
-* touchscreen.tap:                       touchscreentapx y.     (line 6)
-* tracing.start:                         tracingstartoptions.   (line 6)
-* tracing.stop:                          tracingstop.           (line 6)
-* worker.evaluate:                       workerevaluatepageFunction[...args].
+* securityDetails.protocol:              securityDetails.protocol.
                                                                 (line 6)
-* worker.evaluateHandle:                 workerevaluateHandlepageFunction[...args].
+* securityDetails.subjectName:           securityDetails.subjectName.
                                                                 (line 6)
-* worker.executionContext:               workerexecutionContext.
+* securityDetails.validFrom:             securityDetails.validFrom.
                                                                 (line 6)
-* worker.url:                            workerurl.             (line 6)
+* securityDetails.validTo:               securityDetails.validTo.
+                                                                (line 6)
+* target.browser:                        target.browser.        (line 6)
+* target.browserContext:                 target.browserContext. (line 6)
+* target.createCDPSession:               target.createCDPSession.
+                                                                (line 6)
+* target.opener:                         target.opener.         (line 6)
+* target.page:                           target.page.           (line 6)
+* target.type:                           target.type.           (line 6)
+* target.url:                            target.url.            (line 6)
+* touchscreen.tap:                       touchscreen.tapx y.    (line 6)
+* tracing.start:                         tracing.start.         (line 6)
+* tracing.stop:                          tracing.stop.          (line 6)
+* worker.evaluate:                       worker.evaluatepageFunction[...args].
+                                                                (line 6)
+* worker.evaluateHandle:                 worker.evaluateHandlepageFunction[...args].
+                                                                (line 6)
+* worker.executionContext:               worker.executionContext.
+                                                                (line 6)
+* worker.url:                            worker.url.            (line 6)
 
 
 File: puppeteer.info,  Node: Event Index,  Prev: Function Index,  Up: Top
