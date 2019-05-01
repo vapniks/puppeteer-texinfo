@@ -1568,8 +1568,8 @@ page.removeListener('request', logRequest);
 * event ‘response'::
 * event ‘workercreated'::
 * event ‘workerdestroyed'::
-* page@asis{.}$selector::
-* page@asis{.}$$selector::
+* page@asis{.}$::
+* page@asis{.}$$::
 * page@asis{.}$$eval::
 * page@asis{.}$eval::
 * page@asis{.}$x::
@@ -1888,7 +1888,7 @@ Emitted when a dedicated
 @uref{https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API,WebWorker}
 is terminated.
 
-@node page@asis{.}$selector
+@node page@asis{.}$
 @subsection page.$(selector)
 @findex page.$
 @anchor{#pageselector}
@@ -1909,7 +1909,7 @@ element matches the selector, the return value resolves to @code{null}.
 
 Shortcut for @ref{#frameselector,page.mainFrame().$(selector)}.
 
-@node page@asis{.}$$selector
+@node page@asis{.}$$
 @subsection page.$$(selector)
 @findex page.$$
 @anchor{#pageselector-1}
@@ -5395,8 +5395,8 @@ An example of getting text from an iframe element:
 @end verbatim
 
 @menu
-* frame@asis{.}$selector::
-* frame@asis{.}$$selector::
+* frame@asis{.}$::
+* frame@asis{.}$$::
 * frame@asis{.}$$eval::
 * frame@asis{.}$eval::
 * frame@asis{.}$x::
@@ -5427,7 +5427,7 @@ An example of getting text from an iframe element:
 * frame@asis{.}waitForXPath::
 @end menu
 
-@node frame@asis{.}$selector
+@node frame@asis{.}$
 @subsection frame.$(selector)
 @findex frame.$
 @anchor{#frameselector}
@@ -5447,7 +5447,7 @@ Promise which resolves to ElementHandle pointing to the frame element.
 The method queries frame for the selector. If there's no such element
 within the frame, the method will resolve to @code{null}.
 
-@node frame@asis{.}$$selector
+@node frame@asis{.}$$
 @subsection frame.$$(selector)
 @findex frame.$$
 @anchor{#frameselector-1}
@@ -6845,8 +6845,8 @@ ElementHandle instances can be used as arguments in
 @ref{#pageevaluatepagefunction-args,@code{page.evaluate()}} methods.
 
 @menu
-* elementHandle@asis{.}$selector::
-* elementHandle@asis{.}$$selector::
+* elementHandle@asis{.}$::
+* elementHandle@asis{.}$$::
 * elementHandle@asis{.}$$eval::
 * elementHandle@asis{.}$eval::
 * elementHandle@asis{.}$x::
@@ -6871,7 +6871,7 @@ ElementHandle instances can be used as arguments in
 * elementHandle@asis{.}uploadFile::
 @end menu
 
-@node elementHandle@asis{.}$selector
+@node elementHandle@asis{.}$
 @subsection elementHandle.$(selector)
 @findex elementHandle.$
 @anchor{#elementhandleselector}
@@ -6890,7 +6890,7 @@ returns:
 The method runs @code{element.querySelector} within the page. If no
 element matches the selector, the return value resolves to @code{null}.
 
-@node elementHandle@asis{.}$$selector
+@node elementHandle@asis{.}$$
 @subsection elementHandle.$$(selector)
 @findex elementHandle.$$
 @anchor{#elementhandleselector-1}

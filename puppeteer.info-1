@@ -1397,8 +1397,8 @@ page.removeListener('request', logRequest);
 * event ‘response'::
 * event ‘workercreated'::
 * event ‘workerdestroyed'::
-* page.$selector::
-* page.$$selector::
+* page.$::
+* page.$$::
 * page.$$eval::
 * page.$eval::
 * page.$x::
@@ -1682,7 +1682,7 @@ Emitted when a dedicated WebWorker
 spawned by the page.
 
 
-File: puppeteer.info,  Node: event ‘workerdestroyed',  Next: page.$selector,  Prev: event ‘workercreated',  Up: class Page
+File: puppeteer.info,  Node: event ‘workerdestroyed',  Next: page.$,  Prev: event ‘workercreated',  Up: class Page
 
 1.9.18 event: ‘workerdestroyed’
 -------------------------------
@@ -1694,7 +1694,7 @@ Emitted when a dedicated WebWorker
 terminated.
 
 
-File: puppeteer.info,  Node: page.$selector,  Next: page.$$selector,  Prev: event ‘workerdestroyed',  Up: class Page
+File: puppeteer.info,  Node: page.$,  Next: page.$$,  Prev: event ‘workerdestroyed',  Up: class Page
 
 1.9.19 page.$(selector)
 -----------------------
@@ -1714,7 +1714,7 @@ matches the selector, the return value resolves to ‘null’.
 Shortcut for *note page.mainFrame().$(selector): #frameselector.
 
 
-File: puppeteer.info,  Node: page.$$selector,  Next: page.$$eval,  Prev: page.$selector,  Up: class Page
+File: puppeteer.info,  Node: page.$$,  Next: page.$$eval,  Prev: page.$,  Up: class Page
 
 1.9.20 page.$$(selector)
 ------------------------
@@ -1735,7 +1735,7 @@ elements match the selector, the return value resolves to ‘[]’.
 Shortcut for *note page.mainFrame().$$(selector): #frameselector-1.
 
 
-File: puppeteer.info,  Node: page.$$eval,  Next: page.$eval,  Prev: page.$$selector,  Up: class Page
+File: puppeteer.info,  Node: page.$$eval,  Next: page.$eval,  Prev: page.$$,  Up: class Page
 
 1.9.21 page.$$eval(selector, pageFunction[,...args])
 ----------------------------------------------------
@@ -4700,8 +4700,8 @@ An example of getting text from an iframe element:
 
 * Menu:
 
-* frame.$selector::
-* frame.$$selector::
+* frame.$::
+* frame.$$::
 * frame.$$eval::
 * frame.$eval::
 * frame.$x::
@@ -4732,7 +4732,7 @@ An example of getting text from an iframe element:
 * frame.waitForXPath::
 
 
-File: puppeteer.info,  Node: frame.$selector,  Next: frame.$$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$,  Next: frame.$$,  Up: class Frame
 
 1.18.1 frame.$(selector)
 ------------------------
@@ -4751,7 +4751,7 @@ The method queries frame for the selector.  If there’s no such element
 within the frame, the method will resolve to ‘null’.
 
 
-File: puppeteer.info,  Node: frame.$$selector,  Next: frame.$$eval,  Prev: frame.$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$$,  Next: frame.$$eval,  Prev: frame.$,  Up: class Frame
 
 1.18.2 frame.$$(selector)
 -------------------------
@@ -4771,7 +4771,7 @@ The method runs ‘document.querySelectorAll’ within the frame.  If no
 elements match the selector, the return value resolves to ‘[]’.
 
 
-File: puppeteer.info,  Node: frame.$$eval,  Next: frame.$eval,  Prev: frame.$$selector,  Up: class Frame
+File: puppeteer.info,  Node: frame.$$eval,  Next: frame.$eval,  Prev: frame.$$,  Up: class Frame
 
 1.18.3 frame.$$eval(selector, pageFunction[,...args])
 -----------------------------------------------------
@@ -5989,8 +5989,8 @@ ElementHandle instances can be used as arguments in *note
 
 * Menu:
 
-* elementHandle.$selector::
-* elementHandle.$$selector::
+* elementHandle.$::
+* elementHandle.$$::
 * elementHandle.$$eval::
 * elementHandle.$eval::
 * elementHandle.$x::
@@ -6015,7 +6015,7 @@ ElementHandle instances can be used as arguments in *note
 * elementHandle.uploadFile::
 
 
-File: puppeteer.info,  Node: elementHandle.$selector,  Next: elementHandle.$$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$,  Next: elementHandle.$$,  Up: class ElementHandle
 
 1.21.1 elementHandle.$(selector)
 --------------------------------
@@ -6033,7 +6033,7 @@ The method runs ‘element.querySelector’ within the page.  If no element
 matches the selector, the return value resolves to ‘null’.
 
 
-File: puppeteer.info,  Node: elementHandle.$$selector,  Next: elementHandle.$$eval,  Prev: elementHandle.$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$$,  Next: elementHandle.$$eval,  Prev: elementHandle.$,  Up: class ElementHandle
 
 1.21.2 elementHandle.$$(selector)
 ---------------------------------
@@ -6052,7 +6052,7 @@ The method runs ‘element.querySelectorAll’ within the page.  If no
 elements match the selector, the return value resolves to ‘[]’.
 
 
-File: puppeteer.info,  Node: elementHandle.$$eval,  Next: elementHandle.$eval,  Prev: elementHandle.$$selector,  Up: class ElementHandle
+File: puppeteer.info,  Node: elementHandle.$$eval,  Next: elementHandle.$eval,  Prev: elementHandle.$$,  Up: class ElementHandle
 
 1.21.3 elementHandle.$$eval(selector, pageFunction[,...args])
 -------------------------------------------------------------
